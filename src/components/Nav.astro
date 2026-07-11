@@ -1,0 +1,241 @@
+---
+import { getCollection } from 'astro:content';
+
+const currentPath = Astro.url.pathname;
+const allPatterns = await getCollection('patterns');
+const sortedPatterns = allPatterns.sort((a, b) => a.data.title.localeCompare(b.data.title));
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="site-logo" aria-label="Artbygng home">
+      <img
+        src="/images/logo-mark.png"
+        alt=""
+        class="logo-mark"
+        width="36"
+        height="36"
+        aria-hidden="true"
+      />
+      <span class="logo-text">artbygng</span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <ul class="nav-list">
+
+        <!-- Patterns with dropdown -->
+        <li class="nav-dropdown-wrap">
+          <a
+            href="/patterns"
+            class:list={['nav-link', { 'nav-link--active': currentPath.startsWith('/patterns') }]}
+          >
+            Patterns <span class="nav-chevron" aria-hidden="true">▾</span>
+          </a>
+          <div class="nav-dropdown">
+            {sortedPatterns.map(p => (
+              <a
+                href={`/patterns/${p.slug}`}
+                class:list={['nav-dropdown-link', { 'nav-dropdown-link--active': currentPath === `/patterns/${p.slug}` }]}
+              >
+                {p.data.title}
+              </a>
+            ))}
+            <div class="nav-dropdown-divider"></div>
+            <a href="/patterns" class="nav-dropdown-all">All patterns &rarr;</a>
+          </div>
+        </li>
+
+        <li>
+          <a
+            href="/blog"
+            class:list={['nav-link', { 'nav-link--active': currentPath.startsWith('/blog') }]}
+          >
+            Blog
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <a
+      href="https://www.etsy.com/shop/artbygng"
+      class="btn btn-accent btn-sm nav-etsy"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Shop on Etsy
+    </a>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    gap: var(--space-5);
+    padding-block: var(--space-4);
+  }
+
+  /* Logo */
+  .site-logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    text-decoration: none;
+    flex: 1;
+  }
+
+  .logo-mark {
+    display: block;
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+  }
+
+  .logo-text {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #162A18;
+    letter-spacing: 0.01em;
+    line-height: 1;
+  }
+
+  .site-logo:hover .logo-text,
+  .site-logo:hover .logo-mark {
+    opacity: 0.8;
+  }
+
+  /* Nav list */
+  .nav-list {
+    display: flex;
+    gap: var(--space-6);
+    align-items: center;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--ink-muted);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: color 0.15s;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .nav-link:hover,
+  .nav-link--active {
+    color: var(--ink);
+  }
+
+  .nav-chevron {
+    font-size: 0.7rem;
+    transition: transform 0.15s;
+    display: inline-block;
+  }
+
+  /* Dropdown wrapper */
+  .nav-dropdown-wrap {
+    position: relative;
+  }
+
+  /* Invisible bridge so moving mouse from link to dropdown doesn't close it */
+  .nav-dropdown-wrap::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: -16px;
+    right: -16px;
+    height: 12px;
+  }
+
+  /* Dropdown panel */
+  .nav-dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: -24px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.09);
+    min-width: 200px;
+    padding: var(--space-2);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.15s, visibility 0.15s, transform 0.15s;
+    transform: translateY(-4px);
+  }
+
+  .nav-dropdown-wrap:hover .nav-dropdown,
+  .nav-dropdown-wrap:focus-within .nav-dropdown {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .nav-dropdown-wrap:hover .nav-chevron {
+    transform: rotate(180deg);
+  }
+
+  /* Dropdown items */
+  .nav-dropdown-link {
+    display: block;
+    padding: var(--space-2) var(--space-4);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--ink-muted);
+    text-decoration: none;
+    border-radius: var(--radius);
+    transition: background 0.12s, color 0.12s;
+    white-space: nowrap;
+  }
+
+  .nav-dropdown-link:hover,
+  .nav-dropdown-link--active {
+    background: var(--cream-alt);
+    color: var(--ink);
+  }
+
+  .nav-dropdown-divider {
+    height: 1px;
+    background: var(--border);
+    margin: var(--space-2) var(--space-2);
+  }
+
+  .nav-dropdown-all {
+    display: block;
+    padding: var(--space-2) var(--space-4);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    border-radius: var(--radius);
+    transition: background 0.12s;
+    white-space: nowrap;
+  }
+
+  .nav-dropdown-all:hover {
+    background: var(--cream-alt);
+    color: var(--accent);
+  }
+
+  @media (max-width: 380px) {
+    .nav-etsy {
+      display: none;
+    }
+  }
+</style>

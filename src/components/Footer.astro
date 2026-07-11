@@ -1,0 +1,103 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="footer-logo">Artbygng</a>
+      <p class="footer-tagline">PDF crochet patterns for soft toddler quiet books</p>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <ul>
+        <li><a href="/patterns">Patterns</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li>
+          <a
+            href="https://www.etsy.com/shop/artbygng"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Shop on Etsy
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>&copy; {year} Artbygng &middot; All rights reserved</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--cream-alt);
+    border-top: 1px solid var(--border);
+    padding-top: var(--space-12);
+  }
+
+  .footer-inner {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    padding-bottom: var(--space-10);
+  }
+
+  @media (min-width: 640px) {
+    .footer-inner {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+
+  .footer-logo {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--ink);
+    text-decoration: none;
+    margin-bottom: var(--space-2);
+  }
+
+  .footer-logo:hover {
+    color: var(--ink);
+  }
+
+  .footer-tagline {
+    font-size: 0.875rem;
+    color: var(--ink-muted);
+    max-width: none;
+  }
+
+  .footer-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .footer-nav a {
+    font-size: 0.9rem;
+    color: var(--ink-muted);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .footer-nav a:hover {
+    color: var(--ink);
+  }
+
+  .footer-bottom {
+    padding-block: var(--space-5);
+    border-top: 1px solid var(--border);
+  }
+
+  .footer-bottom p {
+    font-size: 0.8rem;
+    color: var(--ink-muted);
+    max-width: none;
+  }
+</style>

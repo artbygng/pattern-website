@@ -1,0 +1,351 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PatternCard from '../components/PatternCard.astro';
+import { getCollection } from 'astro:content';
+
+const allPatterns = await getCollection('patterns');
+
+// Show featured first; fill up to 3 with whatever else is there.
+const featured = allPatterns.filter(p => p.data.featured);
+const others   = allPatterns.filter(p => !p.data.featured);
+const preview  = [...featured, ...others].slice(0, 3);
+---
+
+<BaseLayout
+  title="Crochet PDF Patterns for Toddler Quiet Books"
+  description="Hand-crafted PDF crochet patterns for soft, interactive toddler quiet books. Shop Artbygng on Etsy."
+>
+
+  <section class="hero" aria-label="Hero">
+    <div class="hero-media">
+      <img
+        src="/images/hero.jpg"
+        alt="The Painter crochet quiet book — a paint palette with colourful felt shapes a toddler can place and rearrange"
+        width="4032"
+        height="3024"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </div>
+    <div class="hero-overlay">
+      <div class="container hero-content">
+        <p class="hero-eyebrow">Artbygng</p>
+        <h1 class="hero-heading">Crochet your own quiet book</h1>
+        <p class="hero-sub">Instant-download PDF patterns &mdash; you make it, they love it.</p>
+        <a href="/patterns" class="btn btn-accent btn-lg">Explore the patterns &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       INTRO — who you are and what you make
+       PLACEHOLDER: Replace the maker photo placeholder and the body copy below.
+       ============================================================ -->
+  <section class="intro section-padding">
+    <div class="container intro-inner">
+
+      <div class="intro-photo">
+        <!--
+          PLACEHOLDER: Replace with a photo of you or a lifestyle shot.
+          Recommended: portrait orientation, 800×1000 px.
+          <img src="/images/maker.jpg" alt="[Your name], maker behind Artbygng"
+               width="800" height="1000" loading="lazy" />
+        -->
+        <div class="img-placeholder intro-photo-placeholder" aria-hidden="true">
+          Maker photo<br/>Portrait &mdash; 4:5
+        </div>
+      </div>
+
+      <div class="intro-text">
+        <h2 class="intro-heading">Hi! I'm Mor, the maker behind Artbygng</h2>
+        <!--
+          PLACEHOLDER: Replace with your real bio — 3 to 5 warm, personal sentences.
+          Keep it casual. This page's job is trust, not selling.
+        -->
+        <p>
+          I design PDF crochet patterns for soft, interactive quiet books &mdash; the kind of
+          handmade toy that grows with a child through their toddler years. Each pattern is
+          built around a theme that sparks imagination: baking, painting, beekeeping,
+          building, and more.
+        </p>
+        <p>
+          Every page is designed to be engaging but not overwhelming.<br />Simple enough
+          to make as a gift, detailed enough to become a keepsake. Download the PDF,
+          gather your yarn, and make something that lasts.
+        </p>
+        <a href="/patterns" class="btn btn-outline intro-cta">
+          See the patterns &rarr;
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       PATTERNS PREVIEW — 3 cards leading into /patterns
+       ============================================================ -->
+  <section class="preview-section section-padding" style="background: var(--cream-alt);">
+    <div class="container">
+
+      <div class="section-header">
+        <h2>The Collection</h2>
+        <p>Five quiet book themes. Each one a complete toddler activity book you crochet at home.</p>
+      </div>
+
+      <div class="card-grid">
+        {preview.map(pattern => (
+          <PatternCard
+            title={pattern.data.title}
+            tagline={pattern.data.tagline}
+            slug={pattern.slug}
+            coverImage={pattern.data.coverImage}
+            etsy_url={pattern.data.etsy_url}
+          />
+        ))}
+      </div>
+
+      <div class="grid-footer">
+        <a href="/patterns" class="btn btn-outline">Browse all 5 patterns &rarr;</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       BLOG TEASER — calm CTA, no pressure
+       PLACEHOLDER: The optional photo slot can be removed if you'd rather
+       keep this section text-only.
+       ============================================================ -->
+  <section class="blog-teaser section-padding">
+    <div class="container blog-teaser-inner">
+
+      <div class="blog-teaser-text">
+        <h2>From the Blog</h2>
+        <p>
+          Gift guides, material tips, pattern comparisons, and behind-the-scenes looks
+          at how these books come together.
+        </p>
+        <a href="/blog" class="btn btn-outline blog-teaser-cta">
+          Visit the blog &rarr;
+        </a>
+      </div>
+
+      <!--
+        PLACEHOLDER: Optional flat-lay or lifestyle photo.
+        Remove this div entirely if you'd rather keep the section text-only.
+        <img src="/images/blog-teaser.jpg" alt="..." width="900" height="506" loading="lazy" />
+      -->
+      <div class="blog-teaser-photo">
+        <div class="img-placeholder" aria-hidden="true" style="aspect-ratio: 16/9; width: 100%; min-height: unset;">
+          Optional blog teaser photo &mdash; 16:9
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* ----- HERO ----- */
+  .hero {
+    position: relative;
+    height: clamp(500px, 85vh, 820px);
+    overflow: hidden;
+  }
+
+  .hero-media {
+    position: absolute;
+    inset: 0;
+  }
+
+  .hero-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    border: none;
+    min-height: unset;
+    font-size: 0.9rem;
+  }
+
+  .hero-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Gradient darkens the bottom so text is legible over any photo */
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(20, 18, 16, 0.85) 0%,
+      rgba(20, 18, 16, 0.45) 45%,
+      rgba(20, 18, 16, 0.1) 100%
+    );
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .hero-content {
+    padding-bottom: var(--space-16);
+    color: var(--white);
+  }
+
+  .hero-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.75;
+    margin-bottom: var(--space-3);
+    max-width: none;
+  }
+
+  .hero-heading {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 5.5vw, 3.75rem);
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: var(--space-4);
+    max-width: 18ch;
+  }
+
+  .hero-sub {
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    opacity: 0.88;
+    margin-bottom: var(--space-8);
+    max-width: 44ch;
+  }
+
+  /* ----- INTRO ----- */
+  .intro-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .intro-inner {
+      grid-template-columns: 5fr 7fr;
+      gap: var(--space-16);
+    }
+  }
+
+  .intro-photo {
+    max-width: 420px;
+    margin-inline: auto;
+    width: 100%;
+  }
+
+  .intro-photo-placeholder {
+    aspect-ratio: 4 / 5;
+    width: 100%;
+    min-height: unset;
+    border-radius: var(--radius-lg);
+  }
+
+  .intro-photo img {
+    border-radius: var(--radius-lg);
+    width: 100%;
+    height: auto;
+  }
+
+  .intro-heading {
+    font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+    margin-bottom: var(--space-5);
+  }
+
+  .intro-text p {
+    color: var(--ink-muted);
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin-bottom: var(--space-4);
+  }
+
+  .intro-cta {
+    margin-top: var(--space-4);
+  }
+
+  /* ----- PATTERNS PREVIEW ----- */
+  .section-header {
+    text-align: center;
+    margin-bottom: var(--space-12);
+  }
+
+  .section-header h2 {
+    font-size: clamp(1.85rem, 4vw, 2.75rem);
+    margin-bottom: var(--space-4);
+  }
+
+  .section-header p {
+    color: var(--ink-muted);
+    font-size: 1.05rem;
+    max-width: 52ch;
+    margin-inline: auto;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    margin-bottom: var(--space-10);
+  }
+
+  @media (min-width: 600px) {
+    .card-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (min-width: 900px) {
+    .card-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .grid-footer {
+    text-align: center;
+  }
+
+  /* ----- BLOG TEASER ----- */
+  .blog-teaser-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .blog-teaser-inner {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-16);
+    }
+  }
+
+  .blog-teaser-text h2 {
+    font-size: clamp(1.85rem, 4vw, 2.75rem);
+    margin-bottom: var(--space-5);
+  }
+
+  .blog-teaser-text p {
+    color: var(--ink-muted);
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+  .blog-teaser-cta {
+    margin-top: var(--space-6);
+  }
+
+  .blog-teaser-photo img {
+    border-radius: var(--radius-lg);
+    width: 100%;
+    height: auto;
+  }
+
+  .blog-teaser-photo .img-placeholder {
+    border-radius: var(--radius-lg);
+  }
+</style>

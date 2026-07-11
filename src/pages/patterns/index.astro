@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PatternCard from '../../components/PatternCard.astro';
+import { getCollection } from 'astro:content';
+
+const allPatterns = await getCollection('patterns');
+
+// Featured first, then alphabetical.
+const sorted = [...allPatterns].sort((a, b) => {
+  if (a.data.featured && !b.data.featured) return -1;
+  if (!a.data.featured && b.data.featured) return 1;
+  return a.data.title.localeCompare(b.data.title);
+});
+---
+
+<BaseLayout
+  title="Crochet Pattern Collection"
+  description="PDF crochet patterns for soft toddler quiet books. Five themes: Bake Time, Painter, Busy Beehive, Home Improvement, and Fun Foods."
+>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="container">
+      <p class="page-eyebrow">The Collection</p>
+      <h1 class="page-title">Quiet book patterns for curious toddlers</h1>
+      <p class="page-desc">
+        Each pattern is a complete quiet book &mdash; multiple interactive pages, all
+        designed for discovering the world, one dynamic at a time.</br> Download the PDF, gather your yarn, and
+        make something that lasts.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- PATTERN GRID -->
+  <section class="patterns-section">
+    <div class="container">
+      <div class="pattern-grid">
+        {sorted.map(pattern => (
+          <PatternCard
+            title={pattern.data.title}
+            tagline={pattern.data.tagline}
+            slug={pattern.slug}
+            coverImage={pattern.data.coverImage}
+            etsy_url={pattern.data.etsy_url}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ETSY CTA STRIP -->
+  <section class="etsy-strip" aria-label="Shop on Etsy">
+    <div class="container etsy-strip-inner">
+      <p>All patterns are PDF instant downloads, available on Etsy.</p>
+      <a
+        href="https://www.etsy.com/shop/artbygng"
+        class="btn btn-accent"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Visit the Artbygng Etsy shop &nearr;
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* ----- PAGE HEADER ----- */
+  .page-header {
+    padding-block: var(--space-20) var(--space-12);
+    text-align: center;
+    background: var(--cream-alt);
+    border-bottom: 1px solid var(--border);
+  }
+
+  @media (max-width: 640px) {
+    .page-header { padding-block: var(--space-12) var(--space-8); }
+  }
+
+  .page-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: var(--space-3);
+    max-width: none;
+  }
+
+  .page-title {
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    max-width: 22ch;
+    margin-inline: auto;
+    margin-bottom: var(--space-5);
+  }
+
+  .page-desc {
+    color: var(--ink-muted);
+    font-size: 1.05rem;
+    line-height: 1.72;
+    max-width: 54ch;
+    margin-inline: auto;
+  }
+
+
+  /* ----- GRID ----- */
+  .patterns-section {
+    padding-block: var(--space-16);
+  }
+
+  .pattern-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  @media (min-width: 580px) {
+    .pattern-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (min-width: 960px) {
+    .pattern-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+
+  /* ----- ETSY STRIP ----- */
+  .etsy-strip {
+    background: var(--ink);
+    padding-block: var(--space-12);
+  }
+
+  .etsy-strip-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-5);
+    text-align: center;
+  }
+
+  .etsy-strip-inner p {
+    color: rgba(250, 248, 244, 0.8);
+    font-size: 1.05rem;
+    max-width: none;
+  }
+
+  @media (min-width: 640px) {
+    .etsy-strip-inner {
+      flex-direction: row;
+      justify-content: center;
+      gap: var(--space-8);
+      text-align: left;
+    }
+  }
+</style>

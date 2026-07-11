@@ -1,0 +1,986 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const patterns = await getCollection('patterns');
+  return patterns.map(p => ({
+    params: { slug: p.slug },
+    props: { pattern: p },
+  }));
+}
+
+const { pattern } = Astro.props;
+const { Content } = await pattern.render();
+const { title, tagline, coverImage, heroImage, etsy_url, accentColor, images, details, videoUrl, playVideo, flipVideo, skillNotes, faq, customerQuotes } = pattern.data;
+const heroSrc = heroImage ?? coverImage;
+---
+
+<BaseLayout
+  title={`${title} Crochet Quiet Book Pattern`}
+  description={tagline}
+  ogImage={coverImage}
+  accentColor={accentColor}
+>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb-bar">
+    <div class="container">
+      <a href="/patterns" class="back-link">&larr; All patterns</a>
+    </div>
+  </div>
+
+  <!-- Page header -->
+  <header class="pattern-header">
+    <div class="container pattern-header-inner">
+      <div class="pattern-header-text">
+        <p class="pattern-eyebrow">Crochet PDF Pattern</p>
+        <h1 class="pattern-title">{title}</h1>
+        <p class="pattern-tagline">{tagline}</p>
+      </div>
+      <a
+        href={etsy_url}
+        class="btn btn-accent btn-lg header-etsy-btn"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Get the pattern &rarr;
+      </a>
+    </div>
+  </header>
+
+  <!-- Cover image -->
+  <div class="pattern-hero">
+    <img
+      src={heroSrc}
+      alt={`${title} crochet quiet book pattern — all pieces laid out`}
+      width="1800"
+      height="528"
+      loading="eager"
+      fetchpriority="high"
+    />
+  </div>
+
+  <!-- Body: markdown content + sidebar -->
+  <section class="pattern-body section-padding">
+    <div class="container pattern-body-inner">
+
+      <div class="pattern-content prose">
+        <Content />
+      </div>
+
+      <aside class="pattern-sidebar">
+        <div class="sidebar-card">
+          <h3 class="sidebar-heading">Pattern details</h3>
+          {details.length > 0 && (
+            <dl class="detail-list">
+              {details.map(({ label, value }) => (
+                <>
+                  <dt>{label}</dt>
+                  <dd>{value}</dd>
+                </>
+              ))}
+            </dl>
+          )}
+          <a
+            href={etsy_url}
+            class="btn btn-accent sidebar-etsy-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Shop on Etsy &rarr;
+          </a>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- Photo gallery -->
+  {images.length > 0 && (
+    <section class="pattern-gallery section-padding">
+      <div class="container">
+        <h2 class="gallery-heading">Inside the book</h2>
+        <div class="gallery-grid">
+          {images.map((src, i) => (
+            <div class="gallery-item">
+              <img
+                src={src}
+                alt={`${title} — page ${i + 1}`}
+                width="600"
+                height="800"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Book play video -->
+  {playVideo && (
+    <section class="pattern-play-video section-padding">
+      <div class="container">
+        <h2 class="section-heading">See it in action</h2>
+        <div class="play-video-wrapper">
+          {playVideo.startsWith('http') ? (
+            <iframe
+              src={playVideo}
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+              title={`${title} quiet book — interactive play demo`}
+            ></iframe>
+          ) : (
+            <video
+              src={playVideo}
+              controls
+              playsinline
+              preload="metadata"
+              aria-label={`${title} quiet book — interactive play demo`}
+            ></video>
+          )}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- PDF flip-through video -->
+  <section class="pattern-video section-padding">
+    <div class="container">
+      <h2 class="section-heading">See it come together</h2>
+      {flipVideo ? (
+        <div class="video-wrapper">
+          {flipVideo.startsWith('http') ? (
+            <iframe
+              src={flipVideo}
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+              title={`${title} pattern PDF flip-through`}
+            ></iframe>
+          ) : (
+            <video
+              src={flipVideo}
+              controls
+              playsinline
+              preload="metadata"
+              aria-label={`${title} pattern PDF flip-through`}
+            ></video>
+          )}
+        </div>
+      ) : videoUrl ? (
+        <div class="video-wrapper">
+          <iframe
+            src={videoUrl}
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+            title={`${title} pattern flip-through`}
+          ></iframe>
+        </div>
+      ) : (
+        <div class="video-placeholder">
+          <div class="video-placeholder-icon">▶</div>
+          <p class="video-placeholder-label">Flip-through video coming soon</p>
+          <p class="video-placeholder-sub">Add <code>flipVideo</code> to frontmatter to embed the reel here</p>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- Honest skill framing -->
+  {skillNotes && (
+    <section class="pattern-skill section-padding">
+      <div class="container">
+        <h2 class="section-heading">How hard is it, really?</h2>
+        <div class="skill-grid">
+          <div class="skill-col skill-col--easy">
+            <h3 class="skill-col-heading">The straightforward parts</h3>
+            <ul class="skill-list">
+              {skillNotes.easy.map(item => <li>{item}</li>)}
+            </ul>
+          </div>
+          <div class="skill-col skill-col--patient">
+            <h3 class="skill-col-heading">The parts that take patience</h3>
+            <ul class="skill-list">
+              {skillNotes.patient.map(item => <li>{item}</li>)}
+            </ul>
+          </div>
+        </div>
+        {skillNotes.instructionImage && (
+          <div class="skill-screenshot-wrap">
+            <img
+              src={skillNotes.instructionImage}
+              alt="Sample page from the Bake Time PDF pattern"
+              class="skill-screenshot"
+            />
+            <p class="skill-screenshot-caption">A page from the PDF — written instructions, stitch counts, and diagrams included throughout.</p>
+          </div>
+        )}
+      </div>
+    </section>
+  )}
+
+  <!-- Mid-page CTA -->
+  <div class="mid-cta">
+    <div class="container mid-cta-inner">
+      <p class="mid-cta-text">Ready to start? The full PDF is waiting for you.</p>
+      <a
+        href={etsy_url}
+        class="btn btn-accent"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Get this pattern on Etsy &rarr;
+      </a>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  {faq.length > 0 && (
+    <section class="pattern-faq section-padding">
+      <div class="container faq-inner">
+        <h2 class="section-heading">Questions & answers</h2>
+        <dl class="faq-list">
+          {faq.map(({ q, a }) => (
+            <>
+              <dt class="faq-q">{q}</dt>
+              <dd class="faq-a">{a}</dd>
+            </>
+          ))}
+        </dl>
+      </div>
+    </section>
+  )}
+
+  <!-- Customer reviews -->
+  {customerQuotes.filter(c => c.quote).length > 0 && (
+    <section class="pattern-ugc section-padding">
+      <div class="container">
+        <h2 class="section-heading">What makers are saying</h2>
+        <div class="ugc-grid">
+          {customerQuotes.filter(c => c.quote).map(({ quote, author, image, date }) => (
+            <div class="ugc-card">
+              <div class="ugc-top">
+                <span class="ugc-stars" aria-label="5 stars">★★★★★</span>
+                {date && <span class="ugc-date">{date}</span>}
+              </div>
+              <blockquote class="ugc-quote">
+                <p>"{quote}"</p>
+              </blockquote>
+              {image && (
+                <div class="ugc-maker-photo">
+                  <img src={image} alt={`Finished ${title} made by ${author}`} />
+                </div>
+              )}
+              <div class="ugc-author-row">
+                <div class="ugc-avatar">
+                  <span>{author.charAt(0)}</span>
+                </div>
+                <div class="ugc-author-info">
+                  <span class="ugc-author-name">{author}</span>
+                  <span class="ugc-source">Etsy review</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- CTA strip -->
+  <section class="cta-strip">
+    <div class="container cta-strip-inner">
+      <div class="cta-strip-text">
+        <p class="cta-eyebrow">The pattern is ready when you are.</p>
+        <p class="cta-sub">Download the PDF and start crocheting today.</p>
+      </div>
+      <a
+        href={etsy_url}
+        class="btn btn-accent btn-lg"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Get the pattern on Etsy &rarr;
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* ---- BREADCRUMB ---- */
+  .breadcrumb-bar {
+    background: var(--cream-alt);
+    border-bottom: 1px solid var(--border);
+    padding-block: var(--space-3);
+  }
+
+  .back-link {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--ink-muted);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .back-link:hover {
+    color: var(--ink);
+  }
+
+  /* ---- HEADER ---- */
+  .pattern-header {
+    background: var(--cream-alt);
+    padding-block: var(--space-10) var(--space-12);
+  }
+
+  .pattern-header-inner {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-8);
+    flex-wrap: wrap;
+  }
+
+  .pattern-header-text {
+    flex: 1;
+    min-width: 280px;
+  }
+
+  .pattern-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: var(--space-2);
+    max-width: none;
+  }
+
+  .pattern-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: var(--space-3);
+  }
+
+  .pattern-tagline {
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    color: var(--ink-muted);
+    line-height: 1.65;
+    max-width: 52ch;
+  }
+
+  .header-etsy-btn {
+    white-space: nowrap;
+    align-self: center;
+    flex-shrink: 0;
+  }
+
+  /* ---- HERO ---- */
+  .pattern-hero {
+    position: relative;
+    height: clamp(240px, 45vh, 520px);
+    overflow: hidden;
+    background: var(--cream-alt);
+    padding-bottom: 20px;
+  }
+
+.pattern-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+  }
+
+  /* ---- BODY ---- */
+  .pattern-body-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+    align-items: start;
+  }
+
+  @media (min-width: 800px) {
+    .pattern-body-inner {
+      grid-template-columns: 1fr 300px;
+      gap: var(--space-16);
+    }
+  }
+
+  /* Prose: markdown content */
+  .prose :global(h2) {
+    font-family: var(--font-serif);
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    font-weight: 500;
+    color: var(--ink);
+    margin-top: var(--space-10);
+    margin-bottom: var(--space-5);
+  }
+
+  .prose :global(h2:first-child) {
+    margin-top: 0;
+  }
+
+  .prose :global(h3) {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-top: var(--space-8);
+    margin-bottom: var(--space-3);
+  }
+
+  .prose :global(p) {
+    color: var(--ink-muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-4);
+  }
+
+  .prose :global(strong) {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .prose :global(hr) {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin-block: var(--space-10);
+  }
+
+  .prose :global(ul), .prose :global(ol) {
+    color: var(--ink-muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    padding-left: 1.4em;
+    margin-bottom: var(--space-4);
+  }
+
+  .prose :global(li) {
+    margin-bottom: var(--space-2);
+  }
+
+  /* ---- SIDEBAR ---- */
+  .sidebar-card {
+    background: var(--cream-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    position: sticky;
+    top: calc(64px + var(--space-6));
+  }
+
+  .sidebar-heading {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: var(--space-5);
+    color: var(--ink);
+  }
+
+  .detail-list {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-2) var(--space-5);
+    margin-bottom: var(--space-6);
+  }
+
+  .detail-list dt {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-muted);
+    white-space: nowrap;
+    padding-top: 2px;
+  }
+
+  .detail-list dd {
+    font-size: 0.95rem;
+    color: var(--ink);
+  }
+
+  .sidebar-etsy-btn {
+    display: block;
+    text-align: center;
+  }
+
+  /* ---- GALLERY ---- */
+  .pattern-gallery {
+    background: var(--cream-alt);
+  }
+
+  .gallery-heading {
+    font-family: var(--font-serif);
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: var(--space-10);
+    color: var(--ink);
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+
+  @media (min-width: 600px) {
+    .gallery-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-5);
+    }
+  }
+
+  @media (min-width: 900px) {
+    .gallery-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-6);
+    }
+  }
+
+  .gallery-item {
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--border);
+    aspect-ratio: 1 / 1;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.03);
+  }
+
+  /* ---- CTA STRIP ---- */
+  .cta-strip {
+    background: var(--ink);
+    padding-block: var(--space-12);
+  }
+
+  .cta-strip-inner {
+    display: flex;
+    align-items: center;
+    gap: var(--space-8);
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .cta-eyebrow {
+    font-family: var(--font-serif);
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: var(--space-2);
+    max-width: none;
+  }
+
+  .cta-sub {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: none;
+    margin-bottom: 0;
+  }
+
+  /* ---- SHARED SECTION HEADING ---- */
+  .section-heading {
+    font-family: var(--font-serif);
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: var(--space-10);
+    color: var(--ink);
+  }
+
+  /* ---- PLAY VIDEO ---- */
+  .pattern-play-video {
+    background: var(--ink);
+  }
+
+  .pattern-play-video .section-heading {
+    color: var(--white);
+  }
+
+  .play-video-wrapper {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    max-width: 860px;
+    margin: 0 auto;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: #000;
+  }
+
+  .play-video-wrapper iframe,
+  .play-video-wrapper video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  /* ---- FLIP-THROUGH VIDEO ---- */
+  .pattern-video {
+    background: var(--cream);
+  }
+
+  .video-wrapper {
+    position: relative;
+    aspect-ratio: 9 / 16;
+    max-width: 380px;
+    margin: 0 auto;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: #000;
+  }
+
+  .video-wrapper iframe,
+  .video-wrapper video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .video-placeholder {
+    max-width: 860px;
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    background: var(--cream-alt);
+    border: 2px dashed var(--border);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-3);
+    text-align: center;
+    padding: var(--space-8);
+  }
+
+  .video-placeholder-icon {
+    font-size: 2.5rem;
+    color: var(--border);
+  }
+
+  .video-placeholder-label {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    color: var(--ink-muted);
+    margin: 0;
+  }
+
+  .video-placeholder-sub {
+    font-size: 0.85rem;
+    color: var(--ink-muted);
+    opacity: 0.7;
+    margin: 0;
+  }
+
+  .video-placeholder-sub code {
+    background: var(--border);
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+  }
+
+  /* ---- SKILL FRAMING ---- */
+  .pattern-skill {
+    background: var(--cream-alt);
+  }
+
+  .skill-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 680px) {
+    .skill-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-10);
+    }
+  }
+
+  .skill-col {
+    background: var(--cream);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6) var(--space-8);
+    border-top: 3px solid transparent;
+  }
+
+  .skill-col--easy {
+    border-top-color: #7ab87a;
+  }
+
+  .skill-col--patient {
+    border-top-color: var(--accent);
+  }
+
+  .skill-col-heading {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: var(--space-5);
+  }
+
+  .skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .skill-list li {
+    font-size: 0.95rem;
+    color: var(--ink-muted);
+    line-height: 1.6;
+    padding-left: 1.2em;
+    position: relative;
+  }
+
+  .skill-col--easy .skill-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #7ab87a;
+    font-weight: 700;
+    font-size: 0.8rem;
+    top: 2px;
+  }
+
+  .skill-col--patient .skill-list li::before {
+    content: "~";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .skill-screenshot-wrap {
+    max-width: 600px;
+    margin: var(--space-12) auto 0;
+    text-align: center;
+  }
+
+  .skill-screenshot {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  }
+
+  .skill-screenshot-caption {
+    margin-top: var(--space-4);
+    font-size: 0.875rem;
+    color: var(--ink-muted);
+    font-style: italic;
+  }
+
+  /* ---- MID-PAGE CTA ---- */
+  .mid-cta {
+    background: #E8D4DA;
+    padding-block: var(--space-10);
+  }
+
+  .mid-cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-6);
+    flex-wrap: wrap;
+  }
+
+  .mid-cta-text {
+    font-family: var(--font-serif);
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    color: var(--ink);
+    margin: 0;
+  }
+
+  /* ---- FAQ ---- */
+  .pattern-faq {
+    background: var(--cream);
+  }
+
+  .faq-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .faq-q {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--ink);
+    padding: var(--space-5) 0 var(--space-2);
+    border-top: 1px solid var(--border);
+    margin: 0;
+  }
+
+  .faq-list dt:first-child {
+    border-top: none;
+  }
+
+  .faq-a {
+    font-size: 0.95rem;
+    color: var(--ink-muted);
+    line-height: 1.75;
+    margin: 0 0 var(--space-2);
+    padding-bottom: var(--space-3);
+  }
+
+  /* ---- REVIEWS ---- */
+  .pattern-ugc {
+    background: var(--cream-alt);
+  }
+
+  .ugc-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
+  @media (min-width: 600px) {
+    .ugc-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 900px) {
+    .ugc-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .ugc-card {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .ugc-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+  }
+
+  .ugc-stars {
+    color: #E8A020;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+  }
+
+  .ugc-date {
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+    white-space: nowrap;
+  }
+
+  .ugc-quote {
+    margin: 0;
+    flex: 1;
+  }
+
+  .ugc-quote p {
+    font-size: 0.95rem;
+    color: var(--ink-muted);
+    line-height: 1.7;
+    font-style: italic;
+    max-width: none;
+    margin: 0;
+  }
+
+  .ugc-maker-photo {
+    border-radius: var(--radius);
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+  }
+
+  .ugc-maker-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 70%;
+    display: block;
+  }
+
+  .ugc-author-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding-top: var(--space-2);
+    border-top: 1px solid var(--border);
+  }
+
+  .ugc-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: var(--accent-light, #FAE8E5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ugc-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .ugc-avatar span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent);
+    line-height: 1;
+  }
+
+  .ugc-author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .ugc-author-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .ugc-source {
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+  }
+</style>
