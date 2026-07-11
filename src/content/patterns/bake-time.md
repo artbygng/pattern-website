@@ -1,5 +1,5 @@
 ---
-title: "Bake Time"
+title: "Bake Time Pattern"
 tagline: "A crochet PDF pattern for a whole little bakery — mixing, rolling, and decorating, one page at a time."
 coverImage: "/images/patterns/bake-time/cover.jpg"
 etsy_url: "https://www.etsy.com/il-en/listing/1495771677/crochet-bake-time-quiet-book-pattern"
@@ -64,7 +64,7 @@ customerQuotes:
     date: "Jun 25, 2023"
 ---
 
-## What's inside
+## What's inside the pattern
 
 Bake Time is a 8-page crochet quiet book centered around a baking theme. The different pages have interactive pieces for children to play with, including a memory game and a page for learning about counting.
 The bright colors and many different options for playing make this a great gift which can last as a wonderful childhood memory.</br>

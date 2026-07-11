@@ -1,5 +1,5 @@
 ---
-title: "The Painter"
+title: "The Painter Pattern"
 tagline: "A crochet PDF pattern for a painting-themed quiet book — colors to mix, pages to explore, and a little artist's studio to build."
 coverImage: "/images/patterns/painter/cover.jpg"
 heroImage: "/images/patterns/painter/hero.jpg"
@@ -51,7 +51,7 @@ playVideo: "https://www.youtube.com/embed/3HLrb4j-zAk?rel=0"
 flipVideo: ""
 ---
 
-## What's inside
+## What's inside the pattern
 
 The Painter is a 4-page crochet quiet book built around an art and color theme. Each page gives little hands something to do — mixing colors, drawing with crayons, and playing with Montessori-themed shapes.
 The bold colors and interactive pieces make it a great gift for curious, creative kids.
