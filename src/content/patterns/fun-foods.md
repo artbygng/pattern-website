@@ -8,42 +8,41 @@ accentColor: "#C94F3A"
 featured: true
 skillNotes:
   easy:
-    - "Each page panel is a flat circle worked in the round — the same construction repeated across all 4 pages, so it gets familiar fast"
-    - "The pizza toppings are small, simple shapes — circles and leaves — each one quick to make and satisfying to finish"
-    - "Color changes happen per piece, not mid-row, so there's no juggling multiple yarns at once"
-    - "Velcro placements are clearly marked throughout, so there's no guessing where each piece attaches"
+    - "Each page panel is a simple flat circle worked in the round — the same construction repeated across all pages, so it gets familiar fast"
+    - "The book is only 4 pages (a bit shorter than some of the other patterns), so it takes less time to finish"
+    - "Color changes happen between rows/rounds, so there's no juggling multiple yarns at once"
+    - "There aren't many complicated shapes in this pattern, most of it is constructed from familiar, simple ones"
   patient:
-    - "The sushi roll has multiple thin layers that need to be carefully assembled and sewn together cleanly"
-    - "The taco shell and pocket require shaping and precise placement to sit correctly on the page"
+    - "Some of the toppings require a bit more intricate work and assembly"
     - "The pizza calls for making multiple copies of each topping type — satisfying once you're in the rhythm, but it adds up"
-    - "The fries are individual pieces that each need their own construction and finishing"
+    - "The fries are individual pieces that each need their own construction and finishing, and then need to be sewn together"
 faq:
-  - q: "What ages is this best for?"
-    a: "Fun Foods works well for toddlers and preschoolers — roughly ages 2 to 5. The pizza toppings and taco fillings are satisfying for little hands, while the sushi assembly adds a fun challenge for older kids. As with any toy with small removable pieces, keep an eye on younger toddlers during play."
-  - q: "How many pieces does the child get to play with?"
-    a: "Quite a few — the pizza alone comes with multiple detachable toppings, the taco has a full set of fillings, and the sushi separates into its layers. Each page has its own set of pieces, so the whole book adds up to a lot of interactive play."
-  - q: "Can I choose my own colors?"
-    a: "Absolutely. The pattern tells you which color goes where, but all the choices are yours. Making a classic Margherita pizza or going wild with toppings — it all works."
-  - q: "What's the trickiest part of this pattern?"
-    a: "The sushi layers require the most precision — getting the thin pieces to sit flat and stack cleanly takes care. The taco shell shaping is also slightly more involved than the other pages."
+  - q: "My child is a picky eater — will they still enjoy it?"
+    a: "The play is the point, not the food. A child who won't touch sushi can still happily take it apart and put it back together — or decide it's something else entirely. The activities are about touching, placing, and rearranging, and kids tend to engage with that regardless of what the food actually is."
+  - q: "How does the potato and knife page work?"
+    a: "There's a crocheted potato that slides onto a little cutting board alongside a soft, crocheted knife. The fries are crocheted as individual pieces that slide from the cutting board to the red carton once 'cut'. It's a pretend-prep activity — pick up the knife, slice the potato, fill the carton. Simple and satisfying."
+  - q: "Is the knife safe?"
+    a: "Completely — it's a soft crocheted piece with no sharp edges, no different from any other element in the book. It's designed for little hands. Supervision is needed for younger kids because of the detachable pieces, knife included - but really it is just another plushy."
+  - q: "The hook size looks smaller than usual — does that make it harder?"
+    a: "A smaller hook means smaller stitches — but it doesn't change the actual crocheting. The difference between a 4mm hook and a 2.75mm one isn't very noticeable - the same technique applies and the instructions are just as thorough as the other patterns."
   - q: "What do I get with my purchase?"
-    a: "An instant-download PDF with written instructions for every element and how to put the book together, step-by-step images throughout, and a full materials list. No subscription, no video required — one purchase, yours to keep."
+    a: "An instant-download PDF with written instructions for every element and how to put the book together, over 240 step-by-step images, and a full materials list. No subscription, no video required — one purchase, yours to keep."
 details:
   - label: "Format"
     value: "PDF instant download"
   - label: "Stitches"
-    value: "magic ring, ch, slst, sc, hdc, inc, dec, dc, tr"
+    value: "magic ring, ch, slst, sc, long sc, hdc, inc, dec, tr"
   - label: "Hook size"
-    value: "4 mm (G)"
+    value: "2.75 mm (C)"
   - label: "Skill level"
     value: "Intermediate"
   - label: "Terminology"
     value: "US"
 images:
   - /images/patterns/fun-foods/page-front.jpg
+  - /images/patterns/fun-foods/page-taco.jpg
   - /images/patterns/fun-foods/page-fries.jpg
   - /images/patterns/fun-foods/page-sushi.jpg
-  - /images/patterns/fun-foods/page-taco.jpg
 customerQuotes: []
 playVideo: "https://www.youtube.com/embed/Nt9RZcjRvOg?rel=0"
 flipVideo: ""
@@ -51,17 +50,17 @@ flipVideo: ""
 
 ## What's inside the pattern
 
-Fun Foods is a 4-page crochet quiet book built around a street food theme. Each page is a different dish, with detachable toppings and fillings for little hands to pile on, rearrange, and put back.
+Fun Foods is a 4-page crochet quiet book built around a fun foods theme. Each page is a different dish, with interactive toppings and fillings for little hands to pile on, rearrange, and put back.
 Bold colors, familiar foods, and a lot of pieces to play with — a great gift for kids who love pretend cooking and imaginative play.
 
 ### The pages
-**Pizza** — A round pizza with a crinkled brown crust and a full set of detachable toppings: tomato slices, white mushrooms, and green basil leaves. Pile them all on or start from scratch — everything velcros in place.
+**Pizza** — A round pizza with a crinkled brown crust and a full set of detachable toppings: tomato slices, white mushrooms, and green basil leaves. Pile them on in any way you like — everything velcros in place.
 
-**Street Food** — A bright orange page packed with fast-food fun. French fries sit in their red carton, a burger on a skewer is ready to munch, and a small net pocket holds a sweet treat. "YUM" says it all.
+**Taco** — Fill the taco from your grocery bag with a rich set of toppings — tomatoes, lettuce, cheese, and meat — then put it back and start again.
 
-**Sushi** — A sushi roll on a blue page, with all its layers — salmon, cucumber, and rice — that can be taken apart and reassembled. A net pocket on the side holds the pieces between servings.
+**French Fries** — Slide the potato onto the cutting board and use the crocheted knife to make the frech fries. Put them in their red pocket and you're done! "YUM" says it all.
 
-**Taco** — A purple page with a yellow taco shell that opens up to reveal a crocheted pocket. Fill it with toppings — tomatoes, lettuce, cheese, and meat — then close it up and start again.
+**Sushi** — Nori and rice ready to be filled with salmon and cucumber. Take it apart and reassemble as you like. A net pocket on the side holds the pieces between servings.
 
 ---
 
