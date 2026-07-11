@@ -10,7 +10,7 @@ details:
   - label: "Format"
     value: "PDF instant download"
   - label: "Stitches"
-    value: "magic ring, ch, slst, sc, hdc, inc, dec, dc, tr"
+    value: "magic ring, ch, slst, sc, hdc, inc, dec, dc, tr, BLO, FLO"
   - label: "Hook size"
     value: "4 mm (G)"
   - label: "Skill level"

@@ -115,11 +115,37 @@ const preview  = [...featured, ...others].slice(0, 3);
 
 
   <!-- ============================================================
+       FAQ — generic questions about the shop and patterns
+       ============================================================ -->
+  <section class="home-faq section-padding">
+    <div class="container faq-wrap">
+      <h2 class="faq-heading">Questions & answers</h2>
+      <dl class="faq-list">
+        <dt class="faq-q">What format are the patterns in?</dt>
+        <dd class="faq-a">All patterns are instant-download PDFs sold through Etsy and Ravelry. Once you purchase, the file is yours to keep forever.</dd>
+
+        <dt class="faq-q">What skill level do I need?</dt>
+        <dd class="faq-a">The patterns are written for intermediate crocheters / strong beginners. You should be comfortable with magic rings, increases and decreases, and working in the round. Each pattern page also lists the specific stitches used so you know exactly what's expected.</dd>
+
+        <dt class="faq-q">What tools and materials do I need?</dt>
+        <dd class="faq-a">A crochet hook (the size will be stated in the pattern), worsted-weight yarn in your chosen colors, a small amount of velcro, a plastic embroidery sheet for page structure, and an embroidery needle. Additional materials will be listed in the pattern's full list with approximate yardage per color.</dd>
+
+        <dt class="faq-q">Can I sell items I make from your patterns?</dt>
+        <dd class="faq-a">Yes, for personal or small-scale use — you're welcome to sell finished books made from these patterns in small quantities (think handmade markets, Etsy shops, gifts). Mass production or commercial manufacturing is not permitted. Credit to the pattern designer is appreciated but not required.</dd>
+
+        <dt class="faq-q">What if I have a question about a pattern?</dt>
+        <dd class="faq-a">Reach out through Etsy or Instagram and I'll get back to you. Pattern questions are always welcome 😊.</dd>
+      </dl>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
        BLOG TEASER — calm CTA, no pressure
        PLACEHOLDER: The optional photo slot can be removed if you'd rather
        keep this section text-only.
        ============================================================ -->
-  <section class="blog-teaser section-padding">
+  <section class="blog-teaser section-padding" style="background: var(--cream-alt);">
     <div class="container blog-teaser-inner">
 
       <div class="blog-teaser-text">
@@ -307,6 +333,45 @@ const preview  = [...featured, ...others].slice(0, 3);
 
   .grid-footer {
     text-align: center;
+  }
+
+  /* ----- FAQ ----- */
+  .faq-wrap {
+    max-width: 720px;
+    margin-inline: auto;
+  }
+
+  .faq-heading {
+    font-size: clamp(1.85rem, 4vw, 2.75rem);
+    margin-bottom: var(--space-10);
+    text-align: center;
+  }
+
+  .home-faq .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .home-faq .faq-q {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--ink);
+    padding: var(--space-5) 0 var(--space-2);
+    border-top: 1px solid var(--border);
+    margin: 0;
+  }
+
+  .home-faq .faq-list dt:first-child {
+    border-top: none;
+  }
+
+  .home-faq .faq-a {
+    font-size: 0.95rem;
+    color: var(--ink-muted);
+    line-height: 1.75;
+    margin: 0 0 var(--space-2);
+    padding-bottom: var(--space-3);
   }
 
   /* ----- BLOG TEASER ----- */
