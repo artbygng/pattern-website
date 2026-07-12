@@ -12,8 +12,7 @@ export async function getStaticPaths() {
 
 const { pattern } = Astro.props;
 const { Content } = await pattern.render();
-const { title, tagline, coverImage, heroImage, etsy_url, accentColor, images, details, videoUrl, playVideo, flipVideo, skillNotes, faq, customerQuotes } = pattern.data;
-const heroSrc = heroImage ?? coverImage;
+const { title, tagline, coverImage, etsy_url, accentColor, images, details, playVideo, flipVideo, skillNotes, faq, customerQuotes } = pattern.data;
 ---
 
 <BaseLayout
@@ -30,93 +29,69 @@ const heroSrc = heroImage ?? coverImage;
     </div>
   </div>
 
-  <!-- Page header -->
-  <header class="pattern-header">
-    <div class="container pattern-header-inner">
-      <div class="pattern-header-text">
+  <!-- Two-column product section -->
+  <section class="product-section section-padding">
+    <div class="container product-inner">
+
+      <!-- Left: gallery -->
+      <div class="product-gallery">
+        {images.length > 1 && (
+          <div class="gallery-thumbs">
+            {images.map((src, i) => (
+              <button
+                class={`thumb-btn${i === 0 ? ' active' : ''}`}
+                data-src={src}
+                data-alt={`${title} — page ${i + 1}`}
+                aria-label={`View page ${i + 1}`}
+                type="button"
+              >
+                <img src={src} alt="" width="80" height="80" loading="lazy" />
+              </button>
+            ))}
+          </div>
+        )}
+        <div class="gallery-main">
+          <img
+            id="gallery-main-img"
+            src={images[0] ?? coverImage}
+            alt={`${title} — page 1`}
+            width="700"
+            height="700"
+            loading="eager"
+            fetchpriority="high"
+          />
+        </div>
+      </div>
+
+      <!-- Right: info -->
+      <div class="product-info">
         <p class="pattern-eyebrow">Crochet PDF Pattern</p>
         <h1 class="pattern-title">{title}</h1>
         <p class="pattern-tagline">{tagline}</p>
+
+        {details.length > 0 && (
+          <dl class="detail-list">
+            {details.map(({ label, value }) => (
+              <>
+                <dt>{label}</dt>
+                <dd>{value}</dd>
+              </>
+            ))}
+          </dl>
+        )}
+
+        <a
+          href={etsy_url}
+          class="btn btn-accent btn-lg product-cta"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Get the pattern on Etsy &rarr;
+        </a>
       </div>
-      <a
-        href={etsy_url}
-        class="btn btn-accent btn-lg header-etsy-btn"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Get the pattern &rarr;
-      </a>
-    </div>
-  </header>
-
-  <!-- Cover image -->
-  <div class="pattern-hero">
-    <img
-      src={heroSrc}
-      alt={`${title} crochet quiet book pattern — all pieces laid out`}
-      width="1800"
-      height="528"
-      loading="eager"
-      fetchpriority="high"
-    />
-  </div>
-
-  <!-- Body: markdown content + sidebar -->
-  <section class="pattern-body section-padding">
-    <div class="container pattern-body-inner">
-
-      <div class="pattern-content prose">
-        <Content />
-      </div>
-
-      <aside class="pattern-sidebar">
-        <div class="sidebar-card">
-          <h3 class="sidebar-heading">Pattern details</h3>
-          {details.length > 0 && (
-            <dl class="detail-list">
-              {details.map(({ label, value }) => (
-                <>
-                  <dt>{label}</dt>
-                  <dd>{value}</dd>
-                </>
-              ))}
-            </dl>
-          )}
-          <a
-            href={etsy_url}
-            class="btn btn-accent sidebar-etsy-btn"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Shop on Etsy &rarr;
-          </a>
-        </div>
-      </aside>
 
     </div>
   </section>
-
-  <!-- Photo gallery -->
-  {images.length > 0 && (
-    <section class="pattern-gallery section-padding">
-      <div class="container">
-        <h2 class="gallery-heading">Inside the book</h2>
-        <div class="gallery-grid">
-          {images.map((src, i) => (
-            <div class="gallery-item">
-              <img
-                src={src}
-                alt={`${title} — page ${i + 1}`}
-                width="600"
-                height="800"
-                loading="lazy"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )}
 
   <!-- Book play video -->
   {playVideo && (
@@ -146,6 +121,15 @@ const heroSrc = heroImage ?? coverImage;
     </section>
   )}
 
+  <!-- Markdown content (full width) -->
+  <section class="pattern-body section-padding">
+    <div class="container">
+      <div class="pattern-content prose">
+        <Content />
+      </div>
+    </div>
+  </section>
+
   <!-- PDF flip-through video -->
   <section class="pattern-video section-padding">
     <div class="container">
@@ -169,16 +153,6 @@ const heroSrc = heroImage ?? coverImage;
               aria-label={`${title} pattern PDF flip-through`}
             ></video>
           )}
-        </div>
-      ) : videoUrl ? (
-        <div class="video-wrapper">
-          <iframe
-            src={videoUrl}
-            frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowfullscreen
-            title={`${title} pattern flip-through`}
-          ></iframe>
         </div>
       ) : (
         <div class="video-placeholder">
@@ -213,7 +187,7 @@ const heroSrc = heroImage ?? coverImage;
           <div class="skill-screenshot-wrap">
             <img
               src={skillNotes.instructionImage}
-              alt="Sample page from the Bake Time PDF pattern"
+              alt="Sample page from the PDF pattern"
               class="skill-screenshot"
             />
             <p class="skill-screenshot-caption">A page from the PDF — written instructions, stitch counts, and diagrams included throughout.</p>
@@ -311,6 +285,20 @@ const heroSrc = heroImage ?? coverImage;
 
 </BaseLayout>
 
+<script>
+  const thumbBtns = document.querySelectorAll<HTMLButtonElement>('.thumb-btn');
+  const mainImg = document.getElementById('gallery-main-img') as HTMLImageElement;
+
+  thumbBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      thumbBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      mainImg.src = btn.dataset.src!;
+      mainImg.alt = btn.dataset.alt!;
+    });
+  });
+</script>
+
 <style>
   /* ---- BREADCRUMB ---- */
   .breadcrumb-bar {
@@ -327,26 +315,84 @@ const heroSrc = heroImage ?? coverImage;
     transition: color 0.15s;
   }
 
-  .back-link:hover {
-    color: var(--ink);
-  }
+  .back-link:hover { color: var(--ink); }
 
-  /* ---- HEADER ---- */
-  .pattern-header {
+  /* ---- TWO-COLUMN PRODUCT SECTION ---- */
+  .product-section {
     background: var(--cream-alt);
-    padding-block: var(--space-10) var(--space-12);
   }
 
-  .pattern-header-inner {
+  .product-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+    align-items: start;
+  }
+
+  @media (min-width: 800px) {
+    .product-inner {
+      grid-template-columns: 55fr 45fr;
+      gap: var(--space-16);
+    }
+  }
+
+  /* ---- GALLERY ---- */
+  .product-gallery {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: var(--space-3);
+    align-items: start;
+  }
+
+  .gallery-main {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--border);
+    aspect-ratio: 1 / 1;
+  }
+
+  .gallery-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.15s ease;
+  }
+
+  .gallery-thumbs {
     display: flex;
-    align-items: flex-start;
-    gap: var(--space-8);
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: var(--space-3);
   }
 
-  .pattern-header-text {
-    flex: 1;
-    min-width: 280px;
+  .thumb-btn {
+    width: 72px;
+    height: 72px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 2px solid transparent;
+    padding: 0;
+    cursor: pointer;
+    background: var(--border);
+    flex-shrink: 0;
+    transition: border-color 0.15s;
+  }
+
+  .thumb-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .thumb-btn:hover { border-color: var(--ink-muted); }
+  .thumb-btn.active { border-color: var(--accent); }
+
+  /* ---- PRODUCT INFO ---- */
+  .product-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
   }
 
   .pattern-eyebrow {
@@ -355,64 +401,62 @@ const heroSrc = heroImage ?? coverImage;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--accent);
-    margin-bottom: var(--space-2);
-    max-width: none;
+    margin: 0;
   }
 
   .pattern-title {
     font-family: var(--font-serif);
-    font-size: clamp(2rem, 5vw, 3.25rem);
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
     font-weight: 500;
     color: var(--ink);
-    margin-bottom: var(--space-3);
+    margin: 0;
+    line-height: 1.2;
   }
 
   .pattern-tagline {
-    font-size: clamp(1rem, 2vw, 1.15rem);
+    font-size: 1rem;
     color: var(--ink-muted);
     line-height: 1.65;
-    max-width: 52ch;
+    margin: 0;
   }
 
-  .header-etsy-btn {
-    white-space: nowrap;
-    align-self: center;
-    flex-shrink: 0;
-  }
-
-  /* ---- HERO ---- */
-  .pattern-hero {
-    position: relative;
-    height: clamp(240px, 45vh, 520px);
-    overflow: hidden;
-    background: var(--cream-alt);
-    padding-bottom: 20px;
-  }
-
-.pattern-hero img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-    display: block;
-  }
-
-  /* ---- BODY ---- */
-  .pattern-body-inner {
+  .detail-list {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-12);
-    align-items: start;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-2) var(--space-5);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding-block: var(--space-4);
+    margin: 0;
   }
 
-  @media (min-width: 800px) {
-    .pattern-body-inner {
-      grid-template-columns: 1fr 300px;
-      gap: var(--space-16);
-    }
+  .detail-list dt {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-muted);
+    white-space: nowrap;
+    padding-top: 2px;
   }
 
-  /* Prose: markdown content */
+  .detail-list dd {
+    font-size: 0.95rem;
+    color: var(--ink);
+  }
+
+  .product-cta {
+    display: block;
+    text-align: center;
+    margin-top: var(--space-2);
+  }
+
+  /* ---- BODY (full width prose) ---- */
+  .pattern-content {
+    max-width: 72ch;
+    margin-inline: auto;
+  }
+
   .prose :global(h2) {
     font-family: var(--font-serif);
     font-size: clamp(1.5rem, 3.5vw, 2rem);
@@ -422,9 +466,7 @@ const heroSrc = heroImage ?? coverImage;
     margin-bottom: var(--space-5);
   }
 
-  .prose :global(h2:first-child) {
-    margin-top: 0;
-  }
+  .prose :global(h2:first-child) { margin-top: 0; }
 
   .prose :global(h3) {
     font-family: var(--font-serif);
@@ -463,134 +505,6 @@ const heroSrc = heroImage ?? coverImage;
 
   .prose :global(li) {
     margin-bottom: var(--space-2);
-  }
-
-  /* ---- SIDEBAR ---- */
-  .sidebar-card {
-    background: var(--cream-alt);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    padding: var(--space-6);
-    position: sticky;
-    top: calc(64px + var(--space-6));
-  }
-
-  .sidebar-heading {
-    font-family: var(--font-serif);
-    font-size: 1.1rem;
-    font-weight: 500;
-    margin-bottom: var(--space-5);
-    color: var(--ink);
-  }
-
-  .detail-list {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: var(--space-2) var(--space-5);
-    margin-bottom: var(--space-6);
-  }
-
-  .detail-list dt {
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--ink-muted);
-    white-space: nowrap;
-    padding-top: 2px;
-  }
-
-  .detail-list dd {
-    font-size: 0.95rem;
-    color: var(--ink);
-  }
-
-  .sidebar-etsy-btn {
-    display: block;
-    text-align: center;
-  }
-
-  /* ---- GALLERY ---- */
-  .pattern-gallery {
-    background: var(--cream-alt);
-  }
-
-  .gallery-heading {
-    font-family: var(--font-serif);
-    font-size: clamp(1.6rem, 4vw, 2.4rem);
-    font-weight: 500;
-    text-align: center;
-    margin-bottom: var(--space-10);
-    color: var(--ink);
-  }
-
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-4);
-  }
-
-  @media (min-width: 600px) {
-    .gallery-grid {
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--space-5);
-    }
-  }
-
-  @media (min-width: 900px) {
-    .gallery-grid {
-      grid-template-columns: repeat(4, 1fr);
-      gap: var(--space-6);
-    }
-  }
-
-  .gallery-item {
-    border-radius: var(--radius);
-    overflow: hidden;
-    background: var(--border);
-    aspect-ratio: 1 / 1;
-  }
-
-  .gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.4s ease;
-  }
-
-  .gallery-item:hover img {
-    transform: scale(1.03);
-  }
-
-  /* ---- CTA STRIP ---- */
-  .cta-strip {
-    background: var(--ink);
-    padding-block: var(--space-12);
-  }
-
-  .cta-strip-inner {
-    display: flex;
-    align-items: center;
-    gap: var(--space-8);
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .cta-eyebrow {
-    font-family: var(--font-serif);
-    font-size: clamp(1.4rem, 3vw, 2rem);
-    font-weight: 500;
-    color: var(--white);
-    margin-bottom: var(--space-2);
-    max-width: none;
-  }
-
-  .cta-sub {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.7);
-    max-width: none;
-    margin-bottom: 0;
   }
 
   /* ---- SHARED SECTION HEADING ---- */
@@ -632,9 +546,7 @@ const heroSrc = heroImage ?? coverImage;
   }
 
   /* ---- FLIP-THROUGH VIDEO ---- */
-  .pattern-video {
-    background: var(--cream);
-  }
+  .pattern-video { background: var(--cream-alt); }
 
   .video-wrapper {
     position: relative;
@@ -659,7 +571,7 @@ const heroSrc = heroImage ?? coverImage;
     max-width: 860px;
     margin: 0 auto;
     aspect-ratio: 16 / 9;
-    background: var(--cream-alt);
+    background: var(--cream);
     border: 2px dashed var(--border);
     border-radius: var(--radius-lg);
     display: flex;
@@ -698,9 +610,7 @@ const heroSrc = heroImage ?? coverImage;
   }
 
   /* ---- SKILL FRAMING ---- */
-  .pattern-skill {
-    background: var(--cream-alt);
-  }
+  .pattern-skill { background: var(--cream); }
 
   .skill-grid {
     display: grid;
@@ -711,26 +621,18 @@ const heroSrc = heroImage ?? coverImage;
   }
 
   @media (min-width: 680px) {
-    .skill-grid {
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-10);
-    }
+    .skill-grid { grid-template-columns: 1fr 1fr; gap: var(--space-10); }
   }
 
   .skill-col {
-    background: var(--cream);
+    background: var(--cream-alt);
     border-radius: var(--radius-lg);
     padding: var(--space-6) var(--space-8);
     border-top: 3px solid transparent;
   }
 
-  .skill-col--easy {
-    border-top-color: #7ab87a;
-  }
-
-  .skill-col--patient {
-    border-top-color: var(--accent);
-  }
+  .skill-col--easy { border-top-color: #7ab87a; }
+  .skill-col--patient { border-top-color: var(--accent); }
 
   .skill-col-heading {
     font-family: var(--font-serif);
@@ -817,9 +719,7 @@ const heroSrc = heroImage ?? coverImage;
   }
 
   /* ---- FAQ ---- */
-  .pattern-faq {
-    background: var(--cream);
-  }
+  .pattern-faq { background: var(--cream-alt); }
 
   .faq-inner {
     max-width: 720px;
@@ -841,9 +741,7 @@ const heroSrc = heroImage ?? coverImage;
     margin: 0;
   }
 
-  .faq-list dt:first-child {
-    border-top: none;
-  }
+  .faq-list dt:first-child { border-top: none; }
 
   .faq-a {
     font-size: 0.95rem;
@@ -854,9 +752,7 @@ const heroSrc = heroImage ?? coverImage;
   }
 
   /* ---- REVIEWS ---- */
-  .pattern-ugc {
-    background: var(--cream-alt);
-  }
+  .pattern-ugc { background: var(--cream); }
 
   .ugc-grid {
     display: grid;
@@ -864,20 +760,11 @@ const heroSrc = heroImage ?? coverImage;
     gap: var(--space-5);
   }
 
-  @media (min-width: 600px) {
-    .ugc-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (min-width: 900px) {
-    .ugc-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
+  @media (min-width: 600px) { .ugc-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 900px) { .ugc-grid { grid-template-columns: repeat(3, 1fr); } }
 
   .ugc-card {
-    background: var(--cream);
+    background: var(--cream-alt);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
     padding: var(--space-6);
@@ -893,22 +780,10 @@ const heroSrc = heroImage ?? coverImage;
     gap: var(--space-3);
   }
 
-  .ugc-stars {
-    color: #E8A020;
-    font-size: 0.95rem;
-    letter-spacing: 0.05em;
-  }
+  .ugc-stars { color: #E8A020; font-size: 0.95rem; letter-spacing: 0.05em; }
+  .ugc-date { font-size: 0.78rem; color: var(--ink-muted); white-space: nowrap; }
 
-  .ugc-date {
-    font-size: 0.78rem;
-    color: var(--ink-muted);
-    white-space: nowrap;
-  }
-
-  .ugc-quote {
-    margin: 0;
-    flex: 1;
-  }
+  .ugc-quote { margin: 0; flex: 1; }
 
   .ugc-quote p {
     font-size: 0.95rem;
@@ -945,7 +820,6 @@ const heroSrc = heroImage ?? coverImage;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    overflow: hidden;
     flex-shrink: 0;
     background: var(--accent-light, #FAE8E5);
     display: flex;
@@ -953,34 +827,39 @@ const heroSrc = heroImage ?? coverImage;
     justify-content: center;
   }
 
-  .ugc-avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+  .ugc-avatar span { font-size: 1rem; font-weight: 600; color: var(--accent); line-height: 1; }
+
+  .ugc-author-info { display: flex; flex-direction: column; gap: 2px; }
+  .ugc-author-name { font-size: 0.875rem; font-weight: 600; color: var(--ink); }
+  .ugc-source { font-size: 0.75rem; color: var(--ink-muted); }
+
+  /* ---- CTA STRIP ---- */
+  .cta-strip {
+    background: var(--ink);
+    padding-block: var(--space-12);
   }
 
-  .ugc-avatar span {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--accent);
-    line-height: 1;
-  }
-
-  .ugc-author-info {
+  .cta-strip-inner {
     display: flex;
-    flex-direction: column;
-    gap: 2px;
+    align-items: center;
+    gap: var(--space-8);
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
-  .ugc-author-name {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--ink);
+  .cta-eyebrow {
+    font-family: var(--font-serif);
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: var(--space-2);
+    max-width: none;
   }
 
-  .ugc-source {
-    font-size: 0.75rem;
-    color: var(--ink-muted);
+  .cta-sub {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: none;
+    margin-bottom: 0;
   }
 </style>
