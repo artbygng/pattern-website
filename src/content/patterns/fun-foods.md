@@ -43,10 +43,10 @@ images:
   - /images/patterns/fun-foods/page-taco.jpg
   - /images/patterns/fun-foods/page-taco2.jpg
   - /images/patterns/fun-foods/page-fries.jpg
+  - /images/patterns/fun-foods/page-all4.jpg
   - /images/patterns/fun-foods/page-fries2.jpg
   - /images/patterns/fun-foods/page-sushi.jpg
   - /images/patterns/fun-foods/page-sushi2.jpg
-  - /images/patterns/fun-foods/page-all4.jpg
 customerQuotes: []
 playVideo: "https://www.youtube.com/embed/Nt9RZcjRvOg?rel=0"
 flipVideo: ""
