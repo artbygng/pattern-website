@@ -44,13 +44,13 @@ details:
 images:
   - /images/patterns/painter/page-front.jpg
   - /images/patterns/painter/page-front3.jpg
-  - /images/patterns/painter/page-cover2.jpg
   - /images/patterns/painter/page-open.jpg
   - /images/patterns/painter/page-pieces.jpg
   - /images/patterns/painter/page-hearts.jpg
   - /images/patterns/painter/page-hearts2.jpg
   - /images/patterns/painter/page-hearts3.jpg
   - /images/patterns/painter/page-crayons.jpg
+  - /images/patterns/painter/page-cover2.jpg
 customerQuotes: []
 playVideo: "https://www.youtube.com/embed/3HLrb4j-zAk?rel=0"
 flipVideo: ""
