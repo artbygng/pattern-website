@@ -254,6 +254,10 @@ const { title, tagline, coverImage, etsy_url, accentColor, images, details, play
                 </div>
               )}
               <div class="ugc-solo-body">
+                <span class="ugc-stars" aria-label="5 stars">★★★★★</span>
+                <blockquote class="ugc-solo-quote">
+                  <p>"{quote}"</p>
+                </blockquote>
                 <div class="ugc-solo-header">
                   <div class="ugc-avatar">
                     <span>{author.charAt(0)}</span>
@@ -262,11 +266,7 @@ const { title, tagline, coverImage, etsy_url, accentColor, images, details, play
                     <span class="ugc-author-name">{author}</span>
                     <span class="ugc-source">Etsy review{date ? ` · ${date}` : ''}</span>
                   </div>
-                  <span class="ugc-stars" aria-label="5 stars">★★★★★</span>
                 </div>
-                <blockquote class="ugc-solo-quote">
-                  <p>"{quote}"</p>
-                </blockquote>
               </div>
             </div>
           ))
@@ -894,11 +894,7 @@ const { title, tagline, coverImage, etsy_url, accentColor, images, details, play
     gap: var(--space-3);
   }
 
-  .ugc-solo-header .ugc-stars {
-    margin-left: auto;
-  }
-
-  .ugc-solo-quote {
+.ugc-solo-quote {
     margin: 0;
   }
 
