@@ -86,15 +86,6 @@ const { title, tagline, coverImage, etsy_url, accentColor, images, details, play
     </div>
   </section>
 
-  <!-- Markdown content (full width) -->
-  <section class="pattern-body section-padding">
-    <div class="container">
-      <div class="pattern-content prose">
-        <Content />
-      </div>
-    </div>
-  </section>
-
   <!-- Book play video -->
   {playVideo && (
     <section class="pattern-play-video section-padding">
@@ -122,6 +113,15 @@ const { title, tagline, coverImage, etsy_url, accentColor, images, details, play
       </div>
     </section>
   )}
+
+  <!-- Markdown content (full width) -->
+  <section class="pattern-body section-padding">
+    <div class="container">
+      <div class="pattern-content prose">
+        <Content />
+      </div>
+    </div>
+  </section>
 
   <!-- PDF flip-through video -->
   <section class="pattern-video section-padding">
