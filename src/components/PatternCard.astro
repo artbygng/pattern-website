@@ -14,8 +14,11 @@ const detailUrl = `/patterns/${slug}`;
 <article class="pattern-card">
   <a href={detailUrl} class="card-img-link" tabindex="-1" aria-hidden="true">
     <div class="card-img">
-        {coverImage
-        ? <img src={coverImage} alt={`${title} crochet quiet book pattern`} width="600" height="800" loading="lazy" />
+      {coverImage
+        ? <>
+            <img src={coverImage} alt={`${title} crochet quiet book pattern`} width="600" height="800" loading="lazy" class="card-cover-img" />
+            <img src="/images/badge-crochet-pdf-pattern.png" alt="" aria-hidden="true" class="card-badge" width="438" height="438" />
+          </>
         : <div class="img-placeholder card-img-placeholder">{title}<br />Cover photo</div>
       }
     </div>
@@ -67,16 +70,26 @@ const detailUrl = `/patterns/${slug}`;
     aspect-ratio: 10 / 11;
     overflow: hidden;
     background: var(--cream-alt);
+    position: relative;
   }
 
-  .card-img img {
+  .card-badge {
+    position: absolute;
+    top: var(--space-3);
+    left: var(--space-3);
+    width: clamp(48px, 15%, 72px);
+    height: auto;
+    pointer-events: none;
+  }
+
+  .card-cover-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.35s ease;
   }
 
-  .pattern-card:hover .card-img img {
+  .pattern-card:hover .card-cover-img {
     transform: scale(1.03);
   }
 
