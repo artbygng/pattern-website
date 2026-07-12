@@ -44,9 +44,9 @@ details:
 images:
   - /images/patterns/painter/page-front.jpg
   - /images/patterns/painter/page-front3.jpg
-  - /images/patterns/painter/page-open.jpg
   - /images/patterns/painter/page-pieces.jpg
   - /images/patterns/painter/page-hearts.jpg
+  - /images/patterns/painter/page-open.jpg
   - /images/patterns/painter/page-hearts2.jpg
   - /images/patterns/painter/page-hearts3.jpg
   - /images/patterns/painter/page-crayons.jpg
