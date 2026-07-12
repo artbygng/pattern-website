@@ -50,8 +50,8 @@ images:
   - /images/patterns/busy-beehive/page-closed.jpg
   - /images/patterns/busy-beehive/page-closedback.jpg
 customerQuotes: []
-playVideo: ""
-flipVideo: "https://www.youtube.com/embed/670iT-GkBiA?rel=0"
+playVideo: "https://www.youtube.com/embed/670iT-GkBiA?rel=0"
+flipVideo: ""
 ---
 
 ## What's inside the pattern
