@@ -41,9 +41,15 @@ details:
     value: "US"
 images:
   - /images/patterns/halloween/page-front.jpg
+  - /images/patterns/halloween/page-front2.jpg
+  - /images/patterns/halloween/page-front3.jpg
+  - /images/patterns/halloween/page-front4.jpg
   - /images/patterns/halloween/page-cauldron.jpg
   - /images/patterns/halloween/page-candy-trees.jpg
   - /images/patterns/halloween/page-tree.jpg
+  - /images/patterns/halloween/page-tree2.jpg
+  - /images/patterns/halloween/page-all.jpg
+  - /images/patterns/halloween/page-all2.jpg
 customerQuotes: []
 playVideo: "https://www.youtube.com/embed/6gpMJf7oJbY?rel=0"
 flipVideo: ""
