@@ -60,6 +60,15 @@ const { title, tagline, coverImage, etsy_url, accentColor, images, details, play
             loading="eager"
             fetchpriority="high"
           />
+          <img
+            id="gallery-badge"
+            src="/images/badge-crochet-pdf-pattern.png"
+            alt=""
+            aria-hidden="true"
+            class="gallery-badge"
+            width="438"
+            height="438"
+          />
         </div>
       </div>
 
@@ -290,12 +299,15 @@ const { title, tagline, coverImage, etsy_url, accentColor, images, details, play
   const mainImg = document.getElementById('gallery-main-img') as HTMLImageElement;
   const galleryMain = document.querySelector('.gallery-main') as HTMLElement;
   const galleryThumbs = document.querySelector('.gallery-thumbs') as HTMLElement;
-  thumbBtns.forEach(btn => {
+  const badge = document.getElementById('gallery-badge') as HTMLElement;
+
+  thumbBtns.forEach((btn, idx) => {
     btn.addEventListener('click', () => {
       thumbBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       mainImg.src = btn.dataset.src!;
       mainImg.alt = btn.dataset.alt!;
+      if (badge) badge.classList.toggle('badge-hidden', idx !== 0);
     });
   });
 
@@ -415,6 +427,20 @@ const { title, tagline, coverImage, etsy_url, accentColor, images, details, play
 
   .thumb-btn:hover { border-color: var(--ink-muted); }
   .thumb-btn.active { border-color: var(--accent); }
+
+  .gallery-badge {
+    position: absolute;
+    top: var(--space-3);
+    left: var(--space-3);
+    width: clamp(72px, 22%, 100px);
+    height: auto;
+    pointer-events: none;
+    transition: opacity 0.15s;
+  }
+
+  .gallery-badge.badge-hidden {
+    opacity: 0;
+  }
 
 
   /* ---- PRODUCT INFO ---- */
