@@ -243,33 +243,64 @@ const { title, tagline, coverImage, etsy_url, accentColor, images, details, play
     <section class="pattern-ugc section-padding">
       <div class="container">
         <h2 class="section-heading">What makers are saying</h2>
-        <div class="ugc-grid">
-          {customerQuotes.filter(c => c.quote).map(({ quote, author, image, date }) => (
-            <div class="ugc-card">
-              <div class="ugc-top">
-                <span class="ugc-stars" aria-label="5 stars">★★★★★</span>
-                {date && <span class="ugc-date">{date}</span>}
-              </div>
-              <blockquote class="ugc-quote">
-                <p>"{quote}"</p>
-              </blockquote>
+
+        {customerQuotes.filter(c => c.quote).length === 1 ? (
+          /* Single review — centered horizontal testimonial */
+          customerQuotes.filter(c => c.quote).map(({ quote, author, image, date }) => (
+            <div class="ugc-solo">
               {image && (
-                <div class="ugc-maker-photo">
+                <div class="ugc-solo-photo">
                   <img src={image} alt={`Finished ${title} made by ${author}`} />
                 </div>
               )}
-              <div class="ugc-author-row">
-                <div class="ugc-avatar">
-                  <span>{author.charAt(0)}</span>
-                </div>
-                <div class="ugc-author-info">
-                  <span class="ugc-author-name">{author}</span>
-                  <span class="ugc-source">Etsy review</span>
+              <div class="ugc-solo-body">
+                <span class="ugc-stars" aria-label="5 stars">★★★★★</span>
+                <blockquote class="ugc-solo-quote">
+                  <p>"{quote}"</p>
+                </blockquote>
+                <div class="ugc-author-row">
+                  <div class="ugc-avatar">
+                    <span>{author.charAt(0)}</span>
+                  </div>
+                  <div class="ugc-author-info">
+                    <span class="ugc-author-name">{author}</span>
+                    <span class="ugc-source">Etsy review{date ? ` · ${date}` : ''}</span>
+                  </div>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
+          ))
+        ) : (
+          /* Multiple reviews — grid */
+          <div class="ugc-grid">
+            {customerQuotes.filter(c => c.quote).map(({ quote, author, image, date }) => (
+              <div class="ugc-card">
+                <div class="ugc-top">
+                  <span class="ugc-stars" aria-label="5 stars">★★★★★</span>
+                  {date && <span class="ugc-date">{date}</span>}
+                </div>
+                <blockquote class="ugc-quote">
+                  <p>"{quote}"</p>
+                </blockquote>
+                {image && (
+                  <div class="ugc-maker-photo">
+                    <img src={image} alt={`Finished ${title} made by ${author}`} />
+                  </div>
+                )}
+                <div class="ugc-author-row">
+                  <div class="ugc-avatar">
+                    <span>{author.charAt(0)}</span>
+                  </div>
+                  <div class="ugc-author-info">
+                    <span class="ugc-author-name">{author}</span>
+                    <span class="ugc-source">Etsy review</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
       </div>
     </section>
   )}
@@ -808,6 +839,67 @@ const { title, tagline, coverImage, etsy_url, accentColor, images, details, play
 
   /* ---- REVIEWS ---- */
   .pattern-ugc { background: var(--cream); }
+
+  /* Single-review horizontal testimonial */
+  .ugc-solo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    max-width: 680px;
+    margin: 0 auto;
+    background: var(--cream-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+
+  @media (min-width: 600px) {
+    .ugc-solo {
+      flex-direction: row;
+      align-items: stretch;
+    }
+  }
+
+  .ugc-solo-photo {
+    flex-shrink: 0;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+
+  @media (min-width: 600px) {
+    .ugc-solo-photo {
+      width: 220px;
+      aspect-ratio: unset;
+    }
+  }
+
+  .ugc-solo-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .ugc-solo-body {
+    padding: var(--space-6) var(--space-7);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    justify-content: center;
+  }
+
+  .ugc-solo-quote {
+    margin: 0;
+  }
+
+  .ugc-solo-quote p {
+    font-size: 1.1rem;
+    color: var(--ink);
+    line-height: 1.7;
+    font-style: italic;
+    margin: 0;
+    max-width: none;
+  }
 
   .ugc-grid {
     display: grid;
