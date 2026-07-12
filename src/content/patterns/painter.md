@@ -53,7 +53,7 @@ images:
   - /images/patterns/painter/page-cover2.jpg
 customerQuotes:
   - quote: "Clear and fun to make"
-    author: "Etsy buyer"
+    author: "Chloe"
     image: "/images/patterns/painter/ugc-1.jpg"
     date: "Aug 27, 2024"
 playVideo: "https://www.youtube.com/embed/3HLrb4j-zAk?rel=0"
