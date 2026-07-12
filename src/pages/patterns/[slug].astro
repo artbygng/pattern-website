@@ -60,6 +60,11 @@ const { title, tagline, coverImage, etsy_url, accentColor, images, details, play
             loading="eager"
             fetchpriority="high"
           />
+          <div class="pattern-badge" aria-hidden="true">
+            <span>CROCHET</span>
+            <span>PATTERN</span>
+            <span>PDF</span>
+          </div>
         </div>
       </div>
 
@@ -290,13 +295,15 @@ const { title, tagline, coverImage, etsy_url, accentColor, images, details, play
   const mainImg = document.getElementById('gallery-main-img') as HTMLImageElement;
   const galleryMain = document.querySelector('.gallery-main') as HTMLElement;
   const galleryThumbs = document.querySelector('.gallery-thumbs') as HTMLElement;
+  const badge = document.querySelector('.pattern-badge') as HTMLElement;
 
-  thumbBtns.forEach(btn => {
+  thumbBtns.forEach((btn, idx) => {
     btn.addEventListener('click', () => {
       thumbBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       mainImg.src = btn.dataset.src!;
       mainImg.alt = btn.dataset.alt!;
+      if (badge) badge.classList.toggle('badge-hidden', idx !== 0);
     });
   });
 
@@ -415,6 +422,33 @@ const { title, tagline, coverImage, etsy_url, accentColor, images, details, play
 
   .thumb-btn:hover { border-color: var(--ink-muted); }
   .thumb-btn.active { border-color: var(--accent); }
+
+  /* ---- BADGE ---- */
+  .pattern-badge {
+    position: absolute;
+    bottom: var(--space-4);
+    left: var(--space-4);
+    width: clamp(80px, 18%, 108px);
+    height: clamp(80px, 18%, 108px);
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(0.55rem, 1.2vw, 0.7rem);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 1.5;
+    pointer-events: none;
+    transition: opacity 0.15s;
+  }
+
+  .badge-hidden {
+    opacity: 0;
+  }
 
   /* ---- PRODUCT INFO ---- */
   .product-info {
