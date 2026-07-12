@@ -42,6 +42,7 @@ images:
   - /images/patterns/fun-foods/page-front.jpg
   - /images/patterns/fun-foods/page-taco.jpg
   - /images/patterns/fun-foods/page-taco2.jpg
+  - /images/patterns/fun-foods/page-taco3.jpg
   - /images/patterns/fun-foods/page-fries.jpg
   - /images/patterns/fun-foods/page-all4.jpg
   - /images/patterns/fun-foods/page-fries2.jpg
