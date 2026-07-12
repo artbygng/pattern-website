@@ -288,6 +288,8 @@ const { title, tagline, coverImage, etsy_url, accentColor, images, details, play
 <script>
   const thumbBtns = document.querySelectorAll<HTMLButtonElement>('.thumb-btn');
   const mainImg = document.getElementById('gallery-main-img') as HTMLImageElement;
+  const galleryMain = document.querySelector('.gallery-main') as HTMLElement;
+  const galleryThumbs = document.querySelector('.gallery-thumbs') as HTMLElement;
 
   thumbBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -297,6 +299,16 @@ const { title, tagline, coverImage, etsy_url, accentColor, images, details, play
       mainImg.alt = btn.dataset.alt!;
     });
   });
+
+  function syncThumbsHeight() {
+    if (galleryMain && galleryThumbs) {
+      galleryThumbs.style.maxHeight = galleryMain.offsetHeight + 'px';
+    }
+  }
+
+  const ro = new ResizeObserver(syncThumbsHeight);
+  if (galleryMain) ro.observe(galleryMain);
+  syncThumbsHeight();
 </script>
 
 <style>
@@ -363,6 +375,22 @@ const { title, tagline, coverImage, etsy_url, accentColor, images, details, play
     display: flex;
     flex-direction: column;
     gap: var(--space-3);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+
+  .gallery-thumbs::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .gallery-thumbs::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .gallery-thumbs::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 2px;
   }
 
   .thumb-btn {
