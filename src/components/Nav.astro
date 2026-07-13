@@ -37,7 +37,7 @@ const sortedPatterns = allPatterns.sort((a, b) => a.data.title.localeCompare(b.d
                 href={`/patterns/${p.slug}`}
                 class:list={['nav-dropdown-link', { 'nav-dropdown-link--active': currentPath === `/patterns/${p.slug}` }]}
               >
-                {p.data.title}
+                {p.data.title.replace(/ (Quiet Book )?Pattern$/i, '').replace(/^The /, '')}
               </a>
             ))}
             <div class="nav-dropdown-divider"></div>
