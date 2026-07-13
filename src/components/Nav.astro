@@ -54,6 +54,15 @@ const sortedPatterns = allPatterns.sort((a, b) => a.data.title.localeCompare(b.d
           </a>
         </li>
 
+        <li>
+          <a
+            href="/about"
+            class:list={['nav-link', { 'nav-link--active': currentPath === '/about' }]}
+          >
+            About
+          </a>
+        </li>
+
       </ul>
     </nav>
 

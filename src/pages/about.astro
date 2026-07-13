@@ -1,0 +1,198 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="About Mor — Artbygng"
+  description="Mor Naveh is the maker behind Artbygng — crochet PDF patterns for soft, interactive toddler quiet books."
+>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="container">
+      <p class="page-eyebrow">About</p>
+      <h1 class="page-title">Hi, I'm Mor</h1>
+      <p class="page-desc">The maker behind Artbygng</p>
+    </div>
+  </section>
+
+  <!-- ABOUT BODY -->
+  <section class="about-section section-padding">
+    <div class="container about-inner">
+
+      <div class="about-photo">
+        <!--
+          PLACEHOLDER: Replace with your photo.
+          <img src="/images/maker.jpg" alt="Mor Naveh, maker behind Artbygng"
+               width="800" height="1000" loading="lazy" />
+        -->
+        <div class="img-placeholder about-photo-placeholder" aria-hidden="true">
+          Maker photo<br/>Portrait &mdash; 4:5
+        </div>
+      </div>
+
+      <div class="about-text">
+        <!--
+          PLACEHOLDER: Replace with your real bio.
+        -->
+        <p>
+          I design PDF crochet patterns for soft, interactive quiet books &mdash; the kind of
+          handmade toy that grows with a child through their toddler years. Each pattern is
+          built around a theme that sparks imagination: baking, painting, beekeeping,
+          building, and more.
+        </p>
+        <p>
+          Every page is designed to be engaging but not overwhelming. Simple enough
+          to make as a gift, detailed enough to become a keepsake. Download the PDF,
+          gather your yarn, and make something that lasts.
+        </p>
+
+        <!-- CONTACT -->
+        <div class="contact-block">
+          <h2 class="contact-heading">Get in touch</h2>
+          <ul class="contact-list">
+            <li>
+              <a href="mailto:artbygng@gmail.com" class="contact-link">
+                <span class="contact-icon" aria-hidden="true">✉</span>
+                artbygng@gmail.com
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/artbygng" class="contact-link" target="_blank" rel="noopener noreferrer">
+                <span class="contact-icon" aria-hidden="true">◈</span>
+                @artbygng on Instagram
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/artbygng" class="contact-link" target="_blank" rel="noopener noreferrer">
+                <span class="contact-icon" aria-hidden="true">◉</span>
+                artbygng on Facebook
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* ----- PAGE HEADER ----- */
+  .page-header {
+    padding-block: var(--space-20) var(--space-12);
+    text-align: center;
+    background: var(--cream-alt);
+    border-bottom: 1px solid var(--border);
+  }
+
+  @media (max-width: 640px) {
+    .page-header { padding-block: var(--space-12) var(--space-8); }
+  }
+
+  .page-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: var(--space-3);
+    max-width: none;
+  }
+
+  .page-title {
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    margin-bottom: var(--space-3);
+  }
+
+  .page-desc {
+    color: var(--ink-muted);
+    font-size: 1.05rem;
+    max-width: none;
+  }
+
+  /* ----- ABOUT BODY ----- */
+  .about-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+    align-items: start;
+    max-width: 860px;
+    margin-inline: auto;
+  }
+
+  @media (min-width: 680px) {
+    .about-inner {
+      grid-template-columns: 5fr 7fr;
+      gap: var(--space-16);
+    }
+  }
+
+  .about-photo {
+    max-width: 360px;
+    margin-inline: auto;
+    width: 100%;
+  }
+
+  .about-photo-placeholder {
+    aspect-ratio: 4 / 5;
+    width: 100%;
+    min-height: unset;
+    border-radius: var(--radius-lg);
+  }
+
+  .about-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+  }
+
+  .about-text p {
+    color: var(--ink-muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-5);
+  }
+
+  /* ----- CONTACT ----- */
+  .contact-block {
+    margin-top: var(--space-10);
+    padding-top: var(--space-8);
+    border-top: 1px solid var(--border);
+  }
+
+  .contact-heading {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: var(--space-5);
+  }
+
+  .contact-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-size: 1rem;
+    color: var(--ink-muted);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .contact-link:hover {
+    color: var(--ink);
+  }
+
+  .contact-icon {
+    font-size: 1.1rem;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+</style>
