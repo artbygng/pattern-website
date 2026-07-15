@@ -8,31 +8,30 @@ accentColor: "#D4941A"
 featured: true
 skillNotes:
   easy:
-    - "The hexagonal pages are worked in rows of single crochet — the shape comes from simple shaping at the edges, nothing technically different from a square page"
-    - "The bee body is the same basic amigurumi shape repeated — once you've made the first one, the rest go quickly"
-    - "The flowers are small flat rounds, familiar and fast to make once you're in a rhythm"
-    - "Color changes happen between rows, not mid-row, so there's no mid-stitch yarn juggling"
+    - "The pages are a simple hexagon pattern, repeated throughout the book. Meditative, relaxed crocheting"
+    - "Most of the plushy bees are the same basic amigurumi shape repeated — once you've made the first one, the rest go quickly"
+    - "A lot of the shapes are used similary in the book, familiar and fast to make once you're in a rhythm"
+    - "Compared to other books, this one has less pieces that need to be sewn together "
   patient:
-    - "The bees are small 3D amigurumi worked in tight rounds — fiddly to stuff and assemble, but very worth it"
-    - "The sleeping flower page has a layered petal construction that wraps around the bee — takes some care to get the shaping right"
     - "The honeycomb sorting pieces are small hexagons, each one needing its own finishing"
-    - "Joining the hexagonal pages into an accordion book requires careful alignment — lay everything out before you start sewing"
+    - "The sleeping bee page has two layers of petals, each worked into the front/back of the circle in the middle — not a very common pattern, but easy to understand when reading and looking at the pictures"
+    - "Some of the bees in the pattern are a bit smaller - can be a tad fiddly to make"
 faq:
   - q: "The hexagon shape is unusual — does it make it harder to crochet?"
-    a: "Not really. The hexagonal pages are worked flat in rows of single crochet, just with shaping along the edges. If you've crocheted a granny square or any shaped piece, the logic is the same. The shape is what makes the book so distinctive, but it doesn't add significant difficulty."
+    a: "Not really. The hexagonal pages are worked flat in rounds of single crochet, a bit like a circle but with different increases. If you've crocheted a granny square or a circle, the logic is the same. The shape is what makes the book so distinctive, but it doesn't add significant difficulty."
   - q: "How many bees are included in the pattern?"
-    a: "The pattern includes multiple bees — some attached to specific pages and several loose ones that children can fly from flower to flower or place wherever they like. It's one of the most-played-with parts of the book."
+    a: "The pattern includes 5 plushy bees and 2 flat ones — some attached to specific pages and several loose ones that children can fly from flower to flower or place wherever they like. It's what makes the book so interactive."
   - q: "What's the trickiest part of this pattern?"
-    a: "The small 3D bees are the most fiddly — they're tiny amigurumi worked in tight rounds that need careful stuffing and assembly. Everything else is quite approachable, including the hexagonal pages themselves."
+    a: "The small bees are the most fiddly — they're tiny amigurumi worked in rounds that need careful stuffing and assembly. Everything else is quite approachable, including the hexagonal pages themselves."
   - q: "What ages is this best for?"
     a: "Toddlers and preschoolers — roughly 2 to 5. The bees are satisfying to handle and move around, and the activities (sorting honeycombs, placing flowers, dipping the honey dipper) work well for little hands. The removable pieces mean adult supervision is recommended for the youngest children."
   - q: "What do I get with my purchase?"
-    a: "An instant-download PDF with written instructions for every element and how to assemble the book, step-by-step images throughout, and a full materials list. No subscription, no video required — one purchase, yours to keep."
+    a: "An instant-download PDF with written instructions for every element and how to assemble the book, over 270 step-by-step images, and a full materials list. No subscription, no video required — one purchase, yours to keep."
 details:
   - label: "Format"
     value: "PDF instant download"
   - label: "Stitches"
-    value: "magic ring, ch, slst, sc, hdc, inc, dec, dc, tr"
+    value: "magic ring, ch, slst, sc, hdc, inc, dec, dc, tr, picot, FLO, BLO"
   - label: "Hook size"
     value: "4 mm (G)"
   - label: "Skill level"
@@ -56,21 +55,24 @@ flipVideo: ""
 
 ## What's inside the pattern
 
-Busy Beehive is a 6-page crochet quiet book built around a bee and nature theme — and shaped like a hexagon, just like a real honeycomb cell. The pages unfold accordion-style into a full little world, with bees to move around, flowers to rearrange, honeycombs to sort, and a honey pot to dip into.
-Bold yellows, warm pinks, and soft greens — a great gift for children who love animals, nature, and imaginative play.
+Busy Beehive is a 6-page crochet quiet book built around a bee and nature theme. It's hexagon-shaped, just like a real honeycomb cell. In the pages you'll find a full little world, with bees to move around, flowers to rearrange, honeycombs to sort, and a honey pot to dip into.
+Bold yellows, warm pinks, and soft greens — a great gift for children who love animals, nature, and imaginative play. 
+</br>There are removable pieces, so adult supervision is recommended for younger children.
 
 ### The pages
-**The Cover** — A yellow hexagonal page with a winding bee path crocheted into it. Detachable flowers velcro onto the cover — a red tulip, a daisy, and more. Loose bees and a honey dipper round out the set. The whole book closes into a tidy hexagon.
+**The Cover** — A winding bee path from the flower all across the little bridges in the cell. The red tulip is the bee's home it can always go back to. Making the bee fly under the bridges is great fine motor skills practice, and also a lot of fun!
 
-**The Beehive** — A green page with a stacked honeycomb hive hanging from a crocheted branch. Two 3D bees velcro on and off — children can fly them away and bring them back home. Pink daisy flowers sit at the base of the hive.
+**The Flower Garden** — Flowers which move into the pots and out of the, and a bee attached which velcro who can visit the flowers before going back to its home on the page. 
 
-**The Honey Pot** — A pink page featuring a large 3D honey pot labeled "HONEY" with golden honey dripping over the top. The honey dipper rests alongside it. White daisy flowers in the corner complete the scene.
 
-**The Flower Garden** — A blue page with two flower pots — one holding bold orange blooms, one holding yellow sunflowers. The flowers are detachable so children can swap and rearrange them between the pots.
+**The Honeycomb** — 9 hexags honeycomb pieces, each with a part of a path on it — together can be made into a multitude of paths. The pieces attach and detach with velcro, and each piece can be connected to the other ones through the sides of the hexagon.
 
-**The Honeycomb** — A purple page covered in small hexagonal honeycomb pieces in two shades — deep amber and pale cream. Each piece has a marking on it. Sort them, match them, arrange them — a quiet, absorbing activity.
+**The Beehive** — A stacked honeycomb hive hanging from a crocheted branch with two bees plushies which can be taken in and out of the hive — children can fly them away and bring them back home. Pink daisy flowers decorate the sides of the hive.
 
-**Good Night, Bee** — A dark navy page dotted with stars. A sleepy bee is tucked inside a large crocheted lavender flower, peeking out from between soft petals. A cozy, gentle close to the book.
+**The Honey Pot** — A large honey pot labeled "HONEY" with golden honey dripping over the top. The honey dipper can be used inside the pot to stir and take out the honey. White daisy flowers in the corner complete the scene.
+
+
+**Good Night, Bee** — A dark navy page dotted with stars. A sleepy bee is tucked inside a large crocheted lavender flower, peeking out from between soft petals which can be closed when the bee goes to sleep. A cozy, gentle close to the book.
 
 ---
 

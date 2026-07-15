@@ -1,0 +1,374 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { blogCategories } from '../../data/blogCategories';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => import.meta.env.DEV || !data.draft);
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+const { title, description, category, pubDate, updatedDate, coverImage, relatedPatterns } = post.data;
+const categoryMeta = blogCategories[category];
+const formattedDate = pubDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+
+const allPatterns = relatedPatterns.length > 0 ? await getCollection('patterns') : [];
+const linkedPatterns = allPatterns.filter(p => relatedPatterns.includes(p.slug));
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  ogImage={coverImage}
+>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb-bar">
+    <div class="container">
+      <a href="/blog" class="back-link">&larr; All posts</a>
+    </div>
+  </div>
+
+  <!-- POST HEADER -->
+  <section class="post-header section-padding">
+    <div class="container post-header-inner">
+      <a href={`/blog/category/${category}`} class="post-category">{categoryMeta.label}</a>
+      <h1 class="post-title">{title}</h1>
+      <p class="post-desc">{description}</p>
+      <div class="post-meta">
+        <time datetime={pubDate.toISOString()}>{formattedDate}</time>
+        {updatedDate && (
+          <span class="post-updated">
+            &middot; Updated {updatedDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+          </span>
+        )}
+      </div>
+    </div>
+  </section>
+
+  {coverImage ? (
+    <div class="post-cover container">
+      <img src={coverImage} alt={title} width="1200" height="675" loading="eager" />
+    </div>
+  ) : (
+    <div class="post-cover container">
+      <div class="img-placeholder post-cover-placeholder">{title}<br />Cover photo &mdash; 16:9</div>
+    </div>
+  )}
+
+  <!-- Markdown content -->
+  <section class="post-body section-padding">
+    <div class="container">
+      <div class="post-content prose">
+        <Content />
+      </div>
+    </div>
+  </section>
+
+  <!-- Related patterns -->
+  {linkedPatterns.length > 0 && (
+    <section class="related-patterns section-padding">
+      <div class="container related-inner">
+        <h2 class="section-heading">Patterns mentioned in this post</h2>
+        <div class="related-grid">
+          {linkedPatterns.map(pattern => (
+            <a href={`/patterns/${pattern.slug}`} class="related-card">
+              <div class="related-card-img">
+                <img src={pattern.data.coverImage} alt={pattern.data.title} width="300" height="330" loading="lazy" />
+              </div>
+              <div class="related-card-body">
+                <h3>{pattern.data.title}</h3>
+                <span class="related-card-link">See the pattern &rarr;</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- CTA strip -->
+  <section class="cta-strip">
+    <div class="container cta-strip-inner">
+      <div class="cta-strip-text">
+        <p class="cta-eyebrow">Ready to start making?</p>
+        <p class="cta-sub">Browse the full pattern collection on Etsy.</p>
+      </div>
+      <a
+        href="https://www.etsy.com/shop/artbygng"
+        class="btn btn-accent btn-lg"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Shop on Etsy &rarr;
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* ---- BREADCRUMB ---- */
+  .breadcrumb-bar {
+    background: var(--cream-alt);
+    border-bottom: 1px solid var(--border);
+    padding-block: var(--space-3);
+  }
+
+  .back-link {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--ink-muted);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .back-link:hover { color: var(--ink); }
+
+  /* ---- POST HEADER ---- */
+  .post-header {
+    background: var(--cream-alt);
+    padding-bottom: var(--space-10);
+  }
+
+  .post-header-inner {
+    max-width: 72ch;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .post-category {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-decoration: none;
+    margin-bottom: var(--space-4);
+  }
+
+  .post-category:hover {
+    text-decoration: underline;
+  }
+
+  .post-title {
+    font-size: clamp(1.9rem, 4.5vw, 3rem);
+    margin-bottom: var(--space-4);
+  }
+
+  .post-desc {
+    color: var(--ink-muted);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: none;
+    margin-bottom: var(--space-5);
+  }
+
+  .post-meta {
+    font-size: 0.85rem;
+    color: var(--ink-muted);
+  }
+
+  /* ---- COVER IMAGE ---- */
+  .post-cover {
+    margin-top: calc(-1 * var(--space-8));
+  }
+
+  .post-cover img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    display: block;
+  }
+
+  .post-cover-placeholder {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    min-height: unset;
+  }
+
+  /* ---- BODY (prose) ---- */
+  .post-content {
+    max-width: 72ch;
+    margin-inline: auto;
+  }
+
+  .prose :global(h2) {
+    font-family: var(--font-serif);
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    font-weight: 500;
+    color: var(--ink);
+    margin-top: var(--space-10);
+    margin-bottom: var(--space-5);
+    clear: both;
+  }
+
+  .prose :global(h2:first-child) { margin-top: 0; }
+
+  .prose :global(h3) {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-top: var(--space-8);
+    margin-bottom: var(--space-3);
+  }
+
+  .prose :global(p) {
+    color: var(--ink-muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-4);
+  }
+
+  .prose :global(strong) {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .prose :global(a) {
+    color: var(--accent);
+  }
+
+  .prose :global(img) {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+    margin-block: var(--space-6);
+  }
+
+  .prose :global(img.inline-thumb) {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    float: left;
+    margin: 0 var(--space-5) var(--space-4) 0;
+  }
+
+  .prose :global(hr) {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin-block: var(--space-10);
+  }
+
+  .prose :global(ul), .prose :global(ol) {
+    color: var(--ink-muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    padding-left: 1.4em;
+    margin-bottom: var(--space-4);
+  }
+
+  .prose :global(li) {
+    margin-bottom: var(--space-2);
+  }
+
+  /* ---- RELATED PATTERNS ---- */
+  .related-patterns { background: var(--cream-alt); }
+
+  .related-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .section-heading {
+    font-family: var(--font-serif);
+    font-size: clamp(1.4rem, 3.5vw, 1.8rem);
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: var(--space-8);
+    color: var(--ink);
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
+  @media (min-width: 560px) {
+    .related-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .related-card {
+    display: flex;
+    gap: var(--space-4);
+    align-items: center;
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+    text-decoration: none;
+    transition: box-shadow 0.15s;
+  }
+
+  .related-card:hover {
+    box-shadow: 0 6px 20px rgba(42, 40, 37, 0.08);
+  }
+
+  .related-card-img {
+    width: 80px;
+    height: 88px;
+    flex-shrink: 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .related-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .related-card-body h3 {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: var(--space-1);
+  }
+
+  .related-card-link {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--accent);
+  }
+
+  /* ---- CTA STRIP ---- */
+  .cta-strip {
+    background: var(--ink);
+    padding-block: var(--space-12);
+  }
+
+  .cta-strip-inner {
+    display: flex;
+    align-items: center;
+    gap: var(--space-8);
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .cta-eyebrow {
+    font-family: var(--font-serif);
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: var(--space-2);
+    max-width: none;
+  }
+
+  .cta-sub {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: none;
+    margin-bottom: 0;
+  }
+</style>

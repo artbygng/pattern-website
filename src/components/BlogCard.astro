@@ -1,0 +1,158 @@
+---
+import { blogCategories } from '../data/blogCategories';
+
+interface Props {
+  title: string;
+  description: string;
+  slug: string;
+  coverImage?: string;
+  category: keyof typeof blogCategories;
+  pubDate: Date;
+}
+
+const { title, description, slug, coverImage, category, pubDate } = Astro.props;
+const detailUrl = `/blog/${slug}`;
+const categoryMeta = blogCategories[category];
+const formattedDate = pubDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+---
+
+<article class="blog-card">
+  <a href={detailUrl} class="card-img-link" tabindex="-1" aria-hidden="true">
+    <div class="card-img">
+      {coverImage
+        ? <img src={coverImage} alt="" width="600" height="400" loading="lazy" class="card-cover-img" />
+        : <div class="img-placeholder card-img-placeholder">{title}<br />Cover photo</div>
+      }
+    </div>
+  </a>
+
+  <div class="card-body">
+    <a href={`/blog/category/${category}`} class="card-category">{categoryMeta.label}</a>
+    <a href={detailUrl} class="card-title-link">
+      <h2 class="card-title">{title}</h2>
+    </a>
+    <p class="card-desc">{description}</p>
+    <div class="card-footer">
+      <time class="card-date" datetime={pubDate.toISOString()}>{formattedDate}</time>
+      <a href={detailUrl} class="card-more-link">Read &rarr;</a>
+    </div>
+  </div>
+</article>
+
+<style>
+  .blog-card {
+    background: var(--cream);
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .blog-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(42, 40, 37, 0.09);
+  }
+
+  .card-img-link {
+    display: block;
+    overflow: hidden;
+  }
+
+  .card-img {
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    background: var(--cream-alt);
+  }
+
+  .card-cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+  }
+
+  .blog-card:hover .card-cover-img {
+    transform: scale(1.03);
+  }
+
+  .card-img-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    border: none;
+    min-height: unset;
+  }
+
+  .card-body {
+    padding: var(--space-5);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    flex: 1;
+  }
+
+  .card-category {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .card-category:hover {
+    text-decoration: underline;
+  }
+
+  .card-title-link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .card-title {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.35;
+  }
+
+  .card-title-link:hover .card-title {
+    color: var(--accent);
+  }
+
+  .card-desc {
+    font-size: 0.9rem;
+    color: var(--ink-muted);
+    line-height: 1.55;
+    flex: 1;
+    max-width: none;
+  }
+
+  .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    margin-top: var(--space-2);
+  }
+
+  .card-date {
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+  }
+
+  .card-more-link {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--ink-muted);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .card-more-link:hover {
+    color: var(--ink);
+  }
+</style>

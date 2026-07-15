@@ -209,3 +209,63 @@ a:hover {
   min-height: 140px;
   user-select: none;
 }
+
+
+/* ============================================================
+   BLOG (shared between /blog and /blog/category/[category])
+   ============================================================ */
+
+.category-nav {
+  border-bottom: 1px solid var(--border);
+  padding-block: var(--space-5);
+}
+
+.category-nav-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+.category-pill {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink-muted);
+  text-decoration: none;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border);
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+
+.category-pill:hover {
+  color: var(--ink);
+  border-color: var(--ink-muted);
+}
+
+.category-pill--active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--white);
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 580px) {
+  .blog-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 960px) {
+  .blog-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--ink-muted);
+  padding-block: var(--space-16);
+}

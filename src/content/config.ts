@@ -31,4 +31,20 @@ const patterns = defineCollection({
   }),
 });
 
-export const collections = { patterns };
+const blog = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    category: z.enum(['gift-guides', 'comparison', 'reassurance', 'seo-pinterest', 'behind-the-scenes']),
+    pubDate: z.date(),
+    updatedDate: z.date().optional(),
+    coverImage: z.string().optional(),
+    // Unpublished posts are hidden from listings/build in production but visible in `astro dev`.
+    draft: z.boolean().default(true),
+    // Pattern slugs (from the patterns collection) to cross-link/CTA within the post.
+    relatedPatterns: z.array(z.string()).optional().default([]),
+  }),
+});
+
+export const collections = { patterns, blog };
