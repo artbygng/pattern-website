@@ -24,6 +24,11 @@ export const blogCategories = {
     eyebrow: 'Behind the Scenes',
     description: 'The story behind Artbygng, and the makers bringing the patterns to life.',
   },
+  'crocheter-intent': {
+    label: 'What to Make',
+    eyebrow: 'For Crocheters',
+    description: 'Project ideas and inspiration for crocheters deciding what to make next.',
+  },
 } as const;
 
 export type BlogCategory = keyof typeof blogCategories;

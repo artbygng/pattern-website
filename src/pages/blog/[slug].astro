@@ -267,6 +267,14 @@ const linkedPatterns = allPatterns.filter(p => relatedPatterns.includes(p.slug))
     margin-bottom: var(--space-4);
   }
 
+  .prose :global(ul) {
+    list-style: disc;
+  }
+
+  .prose :global(ol) {
+    list-style: decimal;
+  }
+
   .prose :global(li) {
     margin-bottom: var(--space-2);
   }

@@ -20,9 +20,9 @@ const preview  = [...featured, ...others].slice(0, 3);
     <div class="hero-media">
       <img
         src="/images/hero.jpg"
-        alt="The Painter crochet quiet book — a paint palette with colourful felt shapes a toddler can place and rearrange"
-        width="4032"
-        height="3024"
+        alt="Crocheting a quiet book page by hand, surrounded by yarn, hooks, and finished amigurumi toys"
+        width="1774"
+        height="887"
         loading="eager"
         fetchpriority="high"
       />
@@ -140,15 +140,8 @@ const preview  = [...featured, ...others].slice(0, 3);
     <div class="container intro-inner">
 
       <div class="intro-photo">
-        <!--
-          PLACEHOLDER: Replace with a photo of you or a lifestyle shot.
-          Recommended: portrait orientation, 800×1000 px.
-          <img src="/images/maker.jpg" alt="[Your name], maker behind Artbygng"
-               width="800" height="1000" loading="lazy" />
-        -->
-        <div class="img-placeholder intro-photo-placeholder" aria-hidden="true">
-          Maker photo<br/>Portrait &mdash; 4:5
-        </div>
+        <img src="/images/maker-home.jpg" alt="Mor Naveh, maker behind Artbygng, crocheting with a cup of tea"
+             width="896" height="1200" loading="lazy" />
       </div>
 
       <div class="intro-text">
@@ -214,6 +207,7 @@ const preview  = [...featured, ...others].slice(0, 3);
       to top,
       rgba(20, 18, 16, 0.85) 0%,
       rgba(20, 18, 16, 0.45) 45%,
+      rgba(20, 18, 16, 0.55) 62%,
       rgba(20, 18, 16, 0.1) 100%
     );
     display: flex;
@@ -233,6 +227,7 @@ const preview  = [...featured, ...others].slice(0, 3);
     opacity: 0.75;
     margin-bottom: var(--space-3);
     max-width: none;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
   }
 
   .hero-heading {
@@ -242,6 +237,7 @@ const preview  = [...featured, ...others].slice(0, 3);
     color: var(--white);
     margin-bottom: var(--space-4);
     max-width: 18ch;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
   }
 
   .hero-sub {
@@ -249,6 +245,7 @@ const preview  = [...featured, ...others].slice(0, 3);
     opacity: 0.88;
     margin-bottom: var(--space-8);
     max-width: 44ch;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
   }
 
   /* ----- INTRO ----- */
