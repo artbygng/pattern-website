@@ -43,34 +43,11 @@ One thing that is important to mention - knowing how to read patterns is necessa
 
 All you'll need is a bit more patience for a bigger project. Creating many pieces, putting them all together, and the assembly of the book. None of it is harder than creating amigurumi toys, just a little more long term.
 
-If you're still assessing whether a specific pattern is in your range, I've written a whole post breaking down [what "skill level" actually means](/blog/is-this-pattern-hard-to-make) for my patterns.
+If you're still assessing whether a specific pattern is in your range, I've written a whole post breaking down [what "skill level" actually means](/blog/is-this-pattern-hard-to-make-skill-level) for my patterns.
 
-## Materials for a Crochet Busy Book: Yarn, Hooks, and Accessories
+## Materials for a Crochet Busy Book
 
-You don't need much, and you may already have most of it. Here's the full shopping list — I go deeper on brands and substitutions in [what you need before you start](/blog/what-you-need-before-you-start), and every pattern has a full list of specific materials required for it.
-
-### Yarn
-
-Many types and weights of yarn can be used for quiet books. In my books I either use worsted aclyric yarn or a thinner cotten/bamboo yarn.</br>
-The important part is to use the same type of yarn through the book (unless mentioned otherwise), so that the sizes can stay consistent and you don't end up with pieces that don't match.
-All types mentioned above are machine-washable, durable, and hold up to enthusiastic toddler use. 
-Thinner cotton and bamboo yarns will usually be a bit harder to touch (not rough, just a bit harder), but all work very well.
-
-Each pattern will tell you what colors are needed and how much of the yarn you'll need, and you can always let your imagination run wild and try any color you like.</br>
-One of my favorite parts of writing new patterns is seeing what colors my testers chose and how beautiful and unique each book comes out, even though they all came from the same pattern.
-
-### Hook
-
-The pattern will provide instructions on what hook size to use for each patter, but if you've chosen to use a different yarn go with the hook size that allows you to crochet tighter stitches. For stuffed pieces as well as the pages themselves, it is better if there's no space between the stitches. This way the stuffing doesn't come out and the embroidery sheet holding up the page doesn't show. If you're not sure, try going with the size on the lower end suggested on the yarn label or one size smaller. 
-
-### Accessories
-
-- Fiberfill stuffing, for some of the play pieces
-- A yarn/tapestry needle, for assembly and weaving in ends
-- Scissors
-- Velcro (a lot of patterns call for them - all of mine do)
-- Platic embroidery canvas for page sturdiness
-- Some patterns call for stitch markers
+You don't need much, and you may already have most of it. Beyond your yarn and hook, there are a couple more things you may not have,. I go into the list of materials, recommended yarns, and hook sizes in a lot more depth [What You Need to Crochet a Quiet Book](/blog/what-you-need-before-you-start-materials).
 
 <!-- IMAGE 3: Flat-lay of materials — yarn cakes in brand-palette colors, hooks, stuffing, tapestry needle, stitch markers on a cream cloth. Alt text below. -->
 
@@ -141,8 +118,6 @@ I'm putting together a full photo walkthrough of this stage in [how pages become
 A quiet book is a project, usually not a weekend make unless you're very fast (I'm definitely not 🤭) — but it's a project made of small, achievable pieces, which makes it easier to finish.
 
 A base page is an evening of TV crochet. A play piece is an evening or less. A reasonable rhythm is one page a week — pieces and all — which finishes a six-page book in about six weeks of relaxed, no-pressure crochet. Crocheting for a December birthday? Start in October and you'll finish with time to spare. One of my customers wrote that the pattern "actually went super fast and I'm almost done" — the pile-of-small-projects structure really does move quicker than it looks.
-
-I break down realistic per-page time estimates in [how long does it take to crochet a quiet book](/blog/how-long-does-it-take-to-crochet-a-quiet-book).
 
 ## 5 Beginner-Friendly Quiet Book Page Ideas
 
@@ -227,9 +202,8 @@ PRODUCTION NOTES — DELETE EVERYTHING BELOW BEFORE PUBLISHING
 - Etsy shop link is filled in (both occurrences). Pattern links point at real
   /patterns/* pages already live on the site.
 - Internal links point at posts that already exist as drafts in this collection:
-  /blog/is-this-pattern-hard-to-make, /blog/what-you-need-before-you-start,
-  /blog/finishing-and-assembly, /blog/how-long-does-it-take-to-crochet-a-quiet-book,
-  /blog/crochet-quiet-book-page-ideas. Publish those alongside this one (or before it)
+  /blog/is-this-pattern-hard-to-make-skill-level, /blog/what-you-need-before-you-start-materials,
+  /blog/finishing-and-assembly, /blog/crochet-quiet-book-page-ideas. Publish those alongside this one (or before it)
   so the links resolve to live pages instead of draft-only ones.
 - The "what to crochet for a 2-year-old" post mentioned in earlier drafts of this piece
   isn't part of the current content plan, so that link was pointed at /patterns instead.

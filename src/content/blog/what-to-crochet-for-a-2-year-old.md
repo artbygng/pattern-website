@@ -67,11 +67,13 @@ A hand puppet turns you into the toy — instant puppet shows, silly voices, "th
 
 ## 10. A crochet quiet book (the showstopper)
 
+![Crochet quiet book pages from the collection — honey pot, Halloween treats, pizza, and the Bake Time cover](/images/blog/what-to-crochet-for-a-2-year-old-quiet-book.jpg)
+
 If you want the gift everyone remembers, crochet a quiet book. A soft book where every page has an activity — pieces to move, textures to feel, little scenarios to play out. It's the biggest project on this list, but the payoff is worth it. If you can make a bib or a stuffed animal, you can make a quiet book.
 
 It's the gift that gets kept — played with for years, then saved in the keepsake box. I've written a [full beginner's guide to crocheting a quiet book](/blog/how-to-crochet-a-quiet-book-beginners-guide), and if you'd rather skip the design work, my quiet book patterns (like the bestselling [Bake Time](/patterns/bake-time)) walk you through every page with photos at every step.
 
-![Crochet quiet book pages from the collection — honey pot, Halloween treats, pizza, and the Bake Time cover](/images/blog/what-to-crochet-for-a-2-year-old-quiet-book.jpg)
+
 
 **[Browse my quiet book & play food patterns on Etsy →](https://www.etsy.com/shop/artbygng)**
 
