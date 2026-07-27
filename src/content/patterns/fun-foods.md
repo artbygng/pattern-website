@@ -57,7 +57,6 @@ images:
     alt: "Close-up of a rolled sushi piece from the Sushi page, showing the salmon and cucumber filling inside"
 customerQuotes: []
 playVideo: "https://www.youtube.com/embed/Nt9RZcjRvOg?rel=0"
-flipVideo: ""
 sneakPeekImage: "/images/patterns/fun-foods/sneak-peek.jpg"
 ---
 

@@ -8,9 +8,7 @@ draft: false
 relatedPatterns: ["bake-time", "fun-foods"]
 ---
 
-import GiftList from '../../components/GiftList.astro';
-
-{/* IMAGE 1 (hero): Flat-lay of 3–4 handmade gifts together on a neutral background — your Bake Time book open in the center, a few Fun Foods pieces scattered around it. Warm light, brand palette props (plum/mustard/cream cloth). This is the Pinterest pin image too, so shoot a vertical (2:3) crop of the same scene. */}
+<!-- IMAGE 1 (hero): Flat-lay of 3–4 handmade gifts together on a neutral background — your Bake Time book open in the center, a few Fun Foods pieces scattered around it. Warm light, brand palette props (plum/mustard/cream cloth). This is the Pinterest pin image too, so shoot a vertical (2:3) crop of the same scene. -->
 
 Handmade gifts have a way of sticking around — the thought we put into creating something for someone goes a long way and can be very meaningful. If you're looking for a special gift that would last, or you just feel like making a small person happy, here are nine handmade gifts that come in under $25 — some you can buy ready-made from independent makers, and most you can make yourself with some time and a materials list.
 
@@ -18,19 +16,17 @@ I've included a **"make it yourself"** box under each idea with the main supplie
 
 **All nine at a glance:**
 
-<GiftList items={[
-  { text: "Crochet quiet book — the keepsake tier", anchor: "#1-a-crochet-quiet-book-the-gift-that-becomes-a-keepsake" },
-  { text: "Crochet play food — for pretend-play chefs", anchor: "#2-crochet-play-food-for-the-toddler-who-cooks" },
-  { text: "Felt play food set — no crochet required", anchor: "#3-a-felt-play-food-set-no-crochet-required" },
-  { text: "Crinkle taggie toy — best for ages 1–2", anchor: "#4-a-crinkle-taggie-toy-the-under-one-crowds-favorite-sound" },
-  { text: "No-sew bean bags — easiest project on the list", anchor: "#5-no-sew-bean-bags--a-toss-game" },
-  { text: "Wooden car ramp — for vehicle lovers", anchor: "#6-a-wooden-car-ramp-from-scrap-wood" },
-  { text: "Playdough kit — no craft skills needed", anchor: "#7-a-playdough-kit" },
-  { text: "Felt story board — grows with the child", anchor: "#8-a-felt-story-board" },
-  { text: "Lacing toy — builds fine motor skills", anchor: "#9-a-lacing-toy" },
-]} />
+1. [Crochet quiet book](#1-a-crocheted-quiet-book-the-gift-that-becomes-a-keepsake) — the keepsake tier
+2. [Crochet play food](#2-crocheted-fun-foods-book-for-the-little-chef) — for pretend-play chefs
+3. [Felt play food set](#3-a-felt-play-food-set-no-crochet-required) — no crochet required
+4. [Crinkle taggie toy](#4-a-crinkle-taggie-toy-babies-love-the-crackle) — best for ages 1–2
+5. [No-sew bean bags](#5-no-sew-bean-bags--a-toss-game) — easiest project on the list
+6. [Wooden car ramp](#6-a-wooden-car-ramp-from-scrap-wood) — for vehicle lovers
+7. [Playdough kit](#7-a-playdough-kit) — no craft skills needed
+8. [Felt story board](#8-a-felt-story-board) — grows with the child
+9. [Lacing toy](#9-a-lacing-toy) — builds fine motor skills
 
-{/* *This post contains affiliate links, which means I may earn a small commission if you buy through them — at no extra cost to you. I only link to supplies I'd use myself.* */}
+<!-- *This post contains affiliate links, which means I may earn a small commission if you buy through them — at no extra cost to you. I only link to supplies I'd use myself.* -->
 
 ## 1. A crocheted quiet book (the gift that becomes a keepsake)
 
@@ -42,10 +38,10 @@ My [Bake Time quiet book pattern](https://www.etsy.com/il-en/listing/1495771677/
 
 **Make it yourself:**
 - The pattern: [Bake Time on Etsy](https://www.etsy.com/il-en/listing/1495771677/crochet-bake-time-quiet-book-pattern)
-- Worsted yarn (the pattern will list the ones used in the pictures) {/* — [AMAZON: cotton yarn multipack] */}
-- A 4mm crochet hook {/* — [AMAZON: crochet hook set] */}
-- Fiberfill stuffing for the padded pieces {/* — [AMAZON: premium fiberfill] */}
-- Plastic embroidery sheets for sturdiness {/* — [AMAZON: premium fiberfill] */}
+- Worsted yarn (the pattern will list the ones used in the pictures) <!-- — [AMAZON: cotton yarn multipack] -->
+- A 4mm crochet hook <!-- — [AMAZON: crochet hook set] -->
+- Fiberfill stuffing for the padded pieces <!-- — [AMAZON: premium fiberfill] -->
+- Plastic embroidery sheets for sturdiness <!-- — [AMAZON: premium fiberfill] -->
 
 ## 2. Crocheted fun foods book (for the little chef)
 
@@ -57,66 +53,66 @@ My [Fun Foods quiet book pattern](https://www.etsy.com/il-en/listing/1761898842/
 
 **Make it yourself:**
 - The pattern: [Fun Foods on Etsy](https://www.etsy.com/il-en/listing/1761898842/fun-foods-crochet-quiet-book-pattern)
-- Worsted yarn (the pattern will list the ones used in the pictures) {/* — [AMAZON: cotton yarn multipack] */}
+- Worsted yarn (the pattern will list the ones used in the pictures) <!-- — [AMAZON: cotton yarn multipack] -->
 - Crochet hook + stuffing (same supplies as the quiet book — one materials haul covers both patterns)
 
 ## 3. A felt play food set (no crochet required)
 
-{/* IMAGE 4: If you make a sample: a few felt foods (e.g. a felt egg + toast) next to your crochet Fun Foods pieces — a nice "two ways to do play food" shot. Otherwise: flat-lay of felt sheets, scissors, and embroidery floss as a "materials" photo. */}
+<!-- IMAGE 4: If you make a sample: a few felt foods (e.g. a felt egg + toast) next to your crochet Fun Foods pieces — a nice "two ways to do play food" shot. Otherwise: flat-lay of felt sheets, scissors, and embroidery floss as a "materials" photo. -->
 
 If crochet isn't your craft, felt gets you to play food faster — most pieces are two shapes stitched around a bit of stuffing. Fun Cloth Crafts keeps a [roundup of 25+ free felt food patterns](https://www.funclothcrafts.com/all-posts/free-felt-food-patterns-tutorials) — donuts, pizza, avocados, fried eggs — and Jonesin' For Taste has a [gift-focused felt food collection](https://jonesinfortaste.com/diy-felt-food-gifts/) if you want to build a themed set (breakfast set, taco night, tea party).
 
 **Make it yourself:**
-- Wool-blend felt sheets in assorted colors {/* — [AMAZON: felt sheet bundle] */}
-- Embroidery floss + needles {/* — [AMAZON: embroidery floss set] */}
-- A small bag of fiberfill {/* — [AMAZON: premium fiberfill] */}
+- Wool-blend felt sheets in assorted colors <!-- — [AMAZON: felt sheet bundle] -->
+- Embroidery floss + needles <!-- — [AMAZON: embroidery floss set] -->
+- A small bag of fiberfill <!-- — [AMAZON: premium fiberfill] -->
 
 ## 4. A crinkle taggie toy (babies love the crackle)
 
-{/* IMAGE 5: Only if you make one — otherwise skip the image and let the section run text-only. Don't reuse the tutorial's photos. */}
+<!-- IMAGE 5: Only if you make one — otherwise skip the image and let the section run text-only. Don't reuse the tutorial's photos. -->
 
 For younger toddlers (and a gift that works for a new-sibling situation), the crinkle taggie is a classic: a soft square that crackles when squeezed, edged with ribbon loops in different textures. Hello Sewing has a clear [step-by-step crinkle taggie tutorial](https://hellosewing.com/crinkle-taggie-toy/) — it's a genuine beginner sewing project, one straight-line seam away from done.
 
 **Make it yourself:**
-- Two fat quarters of tightly woven cotton {/* — [AMAZON: fat quarter bundle] */}
-- Grosgrain ribbon in assorted widths {/* — [AMAZON: grosgrain ribbon variety pack] */}
-- Crinkle material {/* — [AMAZON: crinkle paper for baby toys] */}
+- Two fat quarters of tightly woven cotton <!-- — [AMAZON: fat quarter bundle] -->
+- Grosgrain ribbon in assorted widths <!-- — [AMAZON: grosgrain ribbon variety pack] -->
+- Crinkle material <!-- — [AMAZON: crinkle paper for baby toys] -->
 
 ## 5. No-sew bean bags + a toss game
 
 Bean bags are the rare gift that works from age one to age six — toss them in a basket, squeeze them, or sort them by color. Fleece Fun has a sweet [toddler bean bag tutorial](https://www.fleecefun.com/toddler-bean-bags-handmade-gift-idea-chrissy-muse-morning/) with ribbon-loop corners, and Nifty Mom's [no-sew version](https://niftymom.com/2016/07/easy-no-sew-bean-bags/) skips the needle entirely. Pair them with a hand-decorated box with holes cut in the lid and you've made a whole game for under $10.
 
 **Make it yourself:**
-- Cotton fabric scraps or fat quarters {/* — [AMAZON: fat quarter bundle] */}
+- Cotton fabric scraps or fat quarters <!-- — [AMAZON: fat quarter bundle] -->
 - Dried beans or rice (grocery store is cheapest)
-- Rick rack ribbon for the corners {/* — [AMAZON: grosgrain ribbon variety pack] */}
+- Rick rack ribbon for the corners <!-- — [AMAZON: grosgrain ribbon variety pack] -->
 
 ## 6. A wooden car ramp from scrap wood
 
-{/* IMAGE 6: Only if you (or a handy relative) build one. Otherwise text-only. */}
+<!-- IMAGE 6: Only if you (or a handy relative) build one. Otherwise text-only. -->
 
 For the vehicle-obsessed toddler, a wooden ramp tower beats almost any store-bought track — cars zigzag down level after level, and it never needs batteries. Anika's DIY Life has a [full car ramp build tutorial](https://www.anikasdiylife.com/diy-toy-car-ramp/) (about two hours of work), and Buggy and Buddy has a [simpler roads-and-ramps version](https://buggyandbuddy.com/make-wooden-toy-car-ramp/) if power tools aren't your thing. Made from scrap wood, the cost is mostly paint.
 
 **Make it yourself:**
 - Scrap lumber or a small board from the hardware store
-- Sandpaper assortment {/* — [AMAZON: sandpaper variety pack] */}
-- Non-toxic paint or finish {/* — [AMAZON: child-safe wood finish] */}
+- Sandpaper assortment <!-- — [AMAZON: sandpaper variety pack] -->
+- Non-toxic paint or finish <!-- — [AMAZON: child-safe wood finish] -->
 
 ## 7. A playdough kit
 
 The trick that makes this gift feel *abundant* is that it's not just a tub of playdough — it's a whole themed kit built for playing with it. Simply Full of Delight shows how to [assemble a playdough kit](https://simplyfullofdelight.com/easy-diy-playdough-kit/) around a theme — farm, dinosaurs, mermaids — with mini rolling pins, cutters, and figurines packed into a compartment box. You're not making the playdough itself, just curating and assembling the kit around it; grab a few tubs (store-bought is easiest) and tuck them in alongside the tools.
 
 **Make it yourself:**
-- Mini cookie cutters + wooden rolling pin {/* — [AMAZON: playdough tool kit] */}
-- A compartment storage box {/* — [AMAZON: compartment craft box] */}
+- Mini cookie cutters + wooden rolling pin <!-- — [AMAZON: playdough tool kit] -->
+- A compartment storage box <!-- — [AMAZON: compartment craft box] -->
 
 ## 8. A felt story board
 
 A felt board is a blank stage: cut out felt animals, shapes, or story characters, and a toddler will narrate for an hour. Jules & Co has a [DIY felt board tutorial](https://julesandco.net/diy-felt-board-plus-3-easy-toddler-activities/) that's just cardboard, felt, and a needle — and the same felt sheets you bought for the play food (idea #3) supply the story pieces. This one scales beautifully: gift the board now, gift new piece sets on the next occasion.
 
 **Make it yourself:**
-- Large felt piece + assorted felt sheets {/* — [AMAZON: felt sheet bundle] */}
-- Sturdy cardboard or a canvas board {/* — [AMAZON: canvas panel] */}
+- Large felt piece + assorted felt sheets <!-- — [AMAZON: felt sheet bundle] -->
+- Sturdy cardboard or a canvas board <!-- — [AMAZON: canvas panel] -->
 
 ## 9. A lacing toy
 
@@ -124,7 +120,7 @@ For toddlers ready for the next fine-motor step, a lacing toy is a great follow-
 
 **Make it yourself:**
 - Cardboard (an empty cereal box works fine)
-- A shoelace or lacing cord {/* — [AMAZON: lacing beads and cord set] */}
+- A shoelace or lacing cord <!-- — [AMAZON: lacing beads and cord set] -->
 - A hole punch
 
 ## Which handmade gift should you pick?
@@ -135,13 +131,11 @@ Want a bigger project that turns into a real keepsake? Get the [Bake Time](https
 
 For crocheters, the answer to [what to crochet for a 2-year-old](/blog/what-to-crochet-for-a-2-year-old) is almost always *something they can play with* — toddlers are past the blanket-and-booties stage. Both of the patterns mentioned in this article are quiet books, just at different scales: Fun Foods is the faster win at four food-themed pages (great amigurumi practice, and quicker to finish), while Bake Time is the eight-page showstopper with more page variety. If you're comfortable with amigurumi basics — working in the round, stuffing small pieces — you already have the skill for these patterns, and [what "skill level" actually means](/blog/is-this-pattern-hard-to-make-skill-level) breaks down exactly what that involves. My patterns are written step by step with photos at every stage, so there's no guesswork along the way.
 
-{/* IMAGE 7 (closing): Your strongest single Bake Time shot — the trust-anchor photo — right above the final CTA. */}
+<!-- IMAGE 7 (closing): Your strongest single Bake Time shot — the trust-anchor photo — right above the final CTA. -->
 
 **[Browse all my crochet quiet book patterns on Etsy →](https://www.etsy.com/shop/artbygng)**
 
-
- 
-{/* ============================================================
+<!-- ============================================================
 PRODUCTION NOTES — DELETE EVERYTHING BELOW BEFORE PUBLISHING
 =============================================================
 
@@ -178,42 +172,20 @@ PRODUCTION NOTES — DELETE EVERYTHING BELOW BEFORE PUBLISHING
   for a 2 year old" — served by the new closing H2 "If you already crochet".
 - The H2s deliberately contain secondary keywords (crochet quiet book, crochet play food,
   felt play food, crinkle taggie, playdough kit).
-- The "at a glance" list targets the featured snippet for list-style queries. The anchor
-  links assume GitHub-style heading slugs (Astro's default) — verify they resolve once
-  the site is built.
+- The "at a glance" list targets the featured snippet for list-style queries.
 - Image ALT TEXT to use (also serves image SEO):
   hero: "handmade gifts for toddlers under $25 - crochet quiet book and play food flat lay"
   img2: "crochet quiet book pattern for toddlers - Bake Time book held open"
   img3: "crochet play food for toddlers - Fun Foods amigurumi pieces on a plate"
   img4: "felt play food materials - felt sheets and embroidery floss"
   img7: "handmade crochet quiet book toddler gift - Bake Time"
-- Internal links to add once those pages exist: /patterns/bake-time, /patterns/fun-foods,
-  /blog/is-this-pattern-hard-to-make-skill-level (from the crocheter closing section),
-  /blog/what-to-crochet-for-a-2-year-old (future Tier 2 post — link both ways).
+- Internal links: done — /patterns/bake-time, /patterns/fun-foods,
+  /blog/is-this-pattern-hard-to-make-skill-level, /blog/what-to-crochet-for-a-2-year-old.
 
-## Schema markup (add to the Astro layout for this post)
-ItemList JSON-LD — helps list-style rich results:
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "9 Handmade Gifts for Toddlers Under $25",
-  "numberOfItems": 9,
-  "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "Crochet quiet book"},
-    {"@type": "ListItem", "position": 2, "name": "Crochet play food"},
-    {"@type": "ListItem", "position": 3, "name": "Felt play food set"},
-    {"@type": "ListItem", "position": 4, "name": "Crinkle taggie toy"},
-    {"@type": "ListItem", "position": 5, "name": "No-sew bean bags"},
-    {"@type": "ListItem", "position": 6, "name": "Wooden car ramp"},
-    {"@type": "ListItem", "position": 7, "name": "Playdough kit"},
-    {"@type": "ListItem", "position": 8, "name": "Felt story board"},
-    {"@type": "ListItem", "position": 9, "name": "Lacing toy"}
-  ]
-}
-```
-(BlogPosting schema should come from the site-wide blog layout — flag for the Claude Code build.)
+## Schema markup
+ItemList JSON-LD is generated automatically by src/pages/blog/[slug].astro from this
+post's numbered "N. Title" H2 headings — no manual schema needed here.
 
 ## Sources used (tutorial links verified working, Jul 15 2026)
 All nine external tutorial links were fetched and confirmed on-topic.
-============================================================ */}
+============================================================ -->

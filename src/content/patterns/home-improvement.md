@@ -62,7 +62,6 @@ images:
     alt: "Sealing the Bathtub page — a crocheted silicone tube sealing the tub edge next to hot and cold taps and a shower rod"
 customerQuotes: []
 playVideo: "https://www.youtube.com/embed/WlvUtuUPITs?rel=0"
-flipVideo: ""
 sneakPeekImage: "/images/patterns/home-improvement/sneak-peek.jpg"
 ---
 

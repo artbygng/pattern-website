@@ -62,7 +62,6 @@ images:
     alt: "Close-up of the trick-or-treat bag beside the Haunted House page and the friendly ghost"
 customerQuotes: []
 playVideo: "https://www.youtube.com/embed/6gpMJf7oJbY?rel=0"
-flipVideo: ""
 sneakPeekImage: "/images/patterns/halloween/sneak-peek.jpg"
 ---
 

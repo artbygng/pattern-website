@@ -36,7 +36,6 @@ images:
     alt: "Memory Game Cookies page — a dozen crocheted cookies that flip over to reveal matching colored shapes underneath"
 
 playVideo: "https://www.youtube.com/embed/XR7TvoAXhZ8?rel=0"
-flipVideo: "https://www.youtube.com/embed/72rhTQ6fXVM?rel=0"
 sneakPeekImage: "/images/patterns/bake-time/sneak-peek.jpg"
 skillNotes:
   easy:

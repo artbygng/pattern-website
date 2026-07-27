@@ -13,9 +13,7 @@ const patterns = defineCollection({
     heroImage: z.string().optional(),
     images: z.array(z.object({ src: z.string(), alt: z.string() })).optional().default([]),
     details: z.array(z.object({ label: z.string(), value: z.string() })).optional().default([]),
-    videoUrl: z.string().optional(),
     playVideo: z.string().optional(),
-    flipVideo: z.string().optional(),
     // Static "sneak peek" composite shown in place of a flip-through video.
     sneakPeekImage: z.string().optional(),
     skillNotes: z.object({

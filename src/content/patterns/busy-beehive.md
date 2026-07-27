@@ -59,7 +59,6 @@ images:
     alt: "Back cover of the closed Busy Beehive quiet book — the Good Night Bee page with its sleepy bee tucked in a purple flower"
 customerQuotes: []
 playVideo: "https://www.youtube.com/embed/670iT-GkBiA?rel=0"
-flipVideo: ""
 sneakPeekImage: "/images/patterns/busy-beehive/sneak-peek.jpg"
 ---
 

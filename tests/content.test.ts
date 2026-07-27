@@ -4,18 +4,12 @@ import { describe, it, expect } from 'vitest';
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import matter from 'gray-matter';
+import { blogCategoryList } from '../src/data/blogCategories';
 
 const ROOT = join(__dirname, '..');
 const PUBLIC = join(ROOT, 'public');
 
-const BLOG_CATEGORIES = [
-  'gift-guides',
-  'comparison',
-  'reassurance',
-  'seo-pinterest',
-  'behind-the-scenes',
-  'crocheter-intent',
-];
+const BLOG_CATEGORIES = blogCategoryList.map((c) => c.slug);
 
 function loadCollection(dir: string) {
   const full = join(ROOT, 'src/content', dir);
@@ -68,7 +62,7 @@ function collectFrontmatterImages(data: Record<string, any>): string[] {
   const paths: string[] = [];
   if (typeof data.coverImage === 'string') paths.push(data.coverImage);
   if (typeof data.heroImage === 'string') paths.push(data.heroImage);
-  if (Array.isArray(data.images)) paths.push(...data.images);
+  if (Array.isArray(data.images)) paths.push(...data.images.map((img: { src: string }) => img.src));
   if (data.skillNotes?.instructionImage) paths.push(data.skillNotes.instructionImage);
   if (Array.isArray(data.customerQuotes)) {
     for (const q of data.customerQuotes) if (q.image) paths.push(q.image);
