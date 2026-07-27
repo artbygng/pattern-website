@@ -1,7 +1,7 @@
 ---
-title: "How a Crochet PDF Pattern Works: What's Actually Inside the File"
-description: "What's inside my quiet book crochet PDF patterns: an instant-download file with written instructions for every piece, hundreds of step photos, and a materials list — not a physical item. Here's how it's organized."
-category: reassurance
+title: "How a Crochet PDF Pattern Works (What's Inside)"
+description: "An instant-download PDF with written instructions, hundreds of step photos, and a materials list — not a physical item."
+category: how-it-works
 pubDate: 2026-07-21
 coverImage: "/images/blog/how-the-pdf-pattern-works-hero.jpg"
 draft: true

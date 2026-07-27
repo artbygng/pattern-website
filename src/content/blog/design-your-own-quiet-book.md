@@ -1,7 +1,7 @@
 ---
 title: "How to Design Your Own Crochet Quiet Book"
-description: "A step-by-step walkthrough for designing your own crochet quiet book from scratch — planning pages, crocheting the base and play pieces, and assembling the finished book."
-category: seo-pinterest
+description: "A step-by-step walkthrough for designing your own crochet quiet book from scratch — planning pages, crocheting pieces, and assembling the finished book."
+category: ideas-inspiration
 pubDate: 2026-07-16
 coverImage: "/images/blog/design-your-own-quiet-book-hero.jpg"
 draft: false

@@ -11,11 +11,28 @@ const sorted = [...allPatterns].sort((a, b) => {
   if (!a.data.featured && b.data.featured) return 1;
   return a.data.title.localeCompare(b.data.title);
 });
+
+// CollectionPage/ItemList structured data (JSON-LD) for the pattern collection.
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Crochet Pattern Collection',
+  mainEntity: {
+    '@type': 'ItemList',
+    itemListElement: sorted.map((pattern, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: new URL(`/patterns/${pattern.slug}`, Astro.site).toString(),
+      name: pattern.data.title,
+    })),
+  },
+};
 ---
 
 <BaseLayout
   title="Crochet Pattern Collection"
-  description="PDF crochet patterns for soft toddler quiet books. Five themes: Bake Time, Painter, Busy Beehive, Home Improvement, and Fun Foods."
+  description="PDF crochet patterns for soft toddler quiet books. Six themes: Bake Time, Busy Beehive, Fun Foods, Halloween, Home Improvement, and Painter."
+  structuredData={structuredData}
 >
 
   <!-- PAGE HEADER -->

@@ -1,11 +1,20 @@
 ---
 title: "How to Crochet a Quiet Book: A Beginner's Guide"
 description: "Learn how to crochet a quiet book step by step — yarn and hook choices, page construction, interactive pieces, and how to join pages into a finished book."
-category: seo-pinterest
+category: ideas-inspiration
 pubDate: 2026-07-16
 coverImage: "/images/blog/how-to-crochet-a-quiet-book-hero.jpg"
 draft: false
 relatedPatterns: ["bake-time", "painter", "busy-beehive", "fun-foods"]
+faq:
+  - q: "Is a crochet quiet book hard to make?"
+    a: "If you have background in crochet, no (if you don't, learning the motor skills needed for crochet can be the tricky but very rewarding part). The techniques for quiet books are the same crochet basics - chains, basic stitches, working rows and rounds, and basic sewing. The challenge is patience across many pieces, not difficulty."
+  - q: "How many pages should a quiet book have?"
+    a: "I usually create books that have 4-8 pages. Under 4 can't be made into a book, and over 8 might get a little bulky."
+  - q: "Can I make a quiet book if I've never crocheted amigurumi?"
+    a: "You'll need to know the basic crochet stitches to get started. Some of the more complex shapes you'll want to create might call for more complex stitches, and you can learn those as well, there are many free online resources for that."
+  - q: "What age is a crochet sensory book good for?"
+    a: "From my experience, 2-5 years old. Old enough for the fine-motor play, young enough to be delighted by it. For younger children supervision is needed when playing with the detachable parts."
 ---
 
 <!-- NOTE: description still mentions "how to join pages" — steps moved to the design-your-own post; author may want to revise. -->
@@ -49,7 +58,7 @@ If you're still assessing whether a specific pattern is in your range, I've writ
 
 ## What materials are needed for a Crochet Busy Book?
 
-You don't need much, and you may already have most of it. Beyond your yarn and hook, there are a couple more things you may not have. I go into the list of materials, recommended yarns, and hook sizes in a lot more depth [What You Need to Crochet a Quiet Book](/blog/what-you-need-before-you-start-materials).
+You don't need much, and you may already have most of it. Beyond your yarn and hook, there are a couple more things you may not have. I go into the list of materials, recommended yarns, and hook sizes in a lot more depth in the [Crochet Quiet Book Materials & Yarn Checklist](/blog/what-you-need-before-you-start-materials).
 
 <img src="/images/blog/what-you-need-materials-hero.jpg" alt="Flat-lay of quiet book materials: yarn in brand-palette colors, hooks, stuffing, tapestry needle, and stitch markers" />
 

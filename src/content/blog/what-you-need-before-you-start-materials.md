@@ -1,11 +1,20 @@
 ---
-title: "What You Need to Crochet a Quiet Book: Yarn, Hooks & the Full Materials Checklist"
+title: "Crochet Quiet Book Materials & Yarn Checklist"
 description: "Everything you need to crochet a quiet book: the best yarn for crochet toys, which hook size to use, and the full materials checklist."
-category: reassurance
+category: how-it-works
 pubDate: 2026-07-18
 coverImage: "/images/blog/what-you-need-materials-hero.jpg"
 draft: false
 relatedPatterns: []
+faq:
+  - q: "Can I use acrylic yarn for a crochet quiet book?"
+    a: "Worsted-weight acrylic is what I've used for most of my patterns — pair it with a 4 mm hook and check that it's machine-washable (most are). The yarns to avoid aren't about fiber but texture: anything fuzzy or chunky will be a bit harder to create the details with."
+  - q: "What hook size is best for crochet toys?"
+    a: "On the lower end or smaller than the yarn label suggests. I use 2.75 mm for DK yarns and 4 mm for worsted. The tighter gauge keeps stuffing hidden and makes pieces sturdy enough for toddler hands."
+  - q: "Do I need a sewing machine to make a quiet book?"
+    a: "No — the only sewing in a quiet book is hand-sewing: attaching velcro with ordinary thread and joining pieces with a tapestry needle. If you can thread a needle, you have the entire skill set."
+  - q: "How much yarn does a quiet book take?"
+    a: "It depends on how many pages there are in your book. My books range from about 900 to 1400 yards in different colors. The play pieces are small, so you need modest amounts of several colors rather than many full skeins, and leftovers from other projects work well."
 ---
 
 <!-- IMAGE 1 (hero): the full "everything you need" flat-lay — yarn in your palette, hook, fiberfill, velcro, buttons, plastic canvas sheet, tapestry needle, stitch markers. This IS the post in one photo, and it's the save-magnet for Pinterest. Vertical 2:3 crop for the pin. -->

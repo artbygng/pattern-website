@@ -1,11 +1,20 @@
 ---
-title: "Are Crochet Quiet Books Hard to Make? A Skill-Level Guide"
-description: "Are crochet quiet books hard? Honestly: no — they're long. If you've crocheted before, you have what you need to get started. Here's what 'Intermediate' really means."
-category: reassurance
+title: "Are Crochet Quiet Books Hard to Make?"
+description: "Are crochet quiet books hard? Honestly: no — they're long. If you've crocheted before, you already have what you need to get started."
+category: how-it-works
 pubDate: 2026-07-18
 coverImage: "/images/blog/is-this-pattern-hard-hero.jpg"
 draft: false
 relatedPatterns: ["bake-time", "painter", "fun-foods"]
+faq:
+  - q: "Are crochet quiet books good for beginners?"
+    a: "Crochet quiet books are a great fit for advanced beginners — if you're comfortable working in both rows and rounds, finishing and stuffing pieces, you're ready to start. If you've never crocheted at all, make one or two other projects first (a ball, a hat) and then come back to a quiet book."
+  - q: "What stitches do I need to know to crochet a quiet book?"
+    a: "Each pattern will list the stitches required so you can plan ahead and decide if the pattern is right for you. You don't need to know every stitch before you start; you learn new ones as you go, there are a lot of videos online."
+  - q: "Do I have to sew the pieces together?"
+    a: "Yes, some sewing is part of making a quiet book: pieces are sewn onto their pages and to each other. It's simple sewing with photo guidance, not tailoring — but it's a part of the project."
+  - q: "How long does it take to crochet a quiet book?"
+    a: "At a relaxed pace, about a page per week. Faster if you have more time — the pieces are small enough that momentum builds quickly."
 ---
 
 <!-- IMAGE 1 (hero): a single small in-progress piece (e.g. a Bake Time cupcake) in your hands, hook still in the loop — the visual argument that "it's just one small piece at a time." Vertical 2:3 crop for Pinterest. -->

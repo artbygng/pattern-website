@@ -1,7 +1,7 @@
 ---
 title: "What If I Get Stuck? Support While You Crochet"
 description: "What kind of help is available if you get stuck mid-pattern, and how to reach out."
-category: reassurance
+category: how-it-works
 pubDate: 2026-09-28
 draft: true
 stub: true

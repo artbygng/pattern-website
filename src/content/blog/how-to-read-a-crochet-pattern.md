@@ -1,11 +1,20 @@
 ---
-title: "How to Read a Crochet Pattern (So You Never Feel Lost Mid-Project)"
-description: "Learn how to read a crochet pattern step by step — abbreviations like ch, sc, and inc, rounds vs. rows, stitch counts, and how photo-guided patterns keep you on track."
-category: reassurance
+title: "How to Read a Crochet Pattern, Step by Step"
+description: "Learn how to read a crochet pattern step by step — abbreviations like ch, sc, and inc, rounds vs. rows, and stitch counts."
+category: how-it-works
 pubDate: 2026-07-18
 coverImage: "/images/blog/how-to-read-a-crochet-pattern-hero.jpg"
 draft: false
 relatedPatterns: ["painter"]
+faq:
+  - q: "What does inc mean in crochet?"
+    a: "inc means increase: work two stitches (usually two single crochets, but check what the pattern says) into the same stitch. It adds one stitch to your total and is how flat circles and rounded pieces grow. Its opposite, dec, merges two stitches into one."
+  - q: "What do the numbers in parentheses/brackets at the end of a row mean?"
+    a: "That's the stitch count — how many stitches you should have when the row or round is complete. Count and compare after every round; it's the fastest way to catch a missed or doubled stitch while it's still easy to fix."
+  - q: "How do I know if a pattern uses US or UK terms?"
+    a: "The pattern should say somewhere in the beginning, or even in the pattern page in purchased patterns."
+  - q: "Do I need to know how to read crochet charts?"
+    a: "No — charts (the diagrams of symbols) are a separate system, and written photo-guided patterns usually don't require them. Sometimes charts are added to a written pattern, but it should say in the pattern page what kind of pattern it is."
 ---
 
 <!-- IMAGE 1 (hero): a pattern PDF open (on a tablet or printed) next to the in-progress piece it describes — e.g. a half-finished Bake Time cupcake sitting on the printed page. Vertical 2:3 crop of the same scene for Pinterest. -->

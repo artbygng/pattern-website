@@ -1,0 +1,19 @@
+{
+  "redirects": [
+    {
+      "source": "/blog/category/seo-pinterest",
+      "destination": "/blog/category/ideas-inspiration",
+      "permanent": true
+    },
+    {
+      "source": "/blog/category/crocheter-intent",
+      "destination": "/blog/category/what-to-make",
+      "permanent": true
+    },
+    {
+      "source": "/blog/category/reassurance",
+      "destination": "/blog/category/how-it-works",
+      "permanent": true
+    }
+  ]
+}

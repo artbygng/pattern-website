@@ -42,15 +42,24 @@ details:
   - label: "Terminology"
     value: "US"
 images:
-  - /images/patterns/painter/page-front.jpg
-  - /images/patterns/painter/page-front3.jpg
-  - /images/patterns/painter/page-pieces.jpg
-  - /images/patterns/painter/page-hearts.jpg
-  - /images/patterns/painter/page-open.jpg
-  - /images/patterns/painter/page-hearts2.jpg
-  - /images/patterns/painter/page-hearts3.jpg
-  - /images/patterns/painter/page-crayons.jpg
-  - /images/patterns/painter/page-cover2.jpg
+  - src: "/images/patterns/painter/page-front.jpg"
+    alt: "The Painter cover page — a palette shape with 7 detachable color spots, a crocheted brush, and THE PAINTER embroidered on"
+  - src: "/images/patterns/painter/page-front3.jpg"
+    alt: "Close-up of The Painter cover page — a hand placing one of the detachable color spots onto the palette"
+  - src: "/images/patterns/painter/page-pieces.jpg"
+    alt: "The Drawing Page — a sun-shaped arrangement of crayon-colored sticks on a canvas, with two mesh pouches holding extra shape pieces"
+  - src: "/images/patterns/painter/page-hearts.jpg"
+    alt: "Coloring with Hearts page — a stitched heart outline surrounded by color spots, with red and orange hearts tucked in mesh pouches"
+  - src: "/images/patterns/painter/page-open.jpg"
+    alt: "The Painter quiet book open flat, showing the Drawing Page and the Coloring with Hearts page side by side"
+  - src: "/images/patterns/painter/page-hearts2.jpg"
+    alt: "Close-up of the Coloring with Hearts page — mixing colors with the brush next to a yellow heart and mesh pouches of blue and purple hearts"
+  - src: "/images/patterns/painter/page-hearts3.jpg"
+    alt: "Close-up of the Coloring with Hearts page — the brush touching a cream-colored heart, with an orange heart in its mesh pouch"
+  - src: "/images/patterns/painter/page-crayons.jpg"
+    alt: "Crayons & Bunny page — a set of colorful crocheted crayons next to a pink bunny with floppy ears and embroidered whiskers"
+  - src: "/images/patterns/painter/page-cover2.jpg"
+    alt: "The Painter quiet book held open, showing the cover palette next to the edge of the Coloring with Hearts page"
 customerQuotes:
   - quote: "Clear and fun to make"
     author: "Chloe"

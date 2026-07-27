@@ -1,11 +1,20 @@
 ---
-title: "What to Crochet for a 2 Year Old: 10 Gifts They'll Really Love"
+title: "What to Crochet for a 2-Year-Old: 10 Gift Ideas"
 description: "Wondering what to crochet for a 2 year old? Ten free patterns to do the trick - bibs, quiet books, amigurumi and more."
-category: crocheter-intent
+category: what-to-make
 pubDate: 2026-07-16
 coverImage: "/images/blog/what-to-crochet-for-a-two-year-old-hero.jpg"
 draft: false
 relatedPatterns: ["bake-time"]
+faq:
+  - q: "What's the best yarn for toddler toys?"
+    a: "Depending on the make, I'd recommend worsted-weight acrylic, cotton or bamboo yarn, and chunky yarn. Chunky yarn is great for fluffy stuffed animals, cotton and bamboo can be used for makes with finer details, and acrylic yarn for interactive toys. You can work with a hook one size smaller than the label suggests so stuffing stays hidden and pieces keep their structure."
+  - q: "Can a beginner crochet a toy for a 2-year-old?"
+    a: "Yes — start with the simpler projects labeled for beginners, like a small stuffed animal or a simple hat."
+  - q: "How long do these projects take?"
+    a: "The bib and finger puppets might take an evening each depending on your speed. A hat or small amigurumi will take a bit longer. A full quiet book can take a few weeks at a relaxed pace."
+  - q: "Are crochet toys safe for a 2-year-old?"
+    a: "Well-made crochet toys are a great fit for this age — use tight stitches, firm stuffing, embroidered faces instead of plastic eyes, and no long cords. Always check finished toys for loose parts and supervise play, especially with removable pieces."
 ---
 
 <!-- IMAGE 1 (hero): a "toddler gift pile" — your finished crochet pieces (toys, quiet book pages/pieces) grouped together. Vertical 2:3 crop of the same scene for Pinterest. -->

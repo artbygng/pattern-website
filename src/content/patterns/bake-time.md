@@ -18,15 +18,23 @@ details:
   - label: "Terminology"
     value: "US"
 images:
-  - /images/patterns/bake-time/page-front.jpg
-  - /images/patterns/bake-time/page-pie.jpg
-  - /images/patterns/bake-time/page-mixer.jpg
-  - /images/patterns/bake-time/page-cookie.jpg
-  - /images/patterns/bake-time/page-cupcakes.jpg
-  - /images/patterns/bake-time/page-cake.jpg
-  - /images/patterns/bake-time/page-brownie.jpg
-  - /images/patterns/bake-time/page-memory.jpg
-  
+  - src: "/images/patterns/bake-time/page-front.jpg"
+    alt: "Bake Time quiet book cover — a page with dripping yellow birthday cake frosting and the words Bake Time stitched on"
+  - src: "/images/patterns/bake-time/page-pie.jpg"
+    alt: "Piece of cake page — a scalloped pie stand holding a strawberry-topped cake slice with removable whipped cream, a lemon slice, and a cherry"
+  - src: "/images/patterns/bake-time/page-mixer.jpg"
+    alt: "Stand Mixer page — a red and gray crocheted stand mixer with an egg and three woven baskets holding fried-egg pieces"
+  - src: "/images/patterns/bake-time/page-cookie.jpg"
+    alt: "Chocolate Chip Cookie page — a big crocheted cookie with removable chocolate chips, next to a milk carton and a cracker"
+  - src: "/images/patterns/bake-time/page-cupcakes.jpg"
+    alt: "Cupcake Shop page — crocheted cupcakes in pink, blue, and purple that match to their own color-coordinated liners"
+  - src: "/images/patterns/bake-time/page-cake.jpg"
+    alt: "Five-tier Cake page — five colorful numbered cake tiers stacked in descending size"
+  - src: "/images/patterns/bake-time/page-brownie.jpg"
+    alt: "Cookie Dough page — an irregularly shaped dough piece decorated with colorful velcro dots and a crocheted rolling pin"
+  - src: "/images/patterns/bake-time/page-memory.jpg"
+    alt: "Memory Game Cookies page — a dozen crocheted cookies that flip over to reveal matching colored shapes underneath"
+
 playVideo: "https://www.youtube.com/embed/XR7TvoAXhZ8?rel=0"
 flipVideo: "https://www.youtube.com/embed/72rhTQ6fXVM?rel=0"
 sneakPeekImage: "/images/patterns/bake-time/sneak-peek.jpg"

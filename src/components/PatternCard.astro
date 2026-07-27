@@ -1,4 +1,6 @@
 ---
+import { getPatternName } from '../utils/patternName';
+
 interface Props {
   title: string;
   tagline: string;
@@ -9,6 +11,7 @@ interface Props {
 
 const { title, tagline, slug, coverImage, etsy_url } = Astro.props;
 const detailUrl = `/patterns/${slug}`;
+const patternName = getPatternName(title);
 ---
 
 <article class="pattern-card">
@@ -16,7 +19,7 @@ const detailUrl = `/patterns/${slug}`;
     <div class="card-img">
       {coverImage
         ? <>
-            <img src={coverImage} alt={`${title} crochet quiet book pattern`} width="600" height="800" loading="lazy" class="card-cover-img" />
+            <img src={coverImage} alt={`${patternName} quiet book pattern cover`} width="600" height="800" loading="lazy" class="card-cover-img" />
             <img src="/images/badge-crochet-pdf-pattern.png" alt="" aria-hidden="true" class="card-badge" width="438" height="438" />
           </>
         : <div class="img-placeholder card-img-placeholder">{title}<br />Cover photo</div>

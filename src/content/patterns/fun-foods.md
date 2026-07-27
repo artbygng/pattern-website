@@ -39,14 +39,22 @@ details:
   - label: "Terminology"
     value: "US"
 images:
-  - /images/patterns/fun-foods/page-front.jpg
-  - /images/patterns/fun-foods/page-taco.jpg
-  - /images/patterns/fun-foods/page-taco2.jpg
-  - /images/patterns/fun-foods/page-fries.jpg
-  - /images/patterns/fun-foods/page-all4.jpg
-  - /images/patterns/fun-foods/page-fries2.jpg
-  - /images/patterns/fun-foods/page-sushi.jpg
-  - /images/patterns/fun-foods/page-sushi2.jpg
+  - src: "/images/patterns/fun-foods/page-front.jpg"
+    alt: "Pizza page — a round pizza with detachable tomato, mushroom, and basil toppings that velcro on"
+  - src: "/images/patterns/fun-foods/page-taco.jpg"
+    alt: "Taco page — a yellow taco shell filled with lettuce, tomato, cheese, and meat toppings, with a grocery bag pocket below"
+  - src: "/images/patterns/fun-foods/page-taco2.jpg"
+    alt: "Close-up of the Taco page — toppings being tucked into the taco's grocery bag pocket"
+  - src: "/images/patterns/fun-foods/page-fries.jpg"
+    alt: "French Fries page — a potato on a cutting board, a crocheted knife, and fries in a red carton, with YUM stitched on"
+  - src: "/images/patterns/fun-foods/page-all4.jpg"
+    alt: "Four pages from the Fun Foods quiet book: the Taco with its grocery bag, the Pizza with toppings, the French Fries with cutting board and knife, and the Sushi page"
+  - src: "/images/patterns/fun-foods/page-fries2.jpg"
+    alt: "Close-up of the French Fries page — lifting the potato off the cutting board next to the crocheted knife"
+  - src: "/images/patterns/fun-foods/page-sushi.jpg"
+    alt: "Sushi page — nori and rice with salmon and cucumber fillings, and a mesh pocket to hold the pieces"
+  - src: "/images/patterns/fun-foods/page-sushi2.jpg"
+    alt: "Close-up of a rolled sushi piece from the Sushi page, showing the salmon and cucumber filling inside"
 customerQuotes: []
 playVideo: "https://www.youtube.com/embed/Nt9RZcjRvOg?rel=0"
 flipVideo: ""

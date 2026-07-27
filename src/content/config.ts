@@ -11,7 +11,7 @@ const patterns = defineCollection({
     accentColor: z.string().optional().default('#C4714F'),
     featured: z.boolean().default(false),
     heroImage: z.string().optional(),
-    images: z.array(z.string()).optional().default([]),
+    images: z.array(z.object({ src: z.string(), alt: z.string() })).optional().default([]),
     details: z.array(z.object({ label: z.string(), value: z.string() })).optional().default([]),
     videoUrl: z.string().optional(),
     playVideo: z.string().optional(),
@@ -38,7 +38,7 @@ const blog = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    category: z.enum(['gift-guides', 'comparison', 'reassurance', 'seo-pinterest', 'behind-the-scenes', 'crocheter-intent']),
+    category: z.enum(['gift-guides', 'comparison', 'how-it-works', 'ideas-inspiration', 'behind-the-scenes', 'what-to-make']),
     pubDate: z.date(),
     updatedDate: z.date().optional(),
     coverImage: z.string().optional(),
@@ -48,6 +48,8 @@ const blog = defineCollection({
     stub: z.boolean().default(false),
     // Pattern slugs (from the patterns collection) to cross-link/CTA within the post.
     relatedPatterns: z.array(z.string()).optional().default([]),
+    // Mirrors the post's own "## FAQ" section, for FAQPage JSON-LD. Keep in sync with the body.
+    faq: z.array(z.object({ q: z.string(), a: z.string() })).optional().default([]),
   }),
 });
 

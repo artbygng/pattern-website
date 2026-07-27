@@ -1,7 +1,7 @@
 ---
 title: "Can I Change the Colors or Theme?"
 description: "Yes — how to customize yarn colors and small details while still following the pattern."
-category: reassurance
+category: how-it-works
 pubDate: 2026-10-19
 draft: true
 stub: true

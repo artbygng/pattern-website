@@ -1,7 +1,7 @@
 ---
 title: "Crochet Gift Ideas for Baby Showers"
 description: "Handmade crochet gift ideas that make a memorable baby shower present."
-category: seo-pinterest
+category: ideas-inspiration
 pubDate: 2026-11-09
 draft: true
 stub: true

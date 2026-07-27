@@ -40,16 +40,26 @@ details:
   - label: "Terminology"
     value: "US"
 images:
-  - /images/patterns/home-improvement/page-front.jpg
-  - /images/patterns/home-improvement/page-front2.jpg
-  - /images/patterns/home-improvement/page-roof.jpg
-  - /images/patterns/home-improvement/page-paint.jpg
-  - /images/patterns/home-improvement/page-tools.jpg
-  - /images/patterns/home-improvement/page-picture.jpg
-  - /images/patterns/home-improvement/page-faucet.jpg
-  - /images/patterns/home-improvement/page-clog.jpg
-  - /images/patterns/home-improvement/page-window.jpg
-  - /images/patterns/home-improvement/page-silicone.jpg
+  - src: "/images/patterns/home-improvement/page-front.jpg"
+    alt: "The House cover page, closed — a gray house facade with a red roof, two lattice windows, and a blue front door"
+  - src: "/images/patterns/home-improvement/page-front2.jpg"
+    alt: "Close-up of the House cover page — a window shutter lifted to reveal a blue interior"
+  - src: "/images/patterns/home-improvement/page-roof.jpg"
+    alt: "Close-up of the House cover page — a loose roof tile being lifted off the red roof"
+  - src: "/images/patterns/home-improvement/page-paint.jpg"
+    alt: "Painting the Wall page — a brick wall with red, blue, and yellow paint colors under a lifted flap, and a crocheted paintbrush"
+  - src: "/images/patterns/home-improvement/page-tools.jpg"
+    alt: "All the loose tools and pieces from the Home Improvement pattern laid out: hammer, wrench, spray bottle, silicone tube, rag, roller, and picture frame"
+  - src: "/images/patterns/home-improvement/page-picture.jpg"
+    alt: "Hanging a Picture page — using the plushy hammer to hang a sun-and-flower picture frame on the wall"
+  - src: "/images/patterns/home-improvement/page-faucet.jpg"
+    alt: "Unclogging the Sink page — a wrench being used on a curved gray pipe below a sink with swirly water"
+  - src: "/images/patterns/home-improvement/page-clog.jpg"
+    alt: "Close-up of the Unclogging the Sink page — the curved pipe detaching with velcro"
+  - src: "/images/patterns/home-improvement/page-window.jpg"
+    alt: "Cleaning the Window page — a gray dirt blob on the window, with a spray cleaning bottle and rag nearby"
+  - src: "/images/patterns/home-improvement/page-silicone.jpg"
+    alt: "Sealing the Bathtub page — a crocheted silicone tube sealing the tub edge next to hot and cold taps and a shower rod"
 customerQuotes: []
 playVideo: "https://www.youtube.com/embed/WlvUtuUPITs?rel=0"
 flipVideo: ""

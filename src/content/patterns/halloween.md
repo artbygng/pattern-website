@@ -1,6 +1,6 @@
 ---
 title: "Halloween Quiet Book Pattern"
-tagline: "A crochet PDF pattern for a Halloween-themed quiet book — a haunted house to decorate, a cauldron to brew, candy trees to arrange, and a trick-or-treat bag to fill."
+tagline: "A crochet PDF pattern for a Halloween-themed quiet book — a haunted house, a cauldron, candy trees, and a trick-or-treat bag to fill."
 coverImage: "/images/patterns/halloween/cover.jpg"
 heroImage: "/images/patterns/halloween/hero.jpg"
 etsy_url: "https://www.etsy.com/il-en/listing/1757246912/halloween-crochet-quiet-book-pdf-pattern"
@@ -40,16 +40,26 @@ details:
   - label: "Terminology"
     value: "US"
 images:
-  - /images/patterns/halloween/page-front.jpg
-  - /images/patterns/halloween/page-front2.jpg
-  - /images/patterns/halloween/page-front3.jpg
-  - /images/patterns/halloween/page-front4.jpg
-  - /images/patterns/halloween/page-cauldron.jpg
-  - /images/patterns/halloween/page-candy-trees.jpg
-  - /images/patterns/halloween/page-tree.jpg
-  - /images/patterns/halloween/page-tree2.jpg
-  - /images/patterns/halloween/page-all.jpg
-  - /images/patterns/halloween/page-all2.jpg
+  - src: "/images/patterns/halloween/page-front.jpg"
+    alt: "Haunted House page — a black house with candy-piece windows, two jack-o-lanterns, a gravestone, and a full moon"
+  - src: "/images/patterns/halloween/page-front2.jpg"
+    alt: "Haunted House page, closed book view — the haunted house with its candy windows and jack-o-lanterns"
+  - src: "/images/patterns/halloween/page-front3.jpg"
+    alt: "Close-up of the friendly ghost in a witch hat next to loose candy pieces on the Haunted House page"
+  - src: "/images/patterns/halloween/page-front4.jpg"
+    alt: "Halloween quiet book closed, showing the Haunted House cover with jack-o-lanterns, a gravestone, and a full moon"
+  - src: "/images/patterns/halloween/page-cauldron.jpg"
+    alt: "Cauldron page — a black witch's cauldron over a crackling fire, with a swirled lollipop being dropped in"
+  - src: "/images/patterns/halloween/page-candy-trees.jpg"
+    alt: "Candy Trees page — colorful lollipop-shaped trees in blue, green, yellow, and red along a dotted path"
+  - src: "/images/patterns/halloween/page-tree.jpg"
+    alt: "Apple Tree page — a round green apple tree with red candies, next to the friendly ghost in a witch hat"
+  - src: "/images/patterns/halloween/page-tree2.jpg"
+    alt: "Close-up of the Apple Tree page's hidden pocket, revealing a red and yellow candy tucked inside"
+  - src: "/images/patterns/halloween/page-all.jpg"
+    alt: "The full Halloween quiet book set: the trick-or-treat bag, the friendly ghost, the closed haunted house book, and loose candy pieces"
+  - src: "/images/patterns/halloween/page-all2.jpg"
+    alt: "Close-up of the trick-or-treat bag beside the Haunted House page and the friendly ghost"
 customerQuotes: []
 playVideo: "https://www.youtube.com/embed/6gpMJf7oJbY?rel=0"
 flipVideo: ""

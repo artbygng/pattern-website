@@ -9,11 +9,26 @@ const allPatterns = await getCollection('patterns');
 const featured = allPatterns.filter(p => p.data.featured);
 const others   = allPatterns.filter(p => !p.data.featured);
 const preview  = [...featured, ...others].slice(0, 3);
+
+// Organization structured data (JSON-LD).
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Artbygng',
+  url: Astro.site?.toString(),
+  logo: new URL('/favicon.png', Astro.site).toString(),
+  sameAs: [
+    'https://www.instagram.com/artbygng',
+    'https://www.facebook.com/artbygng',
+    'https://www.etsy.com/shop/artbygng',
+  ],
+};
 ---
 
 <BaseLayout
   title="Crochet PDF Patterns for Toddler Quiet Books"
   description="Hand-crafted PDF crochet patterns for soft, interactive toddler quiet books. Shop Artbygng on Etsy."
+  structuredData={structuredData}
 >
 
   <section class="hero" aria-label="Hero">
@@ -46,7 +61,7 @@ const preview  = [...featured, ...others].slice(0, 3);
 
       <div class="section-header">
         <h2>The Collection</h2>
-        <p>Five quiet book themes. Each one a complete toddler activity book you crochet at home.</p>
+        <p>Six quiet book themes. Each one a complete toddler activity book you crochet at home.</p>
       </div>
 
       <div class="card-grid">

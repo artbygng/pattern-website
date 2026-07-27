@@ -39,15 +39,24 @@ details:
   - label: "Terminology"
     value: "US"
 images:
-  - /images/patterns/busy-beehive/page-front.jpg
-  - /images/patterns/busy-beehive/page-front2.jpg
-  - /images/patterns/busy-beehive/page-beehive.jpg
-  - /images/patterns/busy-beehive/page-honey.jpg
-  - /images/patterns/busy-beehive/page-path.jpg
-  - /images/patterns/busy-beehive/page-all.jpg
-  - /images/patterns/busy-beehive/page-back.jpg
-  - /images/patterns/busy-beehive/page-closed.jpg
-  - /images/patterns/busy-beehive/page-closedback.jpg
+  - src: "/images/patterns/busy-beehive/page-front.jpg"
+    alt: "Busy Beehive quiet book open to two pages — a pink Honey Pot page and a green Beehive page with a hanging honeycomb hive"
+  - src: "/images/patterns/busy-beehive/page-front2.jpg"
+    alt: "Busy Beehive cover page — a winding bee path leading to a red tulip, with removable bridge pieces along the way"
+  - src: "/images/patterns/busy-beehive/page-beehive.jpg"
+    alt: "Beehive page — a hanging honeycomb hive on a branch with two plushy bees and pink flowers"
+  - src: "/images/patterns/busy-beehive/page-honey.jpg"
+    alt: "Honey Pot page — a honey jar labeled HONEY with a honey dipper and white daisies"
+  - src: "/images/patterns/busy-beehive/page-path.jpg"
+    alt: "Honeycomb page — nine hexagon pieces, each with part of a path on it, that connect together in different arrangements"
+  - src: "/images/patterns/busy-beehive/page-all.jpg"
+    alt: "Four pages from the Busy Beehive quiet book: the Honey Pot, the Flower Garden with two potted flowers, the Honeycomb sorting page, and the Good Night Bee page"
+  - src: "/images/patterns/busy-beehive/page-back.jpg"
+    alt: "Good Night Bee page — a sleepy bee peeking out from a purple flower's open petals on a starry night background"
+  - src: "/images/patterns/busy-beehive/page-closed.jpg"
+    alt: "Busy Beehive quiet book closed, showing the cover with its winding bee path and red tulip"
+  - src: "/images/patterns/busy-beehive/page-closedback.jpg"
+    alt: "Back cover of the closed Busy Beehive quiet book — the Good Night Bee page with its sleepy bee tucked in a purple flower"
 customerQuotes: []
 playVideo: "https://www.youtube.com/embed/670iT-GkBiA?rel=0"
 flipVideo: ""

@@ -1,10 +1,24 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+// AboutPage structured data (JSON-LD).
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  name: 'About Mor',
+  description: 'Mor Naveh is the maker behind Artbygng — crochet PDF patterns for soft, interactive toddler quiet books.',
+  mainEntity: {
+    '@type': 'Person',
+    name: 'Mor Naveh',
+    worksFor: { '@type': 'Organization', name: 'Artbygng' },
+  },
+};
 ---
 
 <BaseLayout
   title="About Mor"
   description="Mor Naveh is the maker behind Artbygng — crochet PDF patterns for soft, interactive toddler quiet books."
+  structuredData={structuredData}
 >
 
   <!-- PAGE HEADER -->
