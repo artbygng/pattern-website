@@ -4,6 +4,7 @@ description: "Yes — how to customize yarn colors and small details while still
 category: reassurance
 pubDate: 2026-10-19
 draft: true
+stub: true
 relatedPatterns: []
 ---
 

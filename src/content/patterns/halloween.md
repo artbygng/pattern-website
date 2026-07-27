@@ -53,13 +53,14 @@ images:
 customerQuotes: []
 playVideo: "https://www.youtube.com/embed/6gpMJf7oJbY?rel=0"
 flipVideo: ""
+sneakPeekImage: "/images/patterns/halloween/sneak-peek.jpg"
 ---
 
 ## What's inside the pattern
 
 The Halloween quiet book is a 4-page play book built around a trick-or-treat theme. Each page is a different Halloween scene, with detachable pieces to place, rearrange, and play with. Alongside the book pages, the pattern includes a crocheted trick-or-treat bag, a set of loose candy pieces, and a friendly ghost — so the whole thing becomes a little Halloween play set.
 Bright colors, cute characters, and a bag full of candy to sort through — a great gift for kids who love Halloween and imaginative play. </br>
-There are removable pieces, so adult supervision is recommended for younger children.
+There are removable pieces, so adult supervision is needed for younger children.
 
 ### The pages
 **The Haunted House** — A crocheted haunted house at night, with two smiling orange pumpkins, a full moon, and a friendly ghost. The windows velcro on nad off and are candy pieces that can be collected into the bag. Kids can decide which treats the house is handing out and swap them around. 

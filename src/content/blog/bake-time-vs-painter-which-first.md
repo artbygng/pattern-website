@@ -4,6 +4,7 @@ description: "A side-by-side comparison of the Bake Time and Painter patterns to
 category: comparison
 pubDate: 2026-08-24
 draft: true
+stub: true
 relatedPatterns: ["bake-time", "painter"]
 ---
 

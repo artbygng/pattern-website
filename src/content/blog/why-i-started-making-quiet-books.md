@@ -4,6 +4,7 @@ description: "The story behind Artbygng and why quiet books became the focus."
 category: behind-the-scenes
 pubDate: 2026-11-23
 draft: true
+stub: true
 relatedPatterns: []
 ---
 

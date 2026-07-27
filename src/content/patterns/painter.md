@@ -58,6 +58,7 @@ customerQuotes:
     date: "Aug 27, 2024"
 playVideo: "https://www.youtube.com/embed/3HLrb4j-zAk?rel=0"
 flipVideo: ""
+sneakPeekImage: "/images/patterns/painter/sneak-peek.jpg"
 ---
 
 ## What's inside the pattern

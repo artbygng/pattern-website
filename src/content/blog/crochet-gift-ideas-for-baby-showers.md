@@ -4,6 +4,7 @@ description: "Handmade crochet gift ideas that make a memorable baby shower pres
 category: seo-pinterest
 pubDate: 2026-11-09
 draft: true
+stub: true
 relatedPatterns: []
 ---
 

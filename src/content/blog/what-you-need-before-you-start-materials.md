@@ -4,7 +4,7 @@ description: "Everything you need to crochet a quiet book: the best yarn for cro
 category: reassurance
 pubDate: 2026-07-18
 coverImage: "/images/blog/what-you-need-materials-hero.jpg"
-draft: true
+draft: false
 relatedPatterns: []
 ---
 
@@ -70,7 +70,7 @@ It depends on how many pages there are in your book. My books range from about 9
 
 If you have some yarn at home, you can start with the smaller pieces in the pattern and buy what you need when you know what's missing. </br></br>If you're wondering you're at the right level of crochet for quiet books, read more about it in my [beginner's guide to crocheting a quiet book](/blog/how-to-crochet-a-quiet-book-beginners-guide).
 
-**[Pick your pattern on Etsy →](https://www.etsy.com/shop/artbygng)**
+
 
 <!-- ============================================================
 PRODUCTION NOTES — DELETE EVERYTHING BELOW BEFORE PUBLISHING

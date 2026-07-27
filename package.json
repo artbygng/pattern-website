@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "test": "vitest run"
   },
   "dependencies": {
     "@astrojs/mdx": "^3.1.9",
@@ -15,5 +16,9 @@
   "allowScripts": {
     "esbuild@0.21.5": true,
     "sharp@0.33.5": true
+  },
+  "devDependencies": {
+    "gray-matter": "^4.0.3",
+    "vitest": "^4.1.10"
   }
 }

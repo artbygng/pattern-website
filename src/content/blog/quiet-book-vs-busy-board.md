@@ -4,6 +4,7 @@ description: "How crochet quiet books and wooden busy boards compare for toddler
 category: comparison
 pubDate: 2026-08-31
 draft: true
+stub: true
 relatedPatterns: []
 ---
 

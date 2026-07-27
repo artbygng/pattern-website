@@ -1,10 +1,10 @@
 ---
-title: "Are Crochet Quiet Books Hard to Make? An Skill-Level Guide"
+title: "Are Crochet Quiet Books Hard to Make? A Skill-Level Guide"
 description: "Are crochet quiet books hard? Honestly: no — they're long. If you've crocheted before, you have what you need to get started. Here's what 'Intermediate' really means."
 category: reassurance
 pubDate: 2026-07-18
 coverImage: "/images/blog/is-this-pattern-hard-hero.jpg"
-draft: true
+draft: false
 relatedPatterns: ["bake-time", "painter", "fun-foods"]
 ---
 
@@ -81,7 +81,6 @@ At a relaxed page, about a page per week. Faster if you have more time — the p
 
 If you enjoy working on projects that take a little longer, or if you don't mind putting a project away for a little while and coming back to it later, I'd say go for it. The feeling satisfaction when it is done is amazing, and so is the joy of giving it as a gift to a child you care about. So go on, give it try ❤️
 
-**[Pick your first quiet book pattern on Etsy →](https://www.etsy.com/shop/artbygng)**
 
 <!-- ============================================================
 PRODUCTION NOTES — DELETE EVERYTHING BELOW BEFORE PUBLISHING
@@ -99,9 +98,9 @@ PRODUCTION NOTES — DELETE EVERYTHING BELOW BEFORE PUBLISHING
   one is labeled Intermediate, none Easy/Beginner. Claim holds as written; no need to
   call out a "beginner pick" pattern since none carries that label.
 - Sewing description ("pieces sewn onto pages, pages joined into a book,
-  whip-stitch-level") — same open question as the pillar post's assembly section
-  (Step 6 there). Reconcile both posts once finishing-and-assembly is written; don't
-  let the two describe different methods.
+  whip-stitch-level") — same open question as the assembly walkthrough in
+  [How to Design Your Own Quiet Book](/blog/design-your-own-quiet-book) (Step 6 there).
+  Reconcile the two; don't let them describe different methods.
 - Stitch claims kept deliberately general per Mor's note — no specific stitch list
   enumerated, matches the pattern of "basics + everything introduced with photos."
 - "Six weeks at a page-a-week pace" — consistent with the pillar post and the

@@ -4,6 +4,7 @@ description: "Gift ideas for a first birthday that go beyond another plastic toy
 category: gift-guides
 pubDate: 2026-08-03
 draft: true
+stub: true
 relatedPatterns: ["bake-time"]
 ---
 

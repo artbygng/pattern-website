@@ -16,6 +16,8 @@ const patterns = defineCollection({
     videoUrl: z.string().optional(),
     playVideo: z.string().optional(),
     flipVideo: z.string().optional(),
+    // Static "sneak peek" composite shown in place of a flip-through video.
+    sneakPeekImage: z.string().optional(),
     skillNotes: z.object({
       easy: z.array(z.string()),
       patient: z.array(z.string()),
@@ -42,6 +44,8 @@ const blog = defineCollection({
     coverImage: z.string().optional(),
     // Unpublished posts are hidden from listings/build in production but visible in `astro dev`.
     draft: z.boolean().default(true),
+    // Outline-only stubs with no real content yet — hidden from listings everywhere, including `astro dev`.
+    stub: z.boolean().default(false),
     // Pattern slugs (from the patterns collection) to cross-link/CTA within the post.
     relatedPatterns: z.array(z.string()).optional().default([]),
   }),

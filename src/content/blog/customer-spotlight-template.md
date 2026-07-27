@@ -4,6 +4,7 @@ description: "A repeatable spotlight format celebrating a customer's finished qu
 category: behind-the-scenes
 pubDate: 2026-11-30
 draft: true
+stub: true
 relatedPatterns: ["bake-time"]
 ---
 

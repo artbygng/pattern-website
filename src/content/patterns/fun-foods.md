@@ -50,6 +50,7 @@ images:
 customerQuotes: []
 playVideo: "https://www.youtube.com/embed/Nt9RZcjRvOg?rel=0"
 flipVideo: ""
+sneakPeekImage: "/images/patterns/fun-foods/sneak-peek.jpg"
 ---
 
 ## What's inside the pattern

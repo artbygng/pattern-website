@@ -4,7 +4,7 @@ description: "Wondering what to crochet for a 2 year old? Ten free patterns to d
 category: crocheter-intent
 pubDate: 2026-07-16
 coverImage: "/images/blog/what-to-crochet-for-a-two-year-old-hero.jpg"
-draft: true
+draft: false
 relatedPatterns: ["bake-time"]
 ---
 
@@ -73,6 +73,7 @@ If you want the gift everyone remembers, crochet a quiet book. A soft book where
 
 It's the gift that gets kept — played with for years, then saved in the keepsake box. I've written a [full beginner's guide to crocheting a quiet book](/blog/how-to-crochet-a-quiet-book-beginners-guide), and if you'd rather skip the design work, my quiet book patterns (like the bestselling [Bake Time](/patterns/bake-time)) walk you through every page with photos at every step.
 
+For each idea, if there are removable pieces adult supervision is needed for younger children.
 
 
 **[Browse my quiet book & play food patterns on Etsy →](https://www.etsy.com/shop/artbygng)**
@@ -100,7 +101,7 @@ Well-made crochet toys are a great fit for this age — use tight stitches, firm
 
 I always find it more interesting for myselft to crochet toys and interactive pieces rather than clothes or blankets. I also find these are the kinds of gifts that make toddlers very happy. Start small with a bib or a ball, and when you're ready for the gift that becomes a family keepsake, the quiet book is waiting for you.
 
-**[Get a step-by-step pattern on Etsy →](https://www.etsy.com/shop/artbygng)**
+
 
 <!-- ============================================================
 PRODUCTION NOTES — DELETE EVERYTHING BELOW BEFORE PUBLISHING

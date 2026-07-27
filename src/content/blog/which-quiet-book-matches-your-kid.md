@@ -4,6 +4,7 @@ description: "A quick personality quiz to match your toddler to the quiet book p
 category: comparison
 pubDate: 2026-08-17
 draft: true
+stub: true
 relatedPatterns: ["bake-time", "busy-beehive", "fun-foods", "halloween", "home-improvement", "painter"]
 ---
 

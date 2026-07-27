@@ -4,6 +4,7 @@ description: "What makes a quiet book Montessori-aligned, and why that's worth t
 category: gift-guides
 pubDate: 2026-07-27
 draft: true
+stub: true
 relatedPatterns: []
 ---
 

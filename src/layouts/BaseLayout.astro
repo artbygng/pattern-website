@@ -9,6 +9,8 @@ interface Props {
   ogImage?: string;
   /** Per-page accent color pulled from product photography. Defaults to terracotta. */
   accentColor?: string;
+  /** Optional JSON-LD structured data (e.g. BlogPosting on posts, Product on pattern pages). */
+  structuredData?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 const {
@@ -16,6 +18,7 @@ const {
   description = 'PDF crochet patterns for soft, interactive toddler quiet books. Made with love by Artbygng.',
   ogImage = '/images/og-default.jpg',
   accentColor = '#C4714F',
+  structuredData,
 } = Astro.props;
 
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
@@ -53,6 +56,11 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
     />
 
     <link rel="icon" href="/favicon.png" type="image/png" />
+
+    <!-- Structured data (JSON-LD) -->
+    {structuredData && (
+      <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    )}
 
     <!-- Per-page accent color override (e.g. sage for Painter, mustard for Beehive) -->
     {accentColor !== '#C4714F' && (

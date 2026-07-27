@@ -4,7 +4,7 @@ import BlogCard from '../../components/BlogCard.astro';
 import { getCollection } from 'astro:content';
 import { blogCategoryList } from '../../data/blogCategories';
 
-const allPosts = await getCollection('blog', ({ data }) => import.meta.env.DEV || !data.draft);
+const allPosts = await getCollection('blog', ({ data }) => !data.stub && (import.meta.env.DEV || !data.draft));
 const sorted = [...allPosts].sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 

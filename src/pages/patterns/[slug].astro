@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 
 const { pattern } = Astro.props;
 const { Content } = await pattern.render();
-const { title, tagline, coverImage, etsy_url, accentColor, images, details, playVideo, flipVideo, skillNotes, faq, customerQuotes } = pattern.data;
+const { title, tagline, coverImage, etsy_url, accentColor, images, details, playVideo, sneakPeekImage, skillNotes, faq, customerQuotes } = pattern.data;
 ---
 
 <BaseLayout
@@ -139,35 +139,22 @@ const { title, tagline, coverImage, etsy_url, accentColor, images, details, play
     </div>
   </section>
 
-  <!-- PDF flip-through video -->
+  <!-- PDF sneak peek -->
   <section class="pattern-video section-padding">
     <div class="container">
-      <h2 class="section-heading">See it come together</h2>
-      {flipVideo ? (
-        <div class="video-wrapper">
-          {flipVideo.startsWith('http') ? (
-            <iframe
-              src={flipVideo}
-              frameborder="0"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowfullscreen
-              title={`${title} pattern PDF flip-through`}
-            ></iframe>
-          ) : (
-            <video
-              src={flipVideo}
-              controls
-              playsinline
-              preload="metadata"
-              aria-label={`${title} pattern PDF flip-through`}
-            ></video>
-          )}
-        </div>
+      <h2 class="section-heading">A sneak peek</h2>
+      {sneakPeekImage ? (
+        <img
+          src={sneakPeekImage}
+          alt={`A sneak peek of pages from the ${title.replace(/^The /, '').replace(/ Pattern$/, '')} PDF`}
+          class="sneak-peek-image"
+          loading="lazy"
+        />
       ) : (
         <div class="video-placeholder">
           <div class="video-placeholder-icon">▶</div>
-          <p class="video-placeholder-label">Flip-through video coming soon</p>
-          <p class="video-placeholder-sub">Add <code>flipVideo</code> to frontmatter to embed the reel here</p>
+          <p class="video-placeholder-label">Sneak peek coming soon</p>
+          <p class="video-placeholder-sub">Add <code>sneakPeekImage</code> to frontmatter to show it here</p>
         </div>
       )}
     </div>
@@ -634,23 +621,13 @@ const { title, tagline, coverImage, etsy_url, accentColor, images, details, play
   /* ---- FLIP-THROUGH VIDEO ---- */
   .pattern-video { background: var(--cream-alt); }
 
-  .video-wrapper {
-    position: relative;
-    aspect-ratio: 9 / 16;
-    max-width: 380px;
+  .sneak-peek-image {
+    display: block;
+    width: 100%;
+    max-width: 860px;
+    height: auto;
     margin: 0 auto;
     border-radius: var(--radius-lg);
-    overflow: hidden;
-    background: #000;
-  }
-
-  .video-wrapper iframe,
-  .video-wrapper video {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
   }
 
   .video-placeholder {

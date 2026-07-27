@@ -4,7 +4,7 @@ import { getCollection } from 'astro:content';
 import { blogCategories } from '../../data/blogCategories';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog', ({ data }) => import.meta.env.DEV || !data.draft);
+  const posts = await getCollection('blog', ({ data }) => !data.stub && (import.meta.env.DEV || !data.draft));
   return posts.map(post => ({
     params: { slug: post.slug },
     props: { post },
@@ -19,12 +19,33 @@ const formattedDate = pubDate.toLocaleDateString('en-US', { month: 'long', day: 
 
 const allPatterns = relatedPatterns.length > 0 ? await getCollection('patterns') : [];
 const linkedPatterns = allPatterns.filter(p => relatedPatterns.includes(p.slug));
+
+// BlogPosting structured data (JSON-LD) for search + AI answer engines.
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  description,
+  ...(coverImage && { image: new URL(coverImage, Astro.site).toString() }),
+  datePublished: pubDate.toISOString(),
+  dateModified: (updatedDate ?? pubDate).toISOString(),
+  author: { '@type': 'Person', name: 'Mor' },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Artbygng',
+    logo: { '@type': 'ImageObject', url: new URL('/favicon.png', Astro.site).toString() },
+  },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl.toString() },
+  url: canonicalUrl.toString(),
+};
 ---
 
 <BaseLayout
   title={title}
   description={description}
   ogImage={coverImage}
+  structuredData={structuredData}
 >
 
   <!-- Breadcrumb -->
@@ -244,6 +265,10 @@ const linkedPatterns = allPatterns.filter(p => relatedPatterns.includes(p.slug))
     margin-block: var(--space-6);
   }
 
+  .prose :global(img.no-round) {
+    border-radius: 0;
+  }
+
   .prose :global(img.inline-thumb) {
     width: 240px;
     height: 240px;
@@ -277,6 +302,89 @@ const linkedPatterns = allPatterns.filter(p => relatedPatterns.includes(p.slug))
 
   .prose :global(li) {
     margin-bottom: var(--space-2);
+  }
+
+  .prose :global(li) :global(ul),
+  .prose :global(li) :global(ol) {
+    margin-top: var(--space-2);
+  }
+
+  .prose :global(code) {
+    background: var(--cream-alt);
+    border-radius: var(--radius-sm);
+    padding: 0.15em 0.4em;
+    font-size: 0.92em;
+  }
+
+  .prose :global(pre) {
+    background: var(--ink);
+    border-radius: var(--radius);
+    padding: var(--space-5);
+    overflow-x: auto;
+    margin-bottom: var(--space-4);
+  }
+
+  .prose :global(pre code) {
+    background: none;
+    padding: 0;
+    color: var(--white);
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  .prose :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--space-6);
+    font-size: 0.95rem;
+  }
+
+  .prose :global(th),
+  .prose :global(td) {
+    text-align: left;
+    padding: var(--space-3) var(--space-4);
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+
+  .prose :global(th) {
+    font-weight: 600;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+
+  .prose :global(td) {
+    color: var(--ink-muted);
+  }
+
+  .prose :global(td:nth-child(2)),
+  .prose :global(td:nth-child(4)) {
+    font-family: monospace;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+
+  /* Tight term+abbr pairs either side, wide gap around the middle "=" divider */
+  .prose :global(th:nth-child(1)),
+  .prose :global(td:nth-child(1)),
+  .prose :global(th:nth-child(4)),
+  .prose :global(td:nth-child(4)) {
+    padding-right: var(--space-2);
+  }
+
+  .prose :global(th:nth-child(2)),
+  .prose :global(td:nth-child(2)),
+  .prose :global(th:nth-child(5)),
+  .prose :global(td:nth-child(5)) {
+    padding-left: var(--space-2);
+  }
+
+  .prose :global(th:nth-child(3)),
+  .prose :global(td:nth-child(3)) {
+    padding-inline: var(--space-6);
+    text-align: center;
+    color: var(--ink-muted);
+    font-weight: 600;
   }
 
   /* ---- RELATED PATTERNS ---- */

@@ -24,7 +24,7 @@ faq:
   - q: "What's the trickiest part of this pattern?"
     a: "The small bees are the most fiddly — they're tiny amigurumi worked in rounds that need careful stuffing and assembly. Everything else is quite approachable, including the hexagonal pages themselves."
   - q: "What ages is this best for?"
-    a: "Toddlers and preschoolers — roughly 2 to 5. The bees are satisfying to handle and move around, and the activities (sorting honeycombs, placing flowers, dipping the honey dipper) work well for little hands. The removable pieces mean adult supervision is recommended for the youngest children."
+    a: "Toddlers and preschoolers — roughly 2 to 5. The bees are satisfying to handle and move around, and the activities (sorting honeycombs, placing flowers, dipping the honey dipper) work well for little hands. The removable pieces mean adult supervision is needed for the youngest children."
   - q: "What do I get with my purchase?"
     a: "An instant-download PDF with written instructions for every element and how to assemble the book, over 270 step-by-step images, and a full materials list. No subscription, no video required — one purchase, yours to keep."
 details:
@@ -51,13 +51,14 @@ images:
 customerQuotes: []
 playVideo: "https://www.youtube.com/embed/670iT-GkBiA?rel=0"
 flipVideo: ""
+sneakPeekImage: "/images/patterns/busy-beehive/sneak-peek.jpg"
 ---
 
 ## What's inside the pattern
 
 Busy Beehive is a 6-page crochet quiet book built around a bee and nature theme. It's hexagon-shaped, just like a real honeycomb cell. In the pages you'll find a full little world, with bees to move around, flowers to rearrange, honeycombs to sort, and a honey pot to dip into.
 Bold yellows, warm pinks, and soft greens — a great gift for children who love animals, nature, and imaginative play. 
-</br>There are removable pieces, so adult supervision is recommended for younger children.
+</br>There are removable pieces, so adult supervision is needed for younger children.
 
 ### The pages
 **The Cover** — A winding bee path from the flower all across the little bridges in the cell. The red tulip is the bee's home it can always go back to. Making the bee fly under the bridges is great fine motor skills practice, and also a lot of fun!

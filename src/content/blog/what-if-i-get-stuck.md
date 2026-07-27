@@ -4,6 +4,7 @@ description: "What kind of help is available if you get stuck mid-pattern, and h
 category: reassurance
 pubDate: 2026-09-28
 draft: true
+stub: true
 relatedPatterns: []
 ---
 

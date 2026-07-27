@@ -25,7 +25,7 @@ faq:
   - q: "What's the trickiest part of this pattern?"
     a: "The hammer head — it's an amigurumi piece worked in rounds with two shaped claws, and getting the claw shaping right takes some attention to the rounds. Everything else is quite accessible, including all six pages and most of the interactive pieces."
   - q: "What ages is this best for?"
-    a: "Toddlers and preschoolers — roughly 2 to 5. The activities (placing tiles, hanging pictures, turning the shower curtain, picking up tools) are well suited for little hands. As always, the small removable pieces mean adult supervision is recommended for younger children."
+    a: "Toddlers and preschoolers — roughly 2 to 5. The activities (placing tiles, hanging pictures, turning the shower curtain, picking up tools) are well suited for little hands. As always, the small removable pieces mean adult supervision is needed for younger children."
   - q: "What do I get with my purchase?"
     a: "An instant-download PDF with written instructions for every element — all six pages, all the tools and loose pieces, and full assembly instructions — with over 300 step-by-step images and a complete materials list. No subscription, no video required — one purchase, yours to keep."
 details:
@@ -53,13 +53,14 @@ images:
 customerQuotes: []
 playVideo: "https://www.youtube.com/embed/WlvUtuUPITs?rel=0"
 flipVideo: ""
+sneakPeekImage: "/images/patterns/home-improvement/sneak-peek.jpg"
 ---
 
 ## What's inside the pattern
 
 Home Improvement is a 6-page crochet quiet book built around a home repair theme. Each page is a different room or task — a whole little house to fix up, one job at a time. There are real tools to pick up and put down, doors that open and close, pictures to hang on the wall, pipes to unclog, windows to scrub, and a bathtub to seal.
 Bold colors, satisfying activities, and a full toolkit — a great gift for toddlers who love to "help" with things and feel like grown-ups for a day.</br>
-There are removable pieces, so adult supervision is recommended for younger children.
+There are removable pieces, so adult supervision is needed for younger children.
 
 ### The pages
 **The House — Welcome!** — Everything in this house is up for play! The windows open and shut with loop latches, the door velcros on and off and the hinges come out,loose roof tiles can be placed and rearranged across the roof.

@@ -29,6 +29,7 @@ images:
   
 playVideo: "https://www.youtube.com/embed/XR7TvoAXhZ8?rel=0"
 flipVideo: "https://www.youtube.com/embed/72rhTQ6fXVM?rel=0"
+sneakPeekImage: "/images/patterns/bake-time/sneak-peek.jpg"
 skillNotes:
   easy:
     - "Page panels are worked through almost entirely with single crochet — easy rows you can crochet on autopilot, with the curved shaping in just the last few rows"
@@ -68,7 +69,7 @@ customerQuotes:
 
 Bake Time is a 8-page crochet quiet book centered around a baking theme. The different pages have interactive pieces for children to play with, including a memory game and a page for learning about counting.
 The bright colors and many different options for playing make this a great gift which can last as a wonderful childhood memory.</br>
-There are removable pieces, so adult supervision is recommended for younger children.
+There are removable pieces, so adult supervision is needed for younger children.
 
 ### The pages
 **The cover** — The cover page depicts a lovely, colorful birthday cake with dripping frosting. The book can be fastened off with a velcro strap.
