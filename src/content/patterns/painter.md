@@ -64,14 +64,15 @@ sneakPeekImage: "/images/patterns/painter/sneak-peek.jpg"
 ## What's inside the pattern
 
 The Painter is a 4-page crochet quiet book built around an art and color theme. Each page gives little hands something to do — mixing colors, drawing with crayons, and playing with Montessori-themed shapes.
-The bold colors and interactive pieces make it a great gift for curious, creative kids.
+The bold colors and interactive pieces make it a great gift for curious, creative kids.</br>
+There are removable pieces, so adult supervision is needed for younger children.
 
 ### The pages
 **The cover** — A painter's palette crocheted in the classic shape, with 7 bold, detachable color spots and a crocheted brush. Children love placing and removing each color — great for color naming and open-ended imaginative play.
 
 **The Drawing Page** — A canvas and Montessori-styled playing pieces, and from here the sky's the limit. Pull the pieces out, arrange different shapes, and mix and match the colors. The pouches hold everything tidy when playtime is done.
 
-**Coloring with Hearts** — Use the paint brush to mix colors from the pallet to create the colors of the hearts. Learn about mixing colors in a fun and playful way.
+**Coloring with Hearts** — Use the paint brush to mix colors from the palette to create the colors of the hearts. Learn about mixing colors in a fun and playful way.
 
 **Crayons & Bunny** — A set of colorful crocheted crayons and a sweet pink bunny with embroidered eyes, floppy ears, and whiskers share the closing page of the book. A fun, cozy end to a little artist's afternoon.
 

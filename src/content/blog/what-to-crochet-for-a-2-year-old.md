@@ -10,7 +10,7 @@ relatedPatterns: ["bake-time"]
 
 <!-- IMAGE 1 (hero): a "toddler gift pile" — your finished crochet pieces (toys, quiet book pages/pieces) grouped together. Vertical 2:3 crop of the same scene for Pinterest. -->
 
-The short answer to what to crochet for a 2 year old is: something they can play with. Past the blanketand-booties stage, they love and develop through pretend play, sorting, stacking, and doing things with their hands. The best crochet gifts for this age are toys, and the good news for you as the crocheter: toys are small, fast, stash-friendly projects.
+The short answer to what to crochet for a 2 year old is: something they can play with. Past the blanket-and-booties stage, they love and develop through pretend play, sorting, stacking, and doing things with their hands. The best crochet gifts for this age are toys, and the good news for you as the crocheter: toys are small, fast, stash-friendly projects.
 
 Here are ten ideas I hope you'll enjoy.
 
@@ -33,13 +33,13 @@ The nice quick win on this list, and a make that earns its keep for many meals. 
 
 Most free bib patterns online stop at newborn sizing, so look for one that's actually built to grow. Make It with Meggie's [Apple Blossom Bib](https://makewithmeggie.com/2020/07/09/round-bib/) is a good one — the designer specifically addresses sizing it up for an older toddler by lengthening the neck ties.
 
-## 2. A simple crochet ball
+## 2. An African crochet ball
 
 I absolutely love this next pattern for an African crochet ball. You can choose your own colors and make it as bright or pastel shaded as you like. Soft enough for indoor throwing, textured enough for little hands to grip, and washable. I've made it myself and it was a hit with the little ones playing with it. This [free African ball pattern](https://crochetbug.com/how-to-make-an-african-flower-soccer-ball/) by Crochetbug will explain how to create the hexagons, and there's a link to a page explaining how to put the ball together.
 
 ## 3. Finger puppets
 
-Finger puppets are a great way to use your scrap-yarn. You won't need a lot of each color, and can mix and match with the different colors you have. Make as many as you like, create stories around the characters, and let your kids imagination run wild. Furls Crochet has a [free finger puppet pattern](https://furlscrochet.com/blogs/amigurumi-crochet-tutorials/free-crochet-finger-puppets-pattern) that's a good jumping-off point. Note that they are rather small so supervision is needed for younger kids.
+Finger puppets are a great way to use your scrap-yarn. You won't need a lot of each color, and can mix and match with the different colors you have. Make as many as you like, create stories around the characters, and let your kid's imagination run wild. Furls Crochet has a [free finger puppet pattern](https://furlscrochet.com/blogs/amigurumi-crochet-tutorials/free-crochet-finger-puppets-pattern) that's a good jumping-off point. Note that they are rather small so supervision is needed for younger kids.
 
 ## 4. A fuzzy amigurumi animal
 
@@ -51,7 +51,7 @@ I've made a bunch of stacking ring toys myself, and they're always a lot of fun.
 
 ## 6. A pull-up vegetable garden
 
-A little crochet "garden: carrots, radishes, and beets that tuck into pockets or a base and get "harvested. This make is pretend play and fine-motor work in one. It photographs adorably, too, if you like sharing your makes. Winding Road Crochet has a [free baby toy garden pattern](https://www.windingroadcrochet.com/crochet-baby-toy-container-garden/) with a carrot, radish, beet, and flower to pull and re-plant.
+A little crochet garden: carrots, radishes, and beets that tuck into pockets or a base and get "harvested". This make is pretend play and fine-motor work in one. It photographs adorably, too, if you like sharing your makes. Winding Road Crochet has a [free baby toy garden pattern](https://www.windingroadcrochet.com/crochet-baby-toy-container-garden/) with a carrot, radish, beet, and flower to pull and re-plant.
 
 ## 7. A little car or truck
 
@@ -83,7 +83,7 @@ For each idea, if there are removable pieces adult supervision is needed for you
 
 ### What's the best yarn for toddler toys?
 
-Depending on the make, I'd recommend worsted-weight acrylic, cotton or bamboo yarn, an chunky yarn. chunky yarn is great for fluffy stuffed animals, cotton and bamboo can be used for makes with finer details, and acrylic yarn for interactive toys (cotton and bamboo will work for those as well, but might be more work because they're thinner). You can work with a hook one size smaller than the label suggests so stuffing stays hidden and pieces keep their structure.
+Depending on the make, I'd recommend worsted-weight acrylic, cotton or bamboo yarn, and chunky yarn. Chunky yarn is great for fluffy stuffed animals, cotton and bamboo can be used for makes with finer details, and acrylic yarn for interactive toys (cotton and bamboo will work for those as well, but might be more work because they're thinner). You can work with a hook one size smaller than the label suggests so stuffing stays hidden and pieces keep their structure.
 
 ### Can a beginner crochet a toy for a 2-year-old?
 
@@ -99,7 +99,7 @@ Well-made crochet toys are a great fit for this age — use tight stitches, firm
 
 ## The real answer and what I always opt for: make an interactive toy
 
-I always find it more interesting for myselft to crochet toys and interactive pieces rather than clothes or blankets. I also find these are the kinds of gifts that make toddlers very happy. Start small with a bib or a ball, and when you're ready for the gift that becomes a family keepsake, the quiet book is waiting for you.
+I always find it more interesting for myself to crochet toys and interactive pieces rather than clothes or blankets. I also find these are the kinds of gifts that make toddlers very happy. Start small with a bib or a ball, and when you're ready for the gift that becomes a family keepsake, the quiet book is waiting for you.
 
 
 

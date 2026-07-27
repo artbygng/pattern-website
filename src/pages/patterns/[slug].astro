@@ -13,10 +13,18 @@ export async function getStaticPaths() {
 const { pattern } = Astro.props;
 const { Content } = await pattern.render();
 const { title, tagline, coverImage, etsy_url, accentColor, images, details, playVideo, sneakPeekImage, skillNotes, faq, customerQuotes } = pattern.data;
+
+// Pattern `title` frontmatter is inconsistent ("Bake Time Pattern", "The Painter Pattern",
+// "Halloween Quiet Book Pattern"...) and doubles as the on-page H1, so strip any existing
+// "Pattern"/"Quiet Book Pattern" wording to get the bare product name for the SEO title.
+const patternName = title
+  .replace(/^The\s+/i, '')
+  .replace(/\s+(Crochet\s+)?Quiet\s+Book\s+Pattern$/i, '')
+  .replace(/\s+Pattern$/i, '');
 ---
 
 <BaseLayout
-  title={`${title} Crochet Quiet Book Pattern`}
+  title={`${patternName} Quiet Book Pattern`}
   description={tagline}
   ogImage={coverImage}
   accentColor={accentColor}

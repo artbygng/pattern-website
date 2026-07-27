@@ -63,10 +63,10 @@ Bold yellows, warm pinks, and soft greens — a great gift for children who love
 ### The pages
 **The Cover** — A winding bee path from the flower all across the little bridges in the cell. The red tulip is the bee's home it can always go back to. Making the bee fly under the bridges is great fine motor skills practice, and also a lot of fun!
 
-**The Flower Garden** — Flowers which move into the pots and out of the, and a bee attached which velcro who can visit the flowers before going back to its home on the page. 
+**The Flower Garden** — Flowers which move in and out of the pots, and a bee attached with velcro who can visit the flowers before going back to its home on the page. 
 
 
-**The Honeycomb** — 9 hexags honeycomb pieces, each with a part of a path on it — together can be made into a multitude of paths. The pieces attach and detach with velcro, and each piece can be connected to the other ones through the sides of the hexagon.
+**The Honeycomb** — 9 hexagons honeycomb pieces, each with a part of a path on it — together can be made into a multitude of paths. The pieces attach and detach with velcro, and each piece can be connected to the other ones through the sides of the hexagon.
 
 **The Beehive** — A stacked honeycomb hive hanging from a crocheted branch with two bees plushies which can be taken in and out of the hive — children can fly them away and bring them back home. Pink daisy flowers decorate the sides of the hive.
 

@@ -63,7 +63,7 @@ Bold colors, familiar foods, and a lot of pieces to play with — a great gift f
 
 **Taco** — Fill the taco from your grocery bag with a rich set of toppings — tomatoes, lettuce, cheese, and meat — then put it back and start again.
 
-**French Fries** — Slide the potato onto the cutting board and use the crocheted knife to make the frech fries. Put them in their red pocket and you're done! "YUM" says it all.
+**French Fries** — Slide the potato onto the cutting board and use the crocheted knife to make the french fries. Put them in their red pocket and you're done! "YUM" says it all.
 
 **Sushi** — Nori and rice ready to be filled with salmon and cucumber. Take it apart and reassemble as you like. A net pocket on the side holds the pieces between servings.
 

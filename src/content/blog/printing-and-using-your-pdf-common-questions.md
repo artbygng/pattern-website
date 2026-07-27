@@ -1,5 +1,5 @@
 ---
-title: "How to Print and Use Your Crochet PDF Pattern bought on Etsy"
+title: "How to Print and Use Your Crochet PDF Pattern Bought on Etsy"
 description: "How to download and print a crochet PDF pattern at home, skip printing and read it on your tablet, where to find your Etsy files, and what to do when you can't download them."
 category: reassurance
 pubDate: 2026-07-20

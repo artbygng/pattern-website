@@ -23,20 +23,20 @@ Usually, no. The book is a collection of pages, appliques, and small plushy item
 
 Crocheters at the start of their journey usually still work on getting the basics down - how to best hold the hook and yarn, how to make different basic stitches and keep them even, etc. The level of skill needed for quiet books is just past that - you know how to make different stitches and no longer have to think about how you place your hands. For my quiet books you won't need years of experience; you'll need to be comfortable with the crochet basics and able to read patterns (with lots of pictures 😊).
 
-Two things make the patterns friendy for begginers with some experience:
+Two things make the patterns friendly for beginners with some experience:
 
 - **Every step is photo-guided.** Each stage shows you what your piece should look like before you move on. One buyer of my [Bake Time](/patterns/bake-time) pattern said "I’ve only just begun this pattern, but so far it is super easy to follow! So many pictures!" </br>
 Here's an example of an image sequence from this pattern:
 
   ![Numbered step-by-step photos from the Bake Time pattern instructions](/images/blog/is-this-pattern-hard-instructions.jpg)
 
-- **Every pattern is tested by multiple crocheters.** I make sure to have my patterns tested by at least 5 crocheters to work out all the kinks and correct mistakes. The product you download will have gone throug a few sets of hands and eyes to make sure you're not guessing and correcting as you go.
+- **Every pattern is tested by multiple crocheters.** I make sure to have my patterns tested by at least 5 crocheters to work out all the kinks and correct mistakes. The product you download will have gone through a few sets of hands and eyes to make sure you're not guessing and correcting as you go.
 
 So read "Intermediate" as "you've crocheted before and finished a few small things" — not "experts only."
 
 ## If you can crochet amigurumi/simple accessories, you already have everything you need to get started
 
-An amigurumi/accessory maker already has the most of the skill toolkit for a crochet quiet book: working basic stitches (you may need to learn a couple of new ones for the book, but they're all easy to learn online), finishing pieces and stuffing them. That's the core of it. The rolling pin, plushy tools, the bees — they are amigurumi. The only difference is that instead of one large toy, you're making a collection of small ones.
+An amigurumi/accessory maker already has most of the skill toolkit for a crochet quiet book: working basic stitches (you may need to learn a couple of new ones for the book, but they're all easy to learn online), finishing pieces and stuffing them. That's the core of it. The rolling pin, plushy tools, the bees — they are amigurumi. The only difference is that instead of one large toy, you're making a collection of small ones.
 
 If this sound familiar to you, my [Painter](/patterns/painter) pattern is a great place to start — it's made of many basic shapes, and it will feel like the projects you already know.
 
@@ -51,11 +51,11 @@ If this sound familiar to you, my [Painter](/patterns/painter) pattern is a grea
 
 **Takes patience:** 
 - A page has multiple pieces, and a book has multiple pages. These are usually not hard, but are a number of them. That's why a page-a-week is what I would recommend.
-- There is some sewing. Pieces are sewn onto pages and sometime each other. It's simple, photo-guided sewing — but if you're a crocheter who dreads the finishing stage, budget some patience for it 🙂.
+- There is some sewing. Pieces are sewn onto pages and sometimes each other. It's simple, photo-guided sewing — but if you're a crocheter who dreads the finishing stage, budget some patience for it 🙂.
 
 ## Which pattern should you start with?
 
-Start with [Bake Time](/patterns/bake-time) if you want the crowd favorite, or [Fun Foods](/patterns/fun-foods) if you're looking for something shorter. Bake Time is my bestselling pattern with the most reviews behind it — one maker wrote that it "actually went super fast." Fun Foods only has 4 pages, so good to start with. And if you've been eyeing [Painter](/patterns/painter) but assumed it was too intricate — that's exactly the pattern a customer described as "clear and fun to make."
+Start with [Bake Time](/patterns/bake-time) if you want the crowd favorite, or [Fun Foods](/patterns/fun-foods) if you're looking for something shorter. Bake Time is my bestselling pattern with the most reviews behind it — one maker wrote that it "actually went super fast." Fun Foods only has 4 pages, so it's good to start with. And if you've been eyeing [Painter](/patterns/painter) but assumed it was too intricate — that's exactly the pattern a customer described as "clear and fun to make."
 
 Whichever you pick, you'll be getting the same high-quality pattern with explanations and photos at every step.
 
@@ -75,11 +75,11 @@ Yes, some sewing is part of making a quiet book: pieces are sewn onto their page
 
 ### How long does it take to crochet a quiet book?
 
-At a relaxed page, about a page per week. Faster if you have more time — the pieces are small enough that momentum builds quickly. 
+At a relaxed pace, about a page per week. Faster if you have more time — the pieces are small enough that momentum builds quickly. 
 
 ## Is a quiet book the right project for you?
 
-If you enjoy working on projects that take a little longer, or if you don't mind putting a project away for a little while and coming back to it later, I'd say go for it. The feeling satisfaction when it is done is amazing, and so is the joy of giving it as a gift to a child you care about. So go on, give it try ❤️
+If you enjoy working on projects that take a little longer, or if you don't mind putting a project away for a little while and coming back to it later, I'd say go for it. The feeling of satisfaction when it is done is amazing, and so is the joy of giving it as a gift to a child you care about. So go on, give it a try ❤️
 
 
 <!-- ============================================================
@@ -99,7 +99,7 @@ PRODUCTION NOTES — DELETE EVERYTHING BELOW BEFORE PUBLISHING
   call out a "beginner pick" pattern since none carries that label.
 - Sewing description ("pieces sewn onto pages, pages joined into a book,
   whip-stitch-level") — same open question as the assembly walkthrough in
-  [How to Design Your Own Quiet Book](/blog/design-your-own-quiet-book) (Step 6 there).
+  [How to Design Your Own Crochet Quiet Book](/blog/design-your-own-quiet-book) (Step 6 there).
   Reconcile the two; don't let them describe different methods.
 - Stitch claims kept deliberately general per Mor's note — no specific stitch list
   enumerated, matches the pattern of "basics + everything introduced with photos."

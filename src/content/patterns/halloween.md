@@ -8,20 +8,20 @@ accentColor: "#D4611A"
 featured: true
 skillNotes:
   easy:
-    - "The page panels squares made of rows of single crochet — steady, simple work that builds up quickly"
+    - "The page panels are squares made of rows of single crochet — steady, simple work that builds up quickly"
     - "The book is only 4 pages (a bit shorter than some of the other patterns), so it takes less time to finish"
-    - "The bag is made of simple rectangle shape composed of single crochet stitches and is easy to follow"
+    - "The bag is made of a simple rectangle shape composed of single crochet stitches and is easy to follow"
     - "The ghost body is a simple dome shape — a friendly introduction to crocheting in the round if it's new to you"
   patient:
     - "There are quite a few individual candy pieces to make and finish — satisfying once you're in the rhythm, but they do add up"
-    - "The cauldron is a 3D sphere worked in rounds that needs to be sewn carefuly to the page wihtout sewing it shut — takes a bit more shaping awareness"
+    - "The cauldron is a 3D sphere worked in rounds that needs to be sewn carefully to the page without sewing it shut — takes a bit more shaping awareness"
     - "To create the Halloween spooky atmosphere, many of the elements are irregularly shaped - requires some attention"
     - "Assembling the book involves attaching and aligning the different elements to the pages — take it slow and lay everything out first"
 faq:
   - q: "Is this too spooky for young children?"
     a: "It's designed to be cute, not scary — smiling jack-o-lanterns, a cheerful ghost in a witch hat, and brightly colored candy. The aesthetic is more 'friendly Halloween' than creepy."
   - q: "Is the trick-or-treat bag part of the pattern?"
-    a: "Yes — the orange smily-face bag with a handle is fully included in the pattern. It's one of the most-played-with pieces: kids fill it with the loose candy pieces, carry it around, and dump it out to start again."
+    a: "Yes — the orange smiley-face bag with a handle is fully included in the pattern. It's one of the most-played-with pieces: kids fill it with the loose candy pieces, carry it around, and dump it out to start again."
   - q: "There are a lot of loose pieces — what happens when they get lost?"
     a: "The trick-or-treat bag holds everything between play sessions, so there's a natural place to stow the candies and the ghost when playtime is done. If a piece does get lost, you can always make more using the pattern 🍭."
   - q: "Will my child play with this outside of October?"
@@ -63,7 +63,7 @@ Bright colors, cute characters, and a bag full of candy to sort through — a gr
 There are removable pieces, so adult supervision is needed for younger children.
 
 ### The pages
-**The Haunted House** — A crocheted haunted house at night, with two smiling orange pumpkins, a full moon, and a friendly ghost. The windows velcro on nad off and are candy pieces that can be collected into the bag. Kids can decide which treats the house is handing out and swap them around. 
+**The Haunted House** — A crocheted haunted house at night, with two smiling orange pumpkins, a full moon, and a friendly ghost. The windows velcro on and off and are candy pieces that can be collected into the bag. Kids can decide which treats the house is handing out and swap them around. 
 
 **Apple Tree with a hidden compartment** — The apple tree hides two pieces of candy in it, can you find them? One is in a hidden pocket in the front, and the other is tied to the back. Great for practicing tying and untying strings using fine motor skills.
 

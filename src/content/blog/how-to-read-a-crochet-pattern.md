@@ -10,7 +10,7 @@ relatedPatterns: ["painter"]
 
 <!-- IMAGE 1 (hero): a pattern PDF open (on a tablet or printed) next to the in-progress piece it describes — e.g. a half-finished Bake Time cupcake sitting on the printed page. Vertical 2:3 crop of the same scene for Pinterest. -->
 
-You can think of reading a crochet pattern like reading a recipe. Just like a recipe describes the materials needed and the steps to follow to complete it, a pattern will tell you what materials you'll need and give you a detatiled list of steps in order to create the final product. I know that a written pattern can look intimidating the first few times, but it is mostly the abbreviations that make it seem hard. In this this post I'll walk you through all of it .
+You can think of reading a crochet pattern like reading a recipe. Just like a recipe describes the materials needed and the steps to follow to complete it, a pattern will tell you what materials you'll need and give you a detailed list of steps in order to create the final product. I know that a written pattern can look intimidating the first few times, but it is mostly the abbreviations that make it seem hard. In this post I'll walk you through all of it .
 
 If you've been hovering over a PDF pattern thinking "but what if I can't follow it?" — this is for you.
 
@@ -77,9 +77,9 @@ Line by line:
 
 - **Rnd 1: 6 sc in MR [6]** — Make a magic ring and work 6 single crochets into it. The number in the square brackets is your stitch count: when the round is done, you should have 6 stitches.
 - **Rnd 2: inc x 6 [12]** — Work an increase (2 sc in one stitch) into every stitch in the previous round.</br> `x 6` means repeat that six times. You end with 12 stitches.
-- **Rnd 3: (sc, inc) x 6 [18]** — The parentheses group a repetative sequence: one single crochet, then one increase. Repeat the whole group six times. You end with 18.
+- **Rnd 3: (sc, inc) x 6 [18]** — The parentheses group a repetitive sequence: one single crochet, then one increase. Repeat the whole group six times. You end with 18.
 
-That breaks down a lot of the grammer you'll see in written patterns. There may be differen types of stitches, and different designers might use different parentheses or grouping, but this is pretty much the jist. In most patterns the grammer used will be stated in the beginning, so you know how to read the pattern correctly.
+That breaks down a lot of the grammar you'll see in written patterns. There may be differen types of stitches, and different designers might use different parentheses or grouping, but this is pretty much the jist. In most patterns the grammer used will be stated in the beginning, so you know how to read the pattern correctly.
 
 
 
@@ -87,7 +87,7 @@ That breaks down a lot of the grammer you'll see in written patterns. There may 
 
 It's been said that a picture is worth a thousand words, and I believe that is especially true in crochet patters. I've had to give up on patterns in the past because no matter how much I tried to understand the written instructions, they just didn't make sense and there was no process photo.
 
-When there are pictures to walk you through the process you know very quickly if you made a mistake or misunderstood, and you can course-correct much quicker and not waist time.
+When there are pictures to walk you through the process you know very quickly if you made a mistake or misunderstood, and you can course-correct much quicker and not waste time.
 
 As you can see above in the beginning of the post I make sure to take a picture every few rows at the very least, and often even more frequently than that. I've learned through my pattern reviewers that it was a game-changer and incredibly helpful, and all of my patterns follow this rule.
 
@@ -97,7 +97,7 @@ When checking out a new pattern, try to go through the following:
 
 1. Check the terms language (US or UK?) and the skill level.
 2. Read the materials list and make a note of anything you'll need to get (now or later).
-3. Skim the stitches used to see if there's anything new you need learn (YouTube is great for that).
+3. Skim the stitches used to see if there's anything new you need to learn (YouTube is great for that).
 4. Skim through photos so you know where the piece is headed.
 5. Then work line by line, counting stitches at the end of every round or row.
 
@@ -124,7 +124,7 @@ No — charts (the diagrams of symbols) are a separate system, and written photo
 ## You Can Already Read More Than You Think
 
 Just keep the list of abbreviations close in the beginning, and the rest should be very clear.
-Start with something small, like a simple amigurumim animal, and work your way up.
+Start with something small, like a simple amigurumi animal, and work your way up.
 
 
 <!-- ============================================================

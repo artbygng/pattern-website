@@ -16,7 +16,7 @@ skillNotes:
     - "The hammer head with its two claws is the most complex 3D piece — worked in rounds with careful directional shaping for each claw"
     - "The door has a velcro-and-pin hinge mechanism that requires precise placement to open and close correctly"
     - "Several pages use a crocheted net pocket to hold loose pieces — the net stitch takes some care to keep even when sewn onto the page"
-    - "There are a few small pieces to crochet, like the roof tiles, hook mechanism, and shower pieces - these can be bid fiddly but worth it once they're ready"
+    - "There are a few small pieces to crochet, like the roof tiles, hook mechanism, and shower pieces - these can be a bit fiddly but worth it once they're ready"
 faq:
   - q: "Six pages sounds like a lot — is this suitable for a first quiet book?"
     a: "It's a bigger project than a 4-page book, but the structure is very repetitive — all six pages are built on the same base shape. If you've finished a 4-page quiet book before, this is a natural next step. If it's your first, it's still very achievable — just plan for more sessions."
@@ -63,15 +63,15 @@ Bold colors, satisfying activities, and a full toolkit — a great gift for todd
 There are removable pieces, so adult supervision is needed for younger children.
 
 ### The pages
-**The House — Welcome!** — Everything in this house is up for play! The windows open and shut with loop latches, the door velcros on and off and the hinges come out,loose roof tiles can be placed and rearranged across the roof.
+**The House — Welcome!** — Everything in this house is up for play! The windows open and shut with loop latches, the door velcros on and off and the hinges come out, loose roof tiles can be placed and rearranged across the roof.
 
-**Painting the Wall** — An brick wall with three colored paint blocks (red, dark blue, yellow) hidden under flap covers. Lift the flap to see what's underneath and paint the wall with the crocheted brush.
+**Painting the Wall** — A brick wall with three colored paint blocks (red, dark blue, yellow) hidden under flap covers. Lift the flap to see what's underneath and paint the wall with the crocheted brush.
 
 **Hanging a Picture** — Use the plushy hammer and nail to hang the picture on the wall. When done playing, every piece has its place on the page waiting for next time.
 
-**Unclogging the Sink** — A sink with swirly water in it leads to a clocked pipe! But not to worry, the curved pipe detaches with velcro so little hands can use the wrench, "fix" the clog, and put it back.
+**Unclogging the Sink** — A sink with swirly water in it leads to a clogged pipe! But not to worry, the curved pipe detaches with velcro so little hands can use the wrench, "fix" the clog, and put it back.
 
-**Cleaning the Window** — A window with grey dirt blobs the hooks on and off. The spray cleaning bottle (with nozzle and handle) and a yellow crocheted rag each sit in their own net pockets. Spray, scrub, and peel the dirt away.
+**Cleaning the Window** — A window with a grey dirt blob that hooks on and off. The spray cleaning bottle (with nozzle and handle) and a yellow crocheted rag each sit in their own net pockets. Spray, scrub, and peel the dirt away.
 
 **Sealing the Bathtub** — A bathtub, shower curtain on a rod, cold and hot taps, and a crocheted silicone sealant tube in its own net pocket. A full bathroom scene — run the shower, open the curtain, seal the edge.
 

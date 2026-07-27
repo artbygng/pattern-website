@@ -47,7 +47,7 @@ faq:
   - q: "Will my child actually play with all of it, or lose interest after one page?"
     a: "The variety is the point — each page is a completely different activity, so there's always something new to come back to. Some kids gravitate toward the memory game, others love placing the toppings or mixing the eggs. There's something here for everyone - a toy built to last."
   - q: "Does the book grow with the child, or will they outgrow it quickly?"
-    a: "It grows well. The simpler pages — placing pie toppings, putting eggs in the bowl — work for the younger kids, while the numbered cake tiers, the cookie shapes, and the memory game stay engaging for the older ones. Children can use it differently at different ages."
+    a: "It grows well. The simpler pages — placing cake toppings, putting eggs in the bowl — work for the younger kids, while the numbered cake tiers, the cookie shapes, and the memory game stay engaging for the older ones. Children can use it differently at different ages."
   - q: "Can I make just some of the pages and skip others?"
     a: "Yes — each page is written as a standalone section, so you can pick and choose based on what appeals to you or how much time you have. A smaller version of the book is completely valid."
   - q: "What do I get with my purchase?"
@@ -67,7 +67,7 @@ customerQuotes:
 
 ## What's inside the pattern
 
-Bake Time is a 8-page crochet quiet book centered around a baking theme. The different pages have interactive pieces for children to play with, including a memory game and a page for learning about counting.
+Bake Time is an 8-page crochet quiet book centered around a baking theme. The different pages have interactive pieces for children to play with, including a memory game and a page for learning about counting.
 The bright colors and many different options for playing make this a great gift which can last as a wonderful childhood memory.</br>
 There are removable pieces, so adult supervision is needed for younger children.
 

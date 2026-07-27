@@ -25,14 +25,14 @@ If you've browsed Montessori-style toys, you'll recognize the philosophy: open-e
 Many quiet books you'll find online are sewn from fabric and felt. A crochet quiet book is very similar, and has its own positives:
 
 - **It's durable.** I've seen crocheted fabric survive being chewed, pulled, and thrown. It'll last for a long time and can be played with by children in the family over and over again.
-- **It's washable.** While it is recommended to use the soft wash cycles or hand wash, the books can be washed and be non-the-worst for it.
-- **The pieces are toys in themselves.** A crocheted cupcake or paintbrush is a chunky, satisfying object a toddler to play with as a toy on its on.
+- **It's washable.** While it is recommended to use the soft wash cycles or hand wash, the books can be washed and be none the worse for it.
+- **The pieces are toys in themselves.** A crocheted cupcake or paintbrush is a chunky, satisfying object a toddler can play with as a toy on its own.
 
 <img src="/images/blog/how-to-crochet-a-quiet-book-page-in-action.jpg" alt="A hand picking up a crocheted cupcake piece from a busy book page, with cookie and toast pieces visible on the facing page" />
 
 ## Do You Already Have the Skills?
 
-If you have background in crochet, yes. A quiet book might look more advanced because of how looks when it's done, but the individual techniques are beginner-to-intermediate friendly. A typical crochet busy book uses:
+If you have background in crochet, yes. A quiet book might look more advanced because of how it looks when it's done, but the individual techniques are beginner-to-intermediate friendly. A typical crochet busy book uses:
 
 - **Chains and single crochet** — the pages themselves are usually flat panels of certain shape, using mostly single crochet and maybe a few more stitches to create a special shape.
 - **Working in the round / magic ring** — for the play pieces (this is standard amigurumi), and sometimes for the pages themselves.
@@ -71,7 +71,7 @@ You can absolutely design a quiet book from scratch using all of the information
 When you design a book, you'll size every piece, work the different interactions, decide on assembly and work out all the kinks. I love designing patterns for books, and it's a great adventure to go on.
 
 <!-- NEW: pointer to the moved walkthrough, so "the information above" still resolves — author to review -->
-You can read the full page-by-page walkthrough in [How to Design Your Own Quiet Book (Without a Pattern)](/blog/design-your-own-quiet-book).
+You can read the full page-by-page walkthrough in [How to Design Your Own Crochet Quiet Book](/blog/design-your-own-quiet-book).
 <!-- /NEW -->
 
 If designing feels like too much of a leap right now, start with a pattern. You'll also learn a lot about how to create your own. </br>In my patterns you'll find step-by-step, photo-guided instructions for every part of the book. I believe images are the key to understanding the trickier parts, and my patterns always have lots of them. 
