@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const { Content } = await post.render();
+const { Content, headings } = await post.render();
 const { title, description, category, pubDate, updatedDate, coverImage, relatedPatterns, faq } = post.data;
 const categoryMeta = blogCategories[category];
 const formattedDate = pubDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
@@ -51,7 +51,22 @@ const faqStructuredData = faq.length > 0 ? {
   })),
 } : null;
 
-const allStructuredData = faqStructuredData ? [structuredData, faqStructuredData] : structuredData;
+// ItemList structured data, for list-style posts whose H2s follow a "N. Title" pattern
+// (e.g. "## 1. Decorate the cake") — derived straight from the post's own headings so it
+// can't drift out of sync with the content.
+const numberedHeadings = headings.filter(h => h.depth === 2 && /^\d+\.\s+/.test(h.text));
+const itemListStructuredData = numberedHeadings.length > 0 ? {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  itemListElement: numberedHeadings.map((h, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: h.text.replace(/^\d+\.\s+/, ''),
+    url: `${canonicalUrl}#${h.slug}`,
+  })),
+} : null;
+
+const allStructuredData = [structuredData, faqStructuredData, itemListStructuredData].filter(Boolean);
 ---
 
 <BaseLayout
