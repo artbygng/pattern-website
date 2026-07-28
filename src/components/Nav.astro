@@ -20,62 +20,80 @@ const sortedPatterns = allPatterns.sort((a, b) => a.data.title.localeCompare(b.d
       <span class="logo-text">artbygng</span>
     </a>
 
-    <nav aria-label="Main navigation">
-      <ul class="nav-list">
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" type="button">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
 
-        <!-- Patterns with dropdown -->
-        <li class="nav-dropdown-wrap">
-          <a
-            href="/patterns"
-            class:list={['nav-link', { 'nav-link--active': currentPath.startsWith('/patterns') }]}
-          >
-            Patterns <span class="nav-chevron" aria-hidden="true">▾</span>
-          </a>
-          <div class="nav-dropdown">
-            {sortedPatterns.map(p => (
-              <a
-                href={`/patterns/${p.slug}`}
-                class:list={['nav-dropdown-link', { 'nav-dropdown-link--active': currentPath === `/patterns/${p.slug}` }]}
-              >
-                {p.data.title.replace(/ (Quiet Book )?Pattern$/i, '').replace(/^The /, '')}
-              </a>
-            ))}
-            <div class="nav-dropdown-divider"></div>
-            <a href="/patterns" class="nav-dropdown-all">All patterns &rarr;</a>
-          </div>
-        </li>
+    <div class="nav-panel">
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
 
-        <li>
-          <a
-            href="/blog"
-            class:list={['nav-link', { 'nav-link--active': currentPath.startsWith('/blog') }]}
-          >
-            Blog
-          </a>
-        </li>
+          <!-- Patterns with dropdown -->
+          <li class="nav-dropdown-wrap">
+            <a
+              href="/patterns"
+              class:list={['nav-link', { 'nav-link--active': currentPath.startsWith('/patterns') }]}
+            >
+              Patterns <span class="nav-chevron" aria-hidden="true">▾</span>
+            </a>
+            <div class="nav-dropdown">
+              {sortedPatterns.map(p => (
+                <a
+                  href={`/patterns/${p.slug}`}
+                  class:list={['nav-dropdown-link', { 'nav-dropdown-link--active': currentPath === `/patterns/${p.slug}` }]}
+                >
+                  {p.data.title.replace(/ (Quiet Book )?Pattern$/i, '').replace(/^The /, '')}
+                </a>
+              ))}
+              <div class="nav-dropdown-divider"></div>
+              <a href="/patterns" class="nav-dropdown-all">All patterns &rarr;</a>
+            </div>
+          </li>
 
-        <li>
-          <a
-            href="/about"
-            class:list={['nav-link', { 'nav-link--active': currentPath === '/about' }]}
-          >
-            About
-          </a>
-        </li>
+          <li>
+            <a
+              href="/blog"
+              class:list={['nav-link', { 'nav-link--active': currentPath.startsWith('/blog') }]}
+            >
+              Blog
+            </a>
+          </li>
 
-      </ul>
-    </nav>
+          <li>
+            <a
+              href="/about"
+              class:list={['nav-link', { 'nav-link--active': currentPath === '/about' }]}
+            >
+              About
+            </a>
+          </li>
 
-    <a
-      href="https://www.etsy.com/shop/artbygng"
-      class="btn btn-accent btn-sm nav-etsy"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Shop on Etsy
-    </a>
+        </ul>
+      </nav>
+
+      <a
+        href="https://www.etsy.com/shop/artbygng"
+        class="btn btn-accent btn-sm nav-etsy"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Shop on Etsy
+      </a>
+    </div>
   </div>
 </header>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('.nav-toggle');
+  const header = document.querySelector('.site-header');
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = header?.classList.toggle('nav-open');
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+</script>
 
 <style>
   .site-header {
@@ -242,9 +260,94 @@ const sortedPatterns = allPatterns.sort((a, b) => a.data.title.localeCompare(b.d
     color: var(--accent);
   }
 
-  @media (max-width: 380px) {
-    .nav-etsy {
+  /* Mobile menu toggle — hidden on desktop */
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .nav-toggle-bar {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--ink);
+    border-radius: 2px;
+    transition: transform 0.2s, opacity 0.2s;
+  }
+
+  .nav-panel {
+    display: flex;
+    align-items: center;
+    gap: var(--space-5);
+    margin-left: auto;
+  }
+
+  @media (max-width: 640px) {
+    .nav-toggle {
+      display: flex;
+    }
+
+    .nav-panel {
       display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: var(--space-4) var(--space-5);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.09);
+    }
+
+    .site-header.nav-open .nav-panel {
+      display: flex;
+    }
+
+    .site-header.nav-open .nav-toggle-bar:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .site-header.nav-open .nav-toggle-bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .site-header.nav-open .nav-toggle-bar:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .nav-list {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+
+    .nav-link {
+      padding-block: var(--space-3);
+    }
+
+    /* No hover to trigger the flyout on touch — "Patterns" just links to /patterns instead */
+    .nav-dropdown-wrap::after {
+      display: none;
+    }
+
+    .nav-dropdown {
+      display: none;
+    }
+
+    .nav-etsy {
+      margin-top: var(--space-3);
+      text-align: center;
     }
   }
 </style>
