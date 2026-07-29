@@ -51,4 +51,14 @@ const blog = defineCollection({
   }),
 });
 
-export const collections = { patterns, blog };
+const freePatterns = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    coverImage: z.string(),
+    pdfUrl: z.string(),
+  }),
+});
+
+export const collections = { patterns, blog, freePatterns };

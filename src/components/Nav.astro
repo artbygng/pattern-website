@@ -36,7 +36,7 @@ const sortedPatterns = allPatterns.sort((a, b) => a.data.title.localeCompare(b.d
               href="/patterns"
               class:list={['nav-link', { 'nav-link--active': currentPath.startsWith('/patterns') }]}
             >
-              Patterns <span class="nav-chevron" aria-hidden="true">▾</span>
+              Quiet Book Patterns <span class="nav-chevron" aria-hidden="true">▾</span>
             </a>
             <div class="nav-dropdown">
               {sortedPatterns.map(p => (
@@ -50,6 +50,15 @@ const sortedPatterns = allPatterns.sort((a, b) => a.data.title.localeCompare(b.d
               <div class="nav-dropdown-divider"></div>
               <a href="/patterns" class="nav-dropdown-all">All patterns &rarr;</a>
             </div>
+          </li>
+
+          <li>
+            <a
+              href="/free-patterns"
+              class:list={['nav-link', { 'nav-link--active': currentPath.startsWith('/free-patterns') }]}
+            >
+              Free Patterns
+            </a>
           </li>
 
           <li>

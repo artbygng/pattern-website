@@ -25,13 +25,14 @@ function loadCollection(dir: string) {
 
 const blog = loadCollection('blog');
 const patterns = loadCollection('patterns');
+const freePatterns = loadCollection('freePatterns');
 
 const patternSlugs = new Set(patterns.map((p) => p.slug));
 const publishedBlogSlugs = new Set(blog.filter((p) => p.data.draft === false).map((p) => p.slug));
 const allBlogSlugs = new Set(blog.map((p) => p.slug));
 
 const staticRoutes = new Set([
-  '/', '/patterns', '/blog', '/about',
+  '/', '/patterns', '/free-patterns', '/blog', '/about',
   ...BLOG_CATEGORIES.map((c) => `/blog/category/${c}`),
 ]);
 
@@ -111,6 +112,18 @@ describe('patterns', () => {
         const refs = [...collectFrontmatterImages(pattern.data), ...extractImagePaths(pattern.content)];
         const missing = refs.filter((p) => !existsSync(join(PUBLIC, p)));
         expect(missing, `${pattern.file} references missing image(s)`).toEqual([]);
+      });
+    });
+  }
+});
+
+describe('free patterns', () => {
+  for (const pattern of freePatterns) {
+    describe(pattern.file, () => {
+      it('cover image and PDF both exist in public/', () => {
+        const refs = [pattern.data.coverImage, pattern.data.pdfUrl].filter(Boolean);
+        const missing = refs.filter((p) => !existsSync(join(PUBLIC, p)));
+        expect(missing, `${pattern.file} references missing file(s)`).toEqual([]);
       });
     });
   }
