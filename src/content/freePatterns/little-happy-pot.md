@@ -34,8 +34,6 @@ A tiny crocheted pot with a lid, three little handles, and a happy face — a qu
 
 ## Pot body
 
-<img src="/images/free-patterns/little-happy-pot-body-progress.jpg" alt="A crocheted purple pot body in progress, with a plastic embroidery mesh circle cut for the base" />
-
 Rnd 1: 6 sc in a magic ring [6]<br/>
 Rnd 2: 6 inc [12]<br/>
 Rnd 3: (sc, inc) repeat 6 times [18]<br/>
@@ -53,8 +51,6 @@ Insert the eyes between round 10 and 11 with 6 st between them.
 
 Embroider the mouth.
 
-<img src="/images/free-patterns/little-happy-pot-body-finished.jpg" alt="A finished purple crocheted pot body with a happy embroidered face, held in a hand" />
-
 ## Handles (make 3)
 
 Rnd 1: 4 sc in a magic ring [4]<br/>
@@ -68,7 +64,6 @@ Sew 2 of the handles opposite each other on round 12, with 2 st between the two 
 
 The handles should be placed so that the face is in the middle.
 
-<img src="/images/free-patterns/little-happy-pot-handles.jpg" alt="Three crocheted handle pieces, then two of them sewn onto the pot body on either side of the face" />
 
 ## Pot lid
 
@@ -85,9 +80,6 @@ Rnd 8: 36 reverse sc [36]
 Slst to close, fasten off, and tuck in the loose ends.
 
 Sew the third handle to the lid, in the two opposite ends of row 2.
-
-<img src="/images/free-patterns/little-happy-pot-lid-holding.jpg" alt="A hand holding a two-toned purple crocheted lid, before the handle is attached" />
-<img src="/images/free-patterns/little-happy-pot-lid-pair.jpg" alt="The finished pot lid from two angles, showing the handle sewn on top" />
 
 ## Putting the pot together
 
