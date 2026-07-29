@@ -15,7 +15,7 @@ const structuredData = {
     itemListElement: sorted.map((pattern, i) => ({
       '@type': 'ListItem',
       position: i + 1,
-      url: new URL(pattern.data.pdfUrl, Astro.site).toString(),
+      url: new URL(`/free-patterns/${pattern.slug}`, Astro.site).toString(),
       name: pattern.data.title,
     })),
   },
@@ -24,7 +24,7 @@ const structuredData = {
 
 <BaseLayout
   title="Free Crochet Patterns"
-  description="Free crochet PDF patterns from Artbygng — small amigurumi makes, no purchase required."
+  description="Free crochet patterns from Artbygng — small amigurumi makes, no purchase required."
   structuredData={structuredData}
 >
 
@@ -34,7 +34,7 @@ const structuredData = {
       <p class="page-eyebrow">Free Patterns</p>
       <h1 class="page-title">A few free patterns to enjoy</h1>
       <p class="page-desc">
-        Small, quick makes — no purchase required. Download the PDF and start crocheting.
+        Small, quick makes — no purchase required.
       </p>
     </div>
   </section>
@@ -44,18 +44,16 @@ const structuredData = {
     <div class="container">
       <div class="pattern-grid">
         {sorted.map(pattern => (
-          <article class="free-pattern-card">
+          <a href={`/free-patterns/${pattern.slug}`} class="free-pattern-card">
             <div class="card-img">
               <img src={pattern.data.coverImage} alt={`${pattern.data.title} — free crochet pattern cover`} width="600" height="800" loading="lazy" class="card-cover-img" />
             </div>
             <div class="card-body">
               <h2 class="card-title">{pattern.data.title}</h2>
               <p class="card-desc">{pattern.data.description}</p>
-              <a href={pattern.data.pdfUrl} class="btn btn-accent btn-sm" target="_blank" rel="noopener noreferrer">
-                Download the free PDF
-              </a>
+              <span class="card-link">View the pattern &rarr;</span>
             </div>
-          </article>
+          </a>
         ))}
       </div>
     </div>
@@ -128,6 +126,13 @@ const structuredData = {
     border: 1px solid var(--border);
     display: flex;
     flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.15s;
+  }
+
+  .free-pattern-card:hover {
+    box-shadow: 0 10px 28px rgba(42, 40, 37, 0.09);
   }
 
   .card-img {
@@ -164,5 +169,11 @@ const structuredData = {
     line-height: 1.55;
     flex: 1;
     max-width: none;
+  }
+
+  .card-link {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--accent);
   }
 </style>

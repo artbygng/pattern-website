@@ -57,7 +57,6 @@ const freePatterns = defineCollection({
     title: z.string(),
     description: z.string(),
     coverImage: z.string(),
-    pdfUrl: z.string(),
   }),
 });
 

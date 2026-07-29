@@ -28,6 +28,7 @@ const patterns = loadCollection('patterns');
 const freePatterns = loadCollection('freePatterns');
 
 const patternSlugs = new Set(patterns.map((p) => p.slug));
+const freePatternSlugs = new Set(freePatterns.map((p) => p.slug));
 const publishedBlogSlugs = new Set(blog.filter((p) => p.data.draft === false).map((p) => p.slug));
 const allBlogSlugs = new Set(blog.map((p) => p.slug));
 
@@ -42,6 +43,8 @@ function isKnownRoute(path: string): boolean {
   if (blogMatch) return allBlogSlugs.has(blogMatch[1]);
   const patternMatch = path.match(/^\/patterns\/([^/]+)$/);
   if (patternMatch) return patternSlugs.has(patternMatch[1]);
+  const freePatternMatch = path.match(/^\/free-patterns\/([^/]+)$/);
+  if (freePatternMatch) return freePatternSlugs.has(freePatternMatch[1]);
   return false;
 }
 
@@ -120,10 +123,10 @@ describe('patterns', () => {
 describe('free patterns', () => {
   for (const pattern of freePatterns) {
     describe(pattern.file, () => {
-      it('cover image and PDF both exist in public/', () => {
-        const refs = [pattern.data.coverImage, pattern.data.pdfUrl].filter(Boolean);
+      it('every referenced image file exists in public/', () => {
+        const refs = [pattern.data.coverImage, ...extractImagePaths(pattern.content)];
         const missing = refs.filter((p) => !existsSync(join(PUBLIC, p)));
-        expect(missing, `${pattern.file} references missing file(s)`).toEqual([]);
+        expect(missing, `${pattern.file} references missing image(s)`).toEqual([]);
       });
     });
   }
