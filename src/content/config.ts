@@ -60,4 +60,39 @@ const freePatterns = defineCollection({
   }),
 });
 
-export const collections = { patterns, blog, freePatterns };
+// Paid bag charm patterns — same shape as `patterns` (also sold on Etsy, same
+// detail-page sections), just a separate collection since charms and quiet books
+// are different product lines.
+const bagCharms = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    tagline: z.string(),
+    coverImage: z.string(),
+    etsy_url: z.string().url(),
+    accentColor: z.string().optional().default('#C4714F'),
+    featured: z.boolean().default(false),
+    heroImage: z.string().optional(),
+    images: z.array(z.object({ src: z.string(), alt: z.string() })).optional().default([]),
+    // Set when images[0] already has a "Crochet PDF Pattern" badge baked into the photo
+    // itself, so the page doesn't overlay its own badge on top of it too.
+    firstImageHasBadge: z.boolean().default(false),
+    details: z.array(z.object({ label: z.string(), value: z.string() })).optional().default([]),
+    playVideo: z.string().optional(),
+    sneakPeekImage: z.string().optional(),
+    skillNotes: z.object({
+      easy: z.array(z.string()),
+      patient: z.array(z.string()),
+      instructionImage: z.string().optional(),
+    }).optional(),
+    faq: z.array(z.object({ q: z.string(), a: z.string() })).optional().default([]),
+    customerQuotes: z.array(z.object({
+      quote: z.string(),
+      author: z.string(),
+      image: z.string().optional(),
+      date: z.string().optional(),
+    })).optional().default([]),
+  }),
+});
+
+export const collections = { patterns, blog, freePatterns, bagCharms };

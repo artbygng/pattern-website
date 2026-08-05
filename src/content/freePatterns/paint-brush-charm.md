@@ -72,6 +72,6 @@ Fasten off leaving a long tail for sewing and tuck in the initial loose end.
 
 ## Want the matching paint can?
 
-This little brush is part of a bigger **Brush & Paint** set — get the complete pattern, including the matching paint can charm, on [my Etsy shop](https://www.etsy.com/il-en/listing/4550545992/brush-paint-bag-charm-crochet-pattern).
+This little brush is part of a bigger **Brush & Paint** set — get the [complete pattern](/bag-charms/paint-and-brush-bag-charm), including the matching paint can charm.
 
 ![Finished paint brush and paint can charms clipped to a backpack zipper](/images/free-patterns/paint-brush-charm-full-set.jpg)
