@@ -95,4 +95,17 @@ const bagCharms = defineCollection({
   }),
 });
 
-export const collections = { patterns, blog, freePatterns, bagCharms };
+// Short (<=1 min) Instagram Reels with one crochet tip each. Embedded via Instagram's
+// own embed.js — no self-hosted video, no API/auth needed since the account is public.
+const tips = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    instagramUrl: z.string().url(),
+    // Reel's own cover frame (the "Crochet tips #N" title card), used as the tile thumbnail.
+    coverImage: z.string(),
+  }),
+});
+
+export const collections = { patterns, blog, freePatterns, bagCharms, tips };

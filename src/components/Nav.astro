@@ -55,6 +55,15 @@ const currentPath = Astro.url.pathname;
 
           <li>
             <a
+              href="/tips"
+              class:list={['nav-link', { 'nav-link--active': currentPath.startsWith('/tips') }]}
+            >
+              Tips
+            </a>
+          </li>
+
+          <li>
+            <a
               href="/blog"
               class:list={['nav-link', { 'nav-link--active': currentPath.startsWith('/blog') }]}
             >

@@ -1,0 +1,290 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allTips = await getCollection('tips');
+// Filenames are numbered ("01-...", "02-...") matching each Reel's own
+// "Crochet tips #N" numbering, so alphabetical slug order is chronological order.
+const tips = [...allTips].sort((a, b) => a.slug.localeCompare(b.slug));
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Crochet Tips',
+  mainEntity: {
+    '@type': 'ItemList',
+    itemListElement: tips.map((tip, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: tip.data.instagramUrl,
+      name: tip.data.title,
+    })),
+  },
+};
+---
+
+<BaseLayout
+  title="Crochet Tips"
+  description="Quick, one-minute crochet tips — one trick per video, straight from Instagram."
+  structuredData={structuredData}
+>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="container">
+      <p class="page-eyebrow">Quick Tips</p>
+      <h1 class="page-title">One-minute crochet tips</h1>
+      <p class="page-desc">
+        Short videos, one trick each — the kind of thing that's easier to show
+        than explain. New ones posted to Instagram regularly.
+      </p>
+    </div>
+  </section>
+
+  <!-- TIPS GRID -->
+  <section class="tips-section">
+    <div class="container">
+      <div class="tips-grid">
+        {tips.map(tip => (
+          <button class="tip-tile" type="button" data-instagram-url={tip.data.instagramUrl}>
+            <span class="tip-tile-image">
+              <img src={tip.data.coverImage} alt={tip.data.title} width="400" height="500" loading="lazy" />
+              <span class="tip-tile-play" aria-hidden="true">&#9654;</span>
+            </span>
+            <span class="tip-tile-desc">{tip.data.description}</span>
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal: the real Instagram embed only mounts here, one at a time, on click -->
+  <div class="tip-modal" id="tip-modal" hidden>
+    <div class="tip-modal-backdrop" data-tip-modal-close></div>
+    <div class="tip-modal-panel" role="dialog" aria-modal="true">
+      <button class="tip-modal-close" type="button" data-tip-modal-close aria-label="Close">&times;</button>
+      <div class="tip-modal-embed" id="tip-modal-embed"></div>
+    </div>
+  </div>
+
+</BaseLayout>
+
+<script is:inline src="https://www.instagram.com/embed.js"></script>
+
+<script is:inline>
+  (function () {
+    const modal = document.getElementById('tip-modal');
+    const embedContainer = document.getElementById('tip-modal-embed');
+
+    function openTip(url) {
+      embedContainer.innerHTML =
+        '<blockquote class="instagram-media" data-instgrm-permalink="' + url +
+        '?utm_source=ig_embed" data-instgrm-version="14"></blockquote>';
+      modal.hidden = false;
+      document.body.style.overflow = 'hidden';
+      if (window.instgrm) {
+        window.instgrm.Embeds.process();
+      }
+    }
+
+    function closeTip() {
+      modal.hidden = true;
+      embedContainer.innerHTML = '';
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.tip-tile').forEach(tile => {
+      tile.addEventListener('click', () => openTip(tile.dataset.instagramUrl));
+    });
+
+    modal.querySelectorAll('[data-tip-modal-close]').forEach(el => {
+      el.addEventListener('click', closeTip);
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && !modal.hidden) closeTip();
+    });
+  })();
+</script>
+
+<style>
+  /* ----- PAGE HEADER ----- */
+  .page-header {
+    padding-block: var(--space-20) var(--space-12);
+    text-align: center;
+    background: var(--cream-alt);
+    border-bottom: 1px solid var(--border);
+  }
+
+  @media (max-width: 640px) {
+    .page-header { padding-block: var(--space-12) var(--space-8); }
+  }
+
+  .page-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: var(--space-3);
+    max-width: none;
+  }
+
+  .page-title {
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    max-width: 22ch;
+    margin-inline: auto;
+    margin-bottom: var(--space-5);
+  }
+
+  .page-desc {
+    color: var(--ink-muted);
+    font-size: 1.05rem;
+    line-height: 1.72;
+    max-width: 54ch;
+    margin-inline: auto;
+  }
+
+  /* ----- GRID ----- */
+  .tips-section {
+    padding-block: var(--space-16);
+  }
+
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+
+  @media (min-width: 640px) {
+    .tips-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  @media (min-width: 960px) {
+    .tips-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  /* ----- TILE ----- */
+  .tip-tile {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding: 0;
+    text-align: left;
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .tip-tile:hover,
+  .tip-tile:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(42, 40, 37, 0.09);
+  }
+
+  .tip-tile-image {
+    position: relative;
+    display: block;
+    aspect-ratio: 1 / 1;
+    /* Flex items get an automatic min-height floor from their content by default,
+       which can win over aspect-ratio when the source photo's own dimensions are
+       tall — override it so every tile crops to the same square regardless. */
+    min-height: 0;
+    background: var(--cream-alt);
+  }
+
+  .tip-tile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Reel covers are portrait with the "Crochet tips #N" title near the top —
+       anchor the square crop there instead of centering, so it doesn't get cut off. */
+    object-position: top;
+    display: block;
+  }
+
+  .tip-tile-play {
+    position: absolute;
+    bottom: var(--space-3);
+    right: var(--space-3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(30, 26, 22, 0.55);
+    color: var(--white);
+    font-size: 0.75rem;
+  }
+
+  .tip-tile-desc {
+    padding: 0 var(--space-4) var(--space-4);
+    font-size: 0.85rem;
+    color: var(--ink-muted);
+    line-height: 1.5;
+    max-width: none;
+  }
+
+  /* ----- MODAL ----- */
+  .tip-modal[hidden] {
+    display: none;
+  }
+
+  .tip-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-6);
+  }
+
+  .tip-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(30, 26, 22, 0.6);
+  }
+
+  .tip-modal-panel {
+    position: relative;
+    width: min(540px, 92vw);
+    max-height: 90vh;
+    overflow-y: auto;
+    background: var(--cream);
+    border-radius: var(--radius-lg);
+    padding: var(--space-10) var(--space-3) var(--space-3);
+  }
+
+  .tip-modal-close {
+    position: absolute;
+    top: var(--space-3);
+    right: var(--space-3);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background: var(--cream-alt);
+    color: var(--ink);
+    font-size: 1.3rem;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  /* Let Instagram's own embed script size the iframe off this container's real
+     width — no fixed px width here, that's what caused the embed to render at
+     the wrong proportions. The embed often ends up narrower than the container
+     and left-aligns by default, so center it explicitly. */
+  .tip-modal-embed {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+</style>
